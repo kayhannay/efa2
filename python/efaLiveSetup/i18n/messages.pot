@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-13 17:20+0200\n"
+"POT-Creation-Date: 2011-01-04 14:41+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,68 +17,72 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: maingui.py:97
+#: maingui.py:100
 msgid "efaLive setup"
 msgstr ""
 
-#: maingui.py:108
+#: maingui.py:111
 msgid "efa version"
 msgstr ""
 
-#: maingui.py:120
+#: maingui.py:123
 msgid "Here you can choose the efa version that "
 msgstr ""
 
-#: maingui.py:121
+#: maingui.py:124
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr ""
 
-#: maingui.py:122
+#: maingui.py:125
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr ""
 
-#: maingui.py:123
+#: maingui.py:126
 msgid "choose efa 1."
 msgstr ""
 
-#: maingui.py:132
+#: maingui.py:135
 msgid "version"
 msgstr ""
 
-#: maingui.py:141
+#: maingui.py:144
 msgid "Tools"
 msgstr ""
 
-#: maingui.py:153
+#: maingui.py:160
 msgid "Terminal"
 msgstr ""
 
-#: maingui.py:162
+#: maingui.py:164
+msgid "Screen setup"
+msgstr ""
+
+#: maingui.py:173
 msgid "Close"
 msgstr ""
 
-#: maingui.py:166
+#: maingui.py:177
 msgid "Apply"
 msgstr ""
 
-#: maingui.py:203
+#: maingui.py:214
 msgid "1 (stable)"
 msgstr ""
 
-#: maingui.py:204
+#: maingui.py:215
 msgid "2 (development)"
 msgstr ""
 
-#: maingui.py:236
+#: maingui.py:264
 msgid ""
 "Could not save files!\n"
 "\n"
 msgstr ""
 
-#: maingui.py:237
+#: maingui.py:265
 msgid "Please check the path you provided for "
 msgstr ""
 
-#: maingui.py:238
+#: maingui.py:266
 msgid "user rights and existance."
 msgstr ""

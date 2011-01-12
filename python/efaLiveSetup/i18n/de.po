@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-13 17:20+0200\n"
+"POT-Creation-Date: 2011-01-04 14:41+0100\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -18,59 +18,63 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: maingui.py:97
+#: maingui.py:100
 msgid "efaLive setup"
 msgstr "efaLive Setup"
 
-#: maingui.py:108
+#: maingui.py:111
 msgid "efa version"
 msgstr "efa Version"
 
-#: maingui.py:120
+#: maingui.py:123
 msgid "Here you can choose the efa version that "
 msgstr "Hier kannst Du auswählen, welche Version von efa "
 
-#: maingui.py:121
+#: maingui.py:124
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
 
-#: maingui.py:122
+#: maingui.py:125
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
 
-#: maingui.py:123
+#: maingui.py:126
 msgid "choose efa 1."
 msgstr "eine stabile Version benötigst, wählen efa 1."
 
-#: maingui.py:132
+#: maingui.py:135
 msgid "version"
 msgstr "Version"
 
-#: maingui.py:141
+#: maingui.py:144
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: maingui.py:153
+#: maingui.py:160
 msgid "Terminal"
 msgstr "Kommandozeile"
 
-#: maingui.py:162
+#: maingui.py:164
+msgid "Screen setup"
+msgstr "Bildschirm-Setup"
+
+#: maingui.py:173
 msgid "Close"
 msgstr "Schließen"
 
-#: maingui.py:166
+#: maingui.py:177
 msgid "Apply"
 msgstr "Anwenden"
 
-#: maingui.py:203
+#: maingui.py:214
 msgid "1 (stable)"
 msgstr "1 (Stabil)"
 
-#: maingui.py:204
+#: maingui.py:215
 msgid "2 (development)"
 msgstr "2 (Entwicklung)"
 
-#: maingui.py:236
+#: maingui.py:264
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -78,11 +82,11 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:237
+#: maingui.py:265
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:238
+#: maingui.py:266
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 
