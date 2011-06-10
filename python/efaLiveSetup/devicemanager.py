@@ -220,11 +220,16 @@ class DeviceManagerView(gtk.Window):
         self.mainBox.add(self.infoLabel)
         self.infoLabel.show()
 
+        self.noDeviceLabel = gtk.Label(_("no devices found"))
+        self.mainBox.add(self.noDeviceLabel)
+        self.noDeviceLabel.show()
+
         self._deviceEntries = {}
 
     def addDevice(self, device):
         deviceEntry = self.createDeviceEntry(device)
         self.mainBox.add(deviceEntry)
+	self.noDeviceLabel.hide()
         deviceEntry.show()
         self._deviceEntries[device.deviceFile] = deviceEntry
 
@@ -232,6 +237,8 @@ class DeviceManagerView(gtk.Window):
         deviceEntry = self._deviceEntries[device.deviceFile]
         del self._deviceEntries[device.deviceFile]
         deviceEntry.destroy()
+	if len(self._deviceEntries) == 0:
+		self.noDeviceLabel.show()
         #TODO Does not work correctly yet
         self.queue_resize()
 
@@ -279,7 +286,7 @@ class DeviceManagerView(gtk.Window):
         return mainBox
 
 class DeviceManagerController(object):
-    def __init__(self, argv, model=None, view=None):
+    def __init__(self, argv, model=None, view=None, standalone=True):
         self._logger = logging.getLogger('devicemanager.DeviceManagerController')
         if(model==None):
             self._model=DeviceManagerModel()
@@ -289,11 +296,13 @@ class DeviceManagerController(object):
             self._view=DeviceManagerView(gtk.WINDOW_TOPLEVEL, self)
         else:
             self._view=view
-        self.initEvents()
+        self.initEvents(standalone)
         self._view.show()
         self._model.searchDevices()
 
-    def initEvents(self):
+    def initEvents(self, standalone):
+        if standalone:
+            self._view.connect('clicked', gtk.main_quit)
         self._model.registerAddObserver(self.onDeviceAdd)
         self._model.registerRemoveObserver(self.onDeviceRemove)
         self._model.registerChangeObserver(self.onDeviceChange)

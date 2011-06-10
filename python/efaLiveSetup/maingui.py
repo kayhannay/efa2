@@ -26,6 +26,7 @@ import subprocess
 
 from observable import Observable
 from devicemanager import DeviceManagerController as DeviceManager
+from screensetup import ScreenSetupController as ScreenSetup
 
 import locale
 import gettext
@@ -175,13 +176,14 @@ class SetupView(gtk.Window):
         self.mainBox.pack_start(self.buttonBox, False, False, 2)
         self.buttonBox.show()
 
-        self.closeButton=gtk.Button(_("Close"))
+        self.applyButton=gtk.Button(_("Save"))
+        self.buttonBox.pack_end(self.applyButton, False, False, 2)
+        self.applyButton.show()
+        
+        self.closeButton=gtk.Button(_("Cancel"))
         self.buttonBox.pack_end(self.closeButton, False, False, 2)
         self.closeButton.show()
         
-        self.applyButton=gtk.Button(_("Apply"))
-        self.buttonBox.pack_end(self.applyButton, False, False, 2)
-        self.applyButton.show()
 
     def showError(self, text):
         """
@@ -242,7 +244,10 @@ class SetupController(object):
         self._view.deviceButton.connect("clicked", self.runDeviceManager)
 
     def runTerminal(self, widget):
-        subprocess.Popen(['xterm'])
+	try:
+            subprocess.Popen(['xterm'])
+	except OSError as error:
+	    print("Could not open terminal program: %s" % error)
 
     def runScreenSetup(self, widget):
         """
@@ -258,10 +263,16 @@ class SetupController(object):
             screenFile.close()
             os.chmod(screenFilePath, 0755)
         """
-        subprocess.Popen(['arandr'])
+        """
+        try:
+                subprocess.Popen(['arandr'])
+        except OSError as error:
+            print("Could not start the program 'arandr': %s" % error)
+        """
+        ScreenSetup(None, confPath=self._model.getConfigPath(), standalone=False)
 
     def runDeviceManager(self, widget):
-        DeviceManager(None)    
+        DeviceManager(None, standalone=False)
         
     def setEfaVersion(self, widget):
         self._model.setEfaVersion(widget.get_active() + 1)
@@ -269,6 +280,7 @@ class SetupController(object):
     def save(self, widget):
         try:
             self._model.save()
+            self.destroy(widget)
         except:
             self._view.showError(_("Could not save files!\n\n")
                 + _("Please check the path you provided for ")
