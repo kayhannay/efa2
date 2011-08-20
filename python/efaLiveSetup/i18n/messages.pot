@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-01-04 14:41+0100\n"
+"POT-Creation-Date: 2011-06-10 12:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,72 +17,134 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: maingui.py:100
+#: devicemanager.py:208
+msgid "Device Manager"
+msgstr ""
+
+#: devicemanager.py:219
+msgid "USB storage devices"
+msgstr ""
+
+#: devicemanager.py:223
+msgid "no devices found"
+msgstr ""
+
+#: devicemanager.py:262
+#, python-format
+msgid "Vendor: %s"
+msgstr ""
+
+#: devicemanager.py:263
+#, python-format
+msgid "Model: %s"
+msgstr ""
+
+#: devicemanager.py:264
+#, python-format
+msgid "Device: %s"
+msgstr ""
+
+#: devicemanager.py:265
+#, python-format
+msgid "Size: %s"
+msgstr ""
+
+#: devicemanager.py:266
+#, python-format
+msgid "Filesystem: %s"
+msgstr ""
+
+#: devicemanager.py:267
+#, python-format
+msgid "Mount point: %s"
+msgstr ""
+
+#: devicemanager.py:271
+msgid "Backup"
+msgstr ""
+
+#: devicemanager.py:276 devicemanager.py:317
+msgid "Mount"
+msgstr ""
+
+#: devicemanager.py:279 devicemanager.py:313
+msgid "Unmount"
+msgstr ""
+
+#: maingui.py:102
 msgid "efaLive setup"
 msgstr ""
 
-#: maingui.py:111
+#: maingui.py:113
 msgid "efa version"
 msgstr ""
 
-#: maingui.py:123
+#: maingui.py:125
 msgid "Here you can choose the efa version that "
 msgstr ""
 
-#: maingui.py:124
+#: maingui.py:126
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr ""
 
-#: maingui.py:125
+#: maingui.py:127
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr ""
 
-#: maingui.py:126
+#: maingui.py:128
 msgid "choose efa 1."
 msgstr ""
 
-#: maingui.py:135
+#: maingui.py:137
 msgid "version"
 msgstr ""
 
-#: maingui.py:144
+#: maingui.py:146
 msgid "Tools"
 msgstr ""
 
-#: maingui.py:160
+#: maingui.py:162
 msgid "Terminal"
 msgstr ""
 
-#: maingui.py:164
+#: maingui.py:166
 msgid "Screen setup"
 msgstr ""
 
-#: maingui.py:173
-msgid "Close"
+#: maingui.py:170
+msgid "Devices"
 msgstr ""
 
-#: maingui.py:177
-msgid "Apply"
+#: maingui.py:179 screensetup.py:65
+msgid "Save"
 msgstr ""
 
-#: maingui.py:214
+#: maingui.py:183 screensetup.py:70
+msgid "Cancel"
+msgstr ""
+
+#: maingui.py:221
 msgid "1 (stable)"
 msgstr ""
 
-#: maingui.py:215
+#: maingui.py:222
 msgid "2 (development)"
 msgstr ""
 
-#: maingui.py:264
+#: maingui.py:285
 msgid ""
 "Could not save files!\n"
 "\n"
 msgstr ""
 
-#: maingui.py:265
+#: maingui.py:286
 msgid "Please check the path you provided for "
 msgstr ""
 
-#: maingui.py:266
+#: maingui.py:287
 msgid "user rights and existance."
+msgstr ""
+
+#: screensetup.py:45
+msgid "Screen Setup"
 msgstr ""

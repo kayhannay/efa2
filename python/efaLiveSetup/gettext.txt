@@ -1,4 +1,4 @@
-xgettext -o i18n/messages.pot efalivesetup/*.py
+xgettext -o i18n/messages.pot *.py
 LANG=de_DE msginit -o i18n/de.po
 msgmerge i18n/de.po i18n/messages.pot
 msgfmt i18n/de.po -o locale/de/LC_MESSAGES/efaLiveSetup.mo
