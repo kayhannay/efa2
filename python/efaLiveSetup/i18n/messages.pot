@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-10 12:53+0200\n"
+"POT-Creation-Date: 2011-08-23 11:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,11 +63,11 @@ msgstr ""
 msgid "Backup"
 msgstr ""
 
-#: devicemanager.py:276 devicemanager.py:317
+#: devicemanager.py:278 devicemanager.py:319
 msgid "Mount"
 msgstr ""
 
-#: devicemanager.py:279 devicemanager.py:313
+#: devicemanager.py:281 devicemanager.py:315
 msgid "Unmount"
 msgstr ""
 
@@ -116,10 +116,10 @@ msgid "Devices"
 msgstr ""
 
 #: maingui.py:179 screensetup.py:65
-msgid "Save"
+msgid "Ok"
 msgstr ""
 
-#: maingui.py:183 screensetup.py:70
+#: maingui.py:183 screensetup.py:75
 msgid "Cancel"
 msgstr ""
 
@@ -147,4 +147,8 @@ msgstr ""
 
 #: screensetup.py:45
 msgid "Screen Setup"
+msgstr ""
+
+#: screensetup.py:70
+msgid "Apply"
 msgstr ""

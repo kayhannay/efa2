@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-10 12:53+0200\n"
+"POT-Creation-Date: 2011-08-23 11:19+0200\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -28,7 +28,7 @@ msgstr "USB Speichermedien"
 
 #: devicemanager.py:223
 msgid "no devices found"
-msgstr "Kein Ger√§t gefunden"
+msgstr "Kein Ger‰t gefunden"
 
 #: devicemanager.py:262
 #, python-format
@@ -43,12 +43,12 @@ msgstr "Modell: %s"
 #: devicemanager.py:264
 #, python-format
 msgid "Device: %s"
-msgstr "Ger√§t: %s"
+msgstr "Ger‰t: %s"
 
 #: devicemanager.py:265
 #, python-format
 msgid "Size: %s"
-msgstr "Gr√∂√üe: %s"
+msgstr "Grˆﬂe: %s"
 
 #: devicemanager.py:266
 #, python-format
@@ -58,19 +58,19 @@ msgstr "Dateisystem: %s"
 #: devicemanager.py:267
 #, python-format
 msgid "Mount point: %s"
-msgstr "Einh√§ngepunkt: %s"
+msgstr "Einh‰ngepunkt: %s"
 
 #: devicemanager.py:271
 msgid "Backup"
 msgstr "Datensicherung"
 
-#: devicemanager.py:276 devicemanager.py:317
+#: devicemanager.py:278 devicemanager.py:319
 msgid "Mount"
-msgstr "Einh√§ngen"
+msgstr "Einh‰ngen"
 
-#: devicemanager.py:279 devicemanager.py:313
+#: devicemanager.py:281 devicemanager.py:315
 msgid "Unmount"
-msgstr "Aush√§ngen"
+msgstr "Aush‰ngen"
 
 #: maingui.py:102
 msgid "efaLive setup"
@@ -82,7 +82,7 @@ msgstr "efa Version"
 
 #: maingui.py:125
 msgid "Here you can choose the efa version that "
-msgstr "Hier kannst Du ausw√§hlen, welche Version von efa "
+msgstr "Hier kannst Du ausw‰hlen, welche Version von efa "
 
 #: maingui.py:126
 msgid "you would like to use. Please note that efa 2 is a development "
@@ -94,7 +94,7 @@ msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
 
 #: maingui.py:128
 msgid "choose efa 1."
-msgstr "eine stabile Version ben√∂tigst, w√§hle efa 1."
+msgstr "eine stabile Version benˆtigst, w‰hle efa 1."
 
 #: maingui.py:137
 msgid "version"
@@ -117,10 +117,10 @@ msgid "Devices"
 msgstr "Speichermedien"
 
 #: maingui.py:179 screensetup.py:65
-msgid "Save"
-msgstr "Speichern"
+msgid "Ok"
+msgstr "Ok"
 
-#: maingui.py:183 screensetup.py:70
+#: maingui.py:183 screensetup.py:75
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -142,7 +142,7 @@ msgstr ""
 
 #: maingui.py:286
 msgid "Please check the path you provided for "
-msgstr "Bitte √ºberpr√ºfe den angegebenen Pfad auf "
+msgstr "Bitte ¸berpr¸fe den angegebenen Pfad auf "
 
 #: maingui.py:287
 msgid "user rights and existance."
@@ -153,11 +153,7 @@ msgstr "Benutzerrechte und ob er existiert."
 msgid "Screen Setup"
 msgstr "Bildschirm-Setup"
 
-#~ msgid "Close"
-#~ msgstr "Schlie√üen"
+#: screensetup.py:70
+msgid "Apply"
+msgstr "Anwenden"
 
-#~ msgid "Apply"
-#~ msgstr "Anwenden"
-
-#~ msgid "Ok"
-#~ msgstr "Ok"

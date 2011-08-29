@@ -42,7 +42,7 @@ class ScreenSetupView(gtk.Window):
     def __init__(self, type, controller=None):
         self._logger = logging.getLogger('screensetup.ScreenSetupView')
         gtk.Window.__init__(self, type)
-        self.set_title(_("Screen Setup"))
+        self.set_title(_("Screen setup"))
         self.set_border_width(5)
         self._controller = controller
 
@@ -62,10 +62,15 @@ class ScreenSetupView(gtk.Window):
         main_box.pack_end(button_box, False, False)
         button_box.show()
 
-        save_button = gtk.Button(_("Save"))
+        save_button = gtk.Button(_("Ok"))
         button_box.pack_end(save_button, False, False, 2)
         save_button.show()
         save_button.connect("clicked", self._controller.save)
+
+        apply_button = gtk.Button(_("Apply"))
+        button_box.pack_end(apply_button, False, False, 2)
+        apply_button.show()
+        apply_button.connect("clicked", self._controller.apply)
 
         cancel_button = gtk.Button(_("Cancel"))
         button_box.pack_end(cancel_button, False, False, 2)
@@ -98,7 +103,11 @@ class ScreenSetupController(object):
         if self._confPath:
             script_file = os.path.join(self._confPath, script_file)
         self._view.randr_widget.save_to_file(script_file)
+        self._view.randr_widget.save_to_x()
         self._view.destroy()
+
+    def apply(self, widget):
+        self._view.randr_widget.save_to_x()
 
     def cancel(self, widget):
         self._view.destroy()
