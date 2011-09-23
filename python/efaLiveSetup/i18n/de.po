@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.2\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-23 11:19+0200\n"
+"POT-Creation-Date: 2011-09-22 11:03+0200\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -18,121 +18,188 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: devicemanager.py:208
+#: devicemanager.py:90
+msgid "Create backup of efaLive on USB device"
+msgstr "Sichern von efaLive auf einem USB-Speichermedium"
+
+#: devicemanager.py:237
 msgid "Device Manager"
 msgstr "Speichermedien"
 
-#: devicemanager.py:219
+#: devicemanager.py:248
 msgid "USB storage devices"
 msgstr "USB Speichermedien"
 
-#: devicemanager.py:223
-msgid "no devices found"
-msgstr "Kein Gerät gefunden"
+#: devicemanager.py:280
+msgid "Unmount USB device"
+msgstr "USB Gerät aushängen"
 
-#: devicemanager.py:262
+#: devicemanager.py:282 devicemanager.py:293
 #, python-format
 msgid "Vendor: %s"
 msgstr "Hersteller: %s"
 
-#: devicemanager.py:263
+#: devicemanager.py:283 devicemanager.py:294
 #, python-format
 msgid "Model: %s"
 msgstr "Modell: %s"
 
-#: devicemanager.py:264
+#: devicemanager.py:284 devicemanager.py:295
 #, python-format
 msgid "Device: %s"
 msgstr "Gerät: %s"
 
-#: devicemanager.py:265
+#: devicemanager.py:285 devicemanager.py:296
 #, python-format
 msgid "Size: %s"
 msgstr "Größe: %s"
 
-#: devicemanager.py:266
+#: devicemanager.py:286 devicemanager.py:297
 #, python-format
 msgid "Filesystem: %s"
 msgstr "Dateisystem: %s"
 
-#: devicemanager.py:267
-#, python-format
-msgid "Mount point: %s"
+#: devicemanager.py:287
+#, fuzzy, python-format
+msgid "Mouned to: %s"
 msgstr "Einhängepunkt: %s"
 
-#: devicemanager.py:271
-msgid "Backup"
-msgstr "Datensicherung"
+#: devicemanager.py:291
+msgid "Mount USB device"
+msgstr "USB Gerät einhängen"
 
-#: devicemanager.py:278 devicemanager.py:319
-msgid "Mount"
-msgstr "Einhängen"
+#: devicemanager.py:332
+#, python-format
+msgid ""
+"Could not mount device:\n"
+"%s"
+msgstr ""
+"Konnte Gerät nicht einhängen:\n"
+"%s"
 
-#: devicemanager.py:281 devicemanager.py:315
-msgid "Unmount"
-msgstr "Aushängen"
+#: devicemanager.py:341
+#, python-format
+msgid ""
+"Could not unmount device:\n"
+"%s"
+msgstr ""
+"Konnte Gerät nicht aushängen:\n"
+"%s"
 
-#: maingui.py:102
+#: devicemanager.py:349
+#, python-format
+msgid ""
+"Could not create backup:\n"
+"%s"
+msgstr ""
+"Konnte keine Datensicherung erstellen:\n"
+"%s"
+
+#: maingui.py:140
 msgid "efaLive setup"
 msgstr "efaLive Setup"
 
-#: maingui.py:113
+#: maingui.py:151
+msgid "efaLive settings"
+msgstr "efaLive Einstellungen"
+
+#: maingui.py:164
 msgid "efa version"
 msgstr "efa Version"
 
-#: maingui.py:125
+#: maingui.py:176
 msgid "Here you can choose the efa version that "
 msgstr "Hier kannst Du auswählen, welche Version von efa "
 
-#: maingui.py:126
+#: maingui.py:177
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
 
-#: maingui.py:127
+#: maingui.py:178
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
 
-#: maingui.py:128
+#: maingui.py:179
 msgid "choose efa 1."
 msgstr "eine stabile Version benötigst, wähle efa 1."
 
-#: maingui.py:137
+#: maingui.py:188
 msgid "version"
 msgstr "Version"
 
-#: maingui.py:146
+#: maingui.py:205
+msgid "efa shutdown action"
+msgstr "Aktion beim Beenden von efa"
+
+#: maingui.py:222
+msgid "enable automatic USB backup"
+msgstr "Automatische Datensicherung auf USB einschalten"
+
+#: maingui.py:227
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: maingui.py:162
+#: maingui.py:243
 msgid "Terminal"
 msgstr "Kommandozeile"
 
-#: maingui.py:166
-msgid "Screen setup"
-msgstr "Bildschirm-Setup"
+#: maingui.py:247
+msgid "File manager"
+msgstr "Dateimanager"
 
-#: maingui.py:170
+#: maingui.py:251
 msgid "Devices"
 msgstr "Speichermedien"
 
-#: maingui.py:179 screensetup.py:65
+#: maingui.py:255
+msgid "Screen"
+msgstr "Bildschirm"
+
+#: maingui.py:259
+msgid "Network"
+msgstr "Netzwerk"
+
+#: maingui.py:265
+msgid "Actions"
+msgstr "Aktionen"
+
+#: maingui.py:281
+msgid "Shutdown PC"
+msgstr "PC herunterfahren"
+
+#: maingui.py:285
+msgid "Restart PC"
+msgstr "PC neu starten"
+
+#: maingui.py:295 screensetup.py:65
 msgid "Ok"
 msgstr "Ok"
 
-#: maingui.py:183 screensetup.py:75
+#: maingui.py:299 screensetup.py:75
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: maingui.py:221
+#: maingui.py:337
 msgid "1 (stable)"
 msgstr "1 (Stabil)"
 
-#: maingui.py:222
+#: maingui.py:338
 msgid "2 (development)"
 msgstr "2 (Entwicklung)"
 
-#: maingui.py:285
+#: maingui.py:340
+msgid "shutdown pc"
+msgstr "PC herunterfahren"
+
+#: maingui.py:341
+msgid "restart pc"
+msgstr "PC neu starten"
+
+#: maingui.py:342
+msgid "restart efa"
+msgstr "efa neu starten"
+
+#: maingui.py:457
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -140,20 +207,34 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:286
+#: maingui.py:458
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:287
+#: maingui.py:459
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 
 #: screensetup.py:45
-#, fuzzy
-msgid "Screen Setup"
+msgid "Screen setup"
 msgstr "Bildschirm-Setup"
 
 #: screensetup.py:70
 msgid "Apply"
 msgstr "Anwenden"
 
+#~ msgid "no devices found"
+#~ msgstr "Kein Gerät gefunden"
+
+#~ msgid "Backup"
+#~ msgstr "Datensicherung"
+
+#~ msgid "Mount"
+#~ msgstr "Einhängen"
+
+#~ msgid "Unmount"
+#~ msgstr "Aushängen"
+
+#, fuzzy
+#~ msgid "Screen Setup"
+#~ msgstr "Bildschirm-Setup"

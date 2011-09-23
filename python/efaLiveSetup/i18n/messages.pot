@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-23 11:19+0200\n"
+"POT-Creation-Date: 2011-09-22 11:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,136 +17,197 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: devicemanager.py:208
+#: devicemanager.py:90
+msgid "Create backup of efaLive on USB device"
+msgstr ""
+
+#: devicemanager.py:237
 msgid "Device Manager"
 msgstr ""
 
-#: devicemanager.py:219
+#: devicemanager.py:248
 msgid "USB storage devices"
 msgstr ""
 
-#: devicemanager.py:223
-msgid "no devices found"
+#: devicemanager.py:280
+msgid "Unmount USB device"
 msgstr ""
 
-#: devicemanager.py:262
+#: devicemanager.py:282 devicemanager.py:293
 #, python-format
 msgid "Vendor: %s"
 msgstr ""
 
-#: devicemanager.py:263
+#: devicemanager.py:283 devicemanager.py:294
 #, python-format
 msgid "Model: %s"
 msgstr ""
 
-#: devicemanager.py:264
+#: devicemanager.py:284 devicemanager.py:295
 #, python-format
 msgid "Device: %s"
 msgstr ""
 
-#: devicemanager.py:265
+#: devicemanager.py:285 devicemanager.py:296
 #, python-format
 msgid "Size: %s"
 msgstr ""
 
-#: devicemanager.py:266
+#: devicemanager.py:286 devicemanager.py:297
 #, python-format
 msgid "Filesystem: %s"
 msgstr ""
 
-#: devicemanager.py:267
+#: devicemanager.py:287
 #, python-format
-msgid "Mount point: %s"
+msgid "Mouned to: %s"
 msgstr ""
 
-#: devicemanager.py:271
-msgid "Backup"
+#: devicemanager.py:291
+msgid "Mount USB device"
 msgstr ""
 
-#: devicemanager.py:278 devicemanager.py:319
-msgid "Mount"
+#: devicemanager.py:332
+#, python-format
+msgid ""
+"Could not mount device:\n"
+"%s"
 msgstr ""
 
-#: devicemanager.py:281 devicemanager.py:315
-msgid "Unmount"
+#: devicemanager.py:341
+#, python-format
+msgid ""
+"Could not unmount device:\n"
+"%s"
 msgstr ""
 
-#: maingui.py:102
+#: devicemanager.py:349
+#, python-format
+msgid ""
+"Could not create backup:\n"
+"%s"
+msgstr ""
+
+#: maingui.py:140
 msgid "efaLive setup"
 msgstr ""
 
-#: maingui.py:113
+#: maingui.py:151
+msgid "efaLive settings"
+msgstr ""
+
+#: maingui.py:164
 msgid "efa version"
 msgstr ""
 
-#: maingui.py:125
+#: maingui.py:176
 msgid "Here you can choose the efa version that "
 msgstr ""
 
-#: maingui.py:126
+#: maingui.py:177
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr ""
 
-#: maingui.py:127
+#: maingui.py:178
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr ""
 
-#: maingui.py:128
+#: maingui.py:179
 msgid "choose efa 1."
 msgstr ""
 
-#: maingui.py:137
+#: maingui.py:188
 msgid "version"
 msgstr ""
 
-#: maingui.py:146
-msgid "Tools"
-msgstr ""
-
-#: maingui.py:162
-msgid "Terminal"
-msgstr ""
-
-#: maingui.py:166
-msgid "Screen setup"
-msgstr ""
-
-#: maingui.py:170
-msgid "Devices"
-msgstr ""
-
-#: maingui.py:179 screensetup.py:65
-msgid "Ok"
-msgstr ""
-
-#: maingui.py:183 screensetup.py:75
-msgid "Cancel"
-msgstr ""
-
-#: maingui.py:221
-msgid "1 (stable)"
+#: maingui.py:205
+msgid "efa shutdown action"
 msgstr ""
 
 #: maingui.py:222
-msgid "2 (development)"
+msgid "enable automatic USB backup"
+msgstr ""
+
+#: maingui.py:227
+msgid "Tools"
+msgstr ""
+
+#: maingui.py:243
+msgid "Terminal"
+msgstr ""
+
+#: maingui.py:247
+msgid "File manager"
+msgstr ""
+
+#: maingui.py:251
+msgid "Devices"
+msgstr ""
+
+#: maingui.py:255
+msgid "Screen"
+msgstr ""
+
+#: maingui.py:259
+msgid "Network"
+msgstr ""
+
+#: maingui.py:265
+msgid "Actions"
+msgstr ""
+
+#: maingui.py:281
+msgid "Shutdown PC"
 msgstr ""
 
 #: maingui.py:285
+msgid "Restart PC"
+msgstr ""
+
+#: maingui.py:295 screensetup.py:65
+msgid "Ok"
+msgstr ""
+
+#: maingui.py:299 screensetup.py:75
+msgid "Cancel"
+msgstr ""
+
+#: maingui.py:337
+msgid "1 (stable)"
+msgstr ""
+
+#: maingui.py:338
+msgid "2 (development)"
+msgstr ""
+
+#: maingui.py:340
+msgid "shutdown pc"
+msgstr ""
+
+#: maingui.py:341
+msgid "restart pc"
+msgstr ""
+
+#: maingui.py:342
+msgid "restart efa"
+msgstr ""
+
+#: maingui.py:457
 msgid ""
 "Could not save files!\n"
 "\n"
 msgstr ""
 
-#: maingui.py:286
+#: maingui.py:458
 msgid "Please check the path you provided for "
 msgstr ""
 
-#: maingui.py:287
+#: maingui.py:459
 msgid "user rights and existance."
 msgstr ""
 
 #: screensetup.py:45
-msgid "Screen Setup"
+msgid "Screen setup"
 msgstr ""
 
 #: screensetup.py:70
