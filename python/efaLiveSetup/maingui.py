@@ -38,10 +38,6 @@ DIR=os.path.realpath(LOCALEDIR)
 gettext.install(APP, DIR, unicode=True)
 
 import logging
-LOG_FILENAME = 'efaLiveSetup.log'
-logging.basicConfig(filename=LOG_FILENAME,level=logging.DEBUG)
-logger = logging.getLogger('MyLoggr')
-logger.info("Hello logger")
 
 
 class SetupModel(object):
@@ -223,37 +219,43 @@ class SetupView(gtk.Window):
         self.mainBox.pack_start(self.toolsFrame, True, False, 2)
         self.toolsFrame.show()
 
-        self.toolsSpaceBox=gtk.HBox(False, 5)
-        self.toolsFrame.add(self.toolsSpaceBox)
+        self.toolsSpaceVBox=gtk.VBox(False, 10)
+        self.toolsFrame.add(self.toolsSpaceVBox)
+        self.toolsSpaceVBox.show()
+        
+        self.toolsSpaceBox=gtk.HBox(False, 10)
+        self.toolsSpaceVBox.pack_start(self.toolsSpaceBox, True, True, 5)
         self.toolsSpaceBox.show()
-
-        self.toolsVBox=gtk.VBox(False, 5)
-        self.toolsSpaceBox.pack_start(self.toolsVBox, False, False, 10)
-        self.toolsVBox.show()
-
-        self.toolsHBox=gtk.HBox(False, 0)
-        self.toolsVBox.pack_start(self.toolsHBox, True, True, 10)
-        self.toolsHBox.show()
+        
+        self.toolsGrid=gtk.Table(2, 3, True)
+        self.toolsSpaceBox.pack_start(self.toolsGrid, True, True, 5)
+        self.toolsGrid.set_row_spacings(2)
+        self.toolsGrid.set_col_spacings(2)
+        self.toolsGrid.show()
 
         self.terminalButton=gtk.Button(_("Terminal"))
-        self.toolsHBox.pack_start(self.terminalButton, False, False, 0)
+        self.toolsGrid.attach(self.terminalButton, 0, 1, 0, 1)
         self.terminalButton.show()
         
         self.fileManagerButton=gtk.Button(_("File manager"))
-        self.toolsHBox.pack_start(self.fileManagerButton, False, False, 0)
+        self.toolsGrid.attach(self.fileManagerButton, 1, 2, 0, 1)
         self.fileManagerButton.show()
        
         self.deviceButton=gtk.Button(_("Devices"))
-        self.toolsHBox.pack_start(self.deviceButton, False, False, 0)
+        self.toolsGrid.attach(self.deviceButton, 2, 3, 0, 1)
         self.deviceButton.show()
-        
+       
         self.screenButton=gtk.Button(_("Screen"))
-        self.toolsHBox.pack_start(self.screenButton, False, False, 0)
+        self.toolsGrid.attach(self.screenButton, 0, 1, 1, 2)
         self.screenButton.show()
         
         self.networkButton=gtk.Button(_("Network"))
-        self.toolsHBox.pack_start(self.networkButton, False, False, 0)
+        self.toolsGrid.attach(self.networkButton, 1, 2, 1, 2)
         self.networkButton.show()
+       
+        self.keyboardButton=gtk.Button(_("Keyboard"))
+        self.toolsGrid.attach(self.keyboardButton, 2, 3, 1, 2)
+        self.keyboardButton.show()
        
 
         # actions box
@@ -261,10 +263,23 @@ class SetupView(gtk.Window):
         self.mainBox.pack_start(self.actionsFrame, True, False, 2)
         self.actionsFrame.show()
 
-        self.actionsSpaceBox=gtk.HBox(False, 5)
-        self.actionsFrame.add(self.actionsSpaceBox)
+        self.actionsSpaceVBox=gtk.VBox(False, 10)
+        self.actionsFrame.add(self.actionsSpaceVBox)
+        self.actionsSpaceVBox.show()
+        
+        self.actionsSpaceBox=gtk.HBox(False, 10)
+        self.actionsSpaceVBox.pack_start(self.actionsSpaceBox, True, True, 5)
         self.actionsSpaceBox.show()
+        
+        self.actionsGrid=gtk.Table(1, 3, True)
+        self.actionsSpaceBox.pack_start(self.actionsGrid, True, True, 5)
+        self.actionsGrid.set_row_spacings(2)
+        self.actionsGrid.set_col_spacings(2)
+        self.actionsGrid.show()
 
+        
+
+        """
         self.actionsVBox=gtk.VBox(False, 5)
         self.actionsSpaceBox.pack_start(self.actionsVBox, False, False, 10)
         self.actionsVBox.show()
@@ -272,14 +287,19 @@ class SetupView(gtk.Window):
         self.actionsHBox=gtk.HBox(False, 0)
         self.actionsVBox.pack_start(self.actionsHBox, True, True, 10)
         self.actionsHBox.show()
+        """
 
         self.shutdownButton=gtk.Button(_("Shutdown PC"))
-        self.actionsHBox.pack_start(self.shutdownButton, False, False, 0)
+        self.actionsGrid.attach(self.shutdownButton, 0, 1, 0, 1)
         self.shutdownButton.show()
         
         self.restartButton=gtk.Button(_("Restart PC"))
-        self.actionsHBox.pack_start(self.restartButton, False, False, 0)
+        self.actionsGrid.attach(self.restartButton, 1, 2, 0, 1)
         self.restartButton.show()
+       
+        self.actionsDummy=gtk.Label()
+        self.actionsGrid.attach(self.actionsDummy, 2, 3, 0, 1)
+        self.actionsDummy.show()
        
 
         # button box
@@ -364,10 +384,11 @@ class SetupController(object):
         self._view.fileManagerButton.connect("clicked", self.runFileManager)
         self._view.shutdownButton.connect("clicked", self.runShutdown)
         self._view.restartButton.connect("clicked", self.runRestart)
+        self._view.keyboardButton.connect("clicked", self.runKeyboardSetup)
 
     def runTerminal(self, widget):
         try:
-            subprocess.Popen(['xtermXXX'])
+            subprocess.Popen(['xterm'])
         except OSError as error:
             message = "Could not open xterm program: %s" % error
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
@@ -412,6 +433,13 @@ class SetupController(object):
     def runDeviceManager(self, widget):
         DeviceManager(None, standalone=False)
         
+    def runKeyboardSetup(self, widget):
+        try:
+            subprocess.Popen(['sudo', 'dpkg-reconfigure', '-fgnome', 'keyboard-configuration'])
+        except OSError as error:
+            message = "Could not run keyboard setup: %s" % error
+            dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+
     def setEfaVersion(self, widget):
         self._model.setEfaVersion(widget.get_active() + 1)
 
@@ -440,6 +468,7 @@ class SetupController(object):
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
 if __name__ == '__main__':
+    logging.basicConfig(filename='efaLiveSetup.log',level=logging.DEBUG)
     controller = SetupController(sys.argv)
     gtk.main();
 
