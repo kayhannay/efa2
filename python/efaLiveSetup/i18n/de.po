@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-01 13:40+0100\n"
+"POT-Creation-Date: 2012-01-04 11:42+0100\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -17,6 +17,30 @@ msgstr ""
 "Content-Type: text/plain; charset=ISO-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: datetime.py:128
+msgid "Date & Time"
+msgstr "Datum & Zeit"
+
+#: datetime.py:151
+msgid "Time (h m s)"
+msgstr "Zeit (h m s)"
+
+#: datetime.py:173
+msgid "Network time protocol"
+msgstr "Netzwerk-Zeit-Protokoll"
+
+#: datetime.py:181
+msgid "Use network time protocol (NTP)"
+msgstr "Zeit über Internet synchronisieren (NTP)"
+
+#: datetime.py:189 maingui.py:319 screensetup.py:65
+msgid "Ok"
+msgstr "Ok"
+
+#: datetime.py:194 maingui.py:323 screensetup.py:75
+msgid "Cancel"
+msgstr "Abbrechen"
 
 #: devicemanager.py:93
 msgid "Create backup of efaLive on USB device"
@@ -99,123 +123,123 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: maingui.py:131
+#: maingui.py:132
 msgid "efaLive setup"
 msgstr "efaLive Setup"
 
-#: maingui.py:142
+#: maingui.py:143
 msgid "efaLive settings"
 msgstr "efaLive Einstellungen"
 
-#: maingui.py:155
+#: maingui.py:156
 msgid "efa version"
 msgstr "efa Version"
 
-#: maingui.py:167
+#: maingui.py:168
 msgid "Here you can choose the efa version that "
 msgstr "Hier kannst Du auswählen, welche Version von efa "
 
-#: maingui.py:168
+#: maingui.py:169
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
 
-#: maingui.py:169
+#: maingui.py:170
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
 
-#: maingui.py:170
+#: maingui.py:171
 msgid "choose efa 1."
 msgstr "eine stabile Version benötigst, wähle efa 1."
 
-#: maingui.py:179
+#: maingui.py:180
 msgid "version"
 msgstr "Version"
 
-#: maingui.py:196
+#: maingui.py:197
 msgid "efa shutdown action"
 msgstr "Aktion beim Beenden von efa"
 
-#: maingui.py:213
+#: maingui.py:214
 msgid "enable automatic USB backup"
 msgstr "Automatische Datensicherung auf USB einschalten"
 
-#: maingui.py:218
+#: maingui.py:219
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: maingui.py:236
+#: maingui.py:237
 msgid "Terminal"
 msgstr "Kommandozeile"
 
-#: maingui.py:240
+#: maingui.py:241
 msgid "File manager"
 msgstr "Dateimanager"
 
-#: maingui.py:244
+#: maingui.py:245
 msgid "Devices"
 msgstr "Speichermedien"
 
-#: maingui.py:248
+#: maingui.py:249
 msgid "Screen"
 msgstr "Bildschirm"
 
-#: maingui.py:252
+#: maingui.py:253
 msgid "Network"
 msgstr "Netzwerk"
 
-#: maingui.py:256
+#: maingui.py:257
 msgid "Keyboard"
 msgstr "Tastatur"
 
-#: maingui.py:262
+#: maingui.py:261
+msgid "Screensaver"
+msgstr "Bildschirmschoner"
+
+#: maingui.py:265
+msgid "Date & time"
+msgstr "Datum & Zeit"
+
+#: maingui.py:271
 msgid "Actions"
 msgstr "Aktionen"
 
-#: maingui.py:292
+#: maingui.py:301
 msgid "Shutdown PC"
 msgstr "PC herunterfahren"
 
-#: maingui.py:296
+#: maingui.py:305
 msgid "Restart PC"
 msgstr "PC neu starten"
 
-#: maingui.py:310 screensetup.py:76
-msgid "Ok"
-msgstr "Ok"
-
-#: maingui.py:314 screensetup.py:86
-msgid "Cancel"
-msgstr "Abbrechen"
-
-#: maingui.py:338
+#: maingui.py:347
 msgid "1 (stable)"
 msgstr "1 (Stabil)"
 
-#: maingui.py:339
+#: maingui.py:348
 msgid "2 (development)"
 msgstr "2 (Entwicklung)"
 
-#: maingui.py:341
+#: maingui.py:350
 msgid "shutdown pc"
 msgstr "PC herunterfahren"
 
-#: maingui.py:342
+#: maingui.py:351
 msgid "restart pc"
 msgstr "PC neu starten"
 
-#: maingui.py:343
+#: maingui.py:352
 msgid "restart efa"
 msgstr "efa neu starten"
 
-#: maingui.py:411
+#: maingui.py:422
 msgid "Really shut down PC ?"
 msgstr "PC wirklich herunterfahren ?"
 
-#: maingui.py:421
+#: maingui.py:432
 msgid "Really reboot PC ?"
 msgstr "PC wirklich neu starten ?"
 
-#: maingui.py:465
+#: maingui.py:486
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -223,23 +247,19 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:466
+#: maingui.py:487
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:467
+#: maingui.py:488
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 
-#: screensetup.py:47
+#: screensetup.py:45
 msgid "Screen setup"
 msgstr "Bildschirm-Setup"
 
-#: screensetup.py:62
-msgid "Screensaver"
-msgstr "Bildschirmschoner"
-
-#: screensetup.py:81
+#: screensetup.py:70
 msgid "Apply"
 msgstr "Anwenden"
 

@@ -46,42 +46,80 @@ class DateTimeModel(object):
         self.day = Observable()
         self.month = Observable()
         self.year = Observable()
+        self.ntp = Observable()
 
     def initModel(self):
         localtime = time.localtime(time.time())
-        print localtime
         self.hour.updateData(localtime[3])
         self.minute.updateData(localtime[4])
         self.second.updateData(localtime[5])
         self.day.updateData(localtime[2])
         self.month.updateData(localtime[1])
         self.year.updateData(localtime[0])
+        self.ntp.updateData(self._check_ntp())
 
-    def setHour(self, hour):
+    def _check_ntp(self):
+        try:
+            ntp_output = self._command_output(["grep", "-l", "ntp", "/etc/init.d/.depend.start"])
+        except OSError as (errno, strerror):
+            self._logger.error("Could not execute mount command to check ntp status: %s" % strerror)
+            raise
+        print ntp_output
+        if ntp_output == None or ntp_output == "":
+            return False
+        else:
+            return True
+
+    def _command_output(self, args, **kwds):
+        kwds.setdefault("stdout", subprocess.PIPE)
+        kwds.setdefault("stderr", subprocess.STDOUT)
+        process = subprocess.Popen(args, **kwds)
+        output = process.communicate()[0]
+        return output
+
+    def set_hour(self, hour):
         self.hour.updateData(hour)
 
-    def setMinute(self, minute):
+    def set_minute(self, minute):
         self.minute.updateData(minute)
 
-    def setSecond(self, second):
+    def set_second(self, second):
         self.second.updateData(second)
 
-    def setDay(self, day):
+    def set_day(self, day):
         self.day.updateData(day)
 
-    def setMonth(self, month):
+    def set_month(self, month):
         self.month.updateData(month)
 
-    def setYear(self, year):
+    def set_year(self, year):
         self.year.updateData(year)
 
+    def set_ntp(self, enable):
+        self.ntp.updateData(enable)
+
     def save(self):
-        print self.year._data
-        print self.month._data
-        print self.day._data
-        print self.hour._data
-        print self.minute._data
-        print self.second._data
+        if self.ntp.getData() == True:
+            print "Enable NTP"
+            try:
+                subprocess.Popen(['sudo', 'insserv', '-d', 'ntp'])
+            except OSError as error:
+                message = "Could not enable NTP service: %s" % error
+                dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+        else:
+            date = "%02d%02d%02d%02d%04d.%02d" % (self.month.getData(), self.day.getData(), self.hour.getData(), self.minute.getData(), self.year.getData(), self.second.getData())
+            print date
+            try:
+                subprocess.Popen(['sudo', 'insserv', '-r', 'ntp'])
+            except OSError as error:
+                message = "Could not disable NTP service: %s" % error
+                dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+            try:
+                subprocess.Popen(['sudo', 'date', date])
+            except OSError as error:
+                message = "Could not set time: %s" % error
+                dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+
 
 class DateTimeView(gtk.Window):
     def __init__(self, type, controller=None):
@@ -132,8 +170,12 @@ class DateTimeView(gtk.Window):
         time_box.pack_end(self.hour_button, False, False)
         self.hour_button.show()
 
+        ntp_frame=gtk.Frame(_("Network time protocol"))
+        main_box.pack_start(ntp_frame, False, False, 2)
+        ntp_frame.show()
+
         ntp_box = gtk.HBox(False, 2)
-        main_box.pack_start(ntp_box, False, False)
+        ntp_frame.add(ntp_box)
         ntp_box.show()
 
         self.ntp_checkbox = gtk.CheckButton(_("Use network time protocol (NTP)"))
@@ -174,6 +216,7 @@ class DateTimeController(object):
         self._model.day.registerObserverCb(self.day_changed)
         self._model.month.registerObserverCb(self.month_changed)
         self._model.year.registerObserverCb(self.year_changed)
+        self._model.ntp.registerObserverCb(self.ntp_changed)
         self.init_events(standalone)
         self._model.initModel()
         self._view.show()
@@ -185,28 +228,27 @@ class DateTimeController(object):
 
     def save(self, widget):
         date = self._view.calendar.get_date()
-        self._model.day.updateData(date[2])
-        self._model.month.updateData(date[1] + 1)
-        self._model.year.updateData(date[0])
-        self._model.hour.updateData(self._view.hour_button.get_value())
-        self._model.minute.updateData(self._view.minute_button.get_value())
-        self._model.second.updateData(self._view.second_button.get_value())
+        self._model.set_day(date[2])
+        self._model.set_month(date[1] + 1)
+        self._model.set_year(date[0])
+        self._model.set_hour(self._view.hour_button.get_value())
+        self._model.set_minute(self._view.minute_button.get_value())
+        self._model.set_second(self._view.second_button.get_value())
+        self._model.set_ntp(self._view.ntp_checkbox.get_active())
         self._model.save()
+        self._view.destroy()
 
     def cancel(self, widget):
         self._view.destroy()
 
     def ntp_toggled(self, widget):
         active = widget.get_active()
-        print active
-        if active == True:
-            self._view.calendar.set_sensitive(False)
-            self._view.hour_button.set_sensitive(False)
-            self._view.minute_button.set_sensitive(False)
-            self._view.second_button.set_sensitive(False)
-            self._view.time_label.set_sensitive(False)
-        else:
-            self._view.calendar.set_sensitive(True)
+        self._view.calendar.set_sensitive(not active)
+        self._view.hour_button.set_sensitive(not active)
+        self._view.minute_button.set_sensitive(not active)
+        self._view.second_button.set_sensitive(not active)
+        self._view.time_label.set_sensitive(not active)
+        
 
     def hour_changed(self, hour):
         self._view.hour_button.set_value(hour)
@@ -225,6 +267,9 @@ class DateTimeController(object):
 
     def year_changed(self, year):
         self._view.calendar.select_month(self._view.calendar.get_date()[1], year)
+
+    def ntp_changed(self, enable):
+        self._view.ntp_checkbox.set_active(enable)
 
     def runScreensaverConfig(self, widget):
         try:
