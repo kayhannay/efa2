@@ -100,7 +100,7 @@ class DateTimeModel(object):
 
     def save(self):
         if self.ntp.getData() == True:
-            print "Enable NTP"
+            self._logger.debug("Enable NTP")
             try:
                 subprocess.Popen(['sudo', 'insserv', '-d', 'ntp'])
             except OSError as error:
@@ -108,7 +108,7 @@ class DateTimeModel(object):
                 dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
         else:
             date = "%02d%02d%02d%02d%04d.%02d" % (self.month.getData(), self.day.getData(), self.hour.getData(), self.minute.getData(), self.year.getData(), self.second.getData())
-            print date
+            self._logger.debug(date)
             try:
                 subprocess.Popen(['sudo', 'insserv', '-r', 'ntp'])
             except OSError as error:
