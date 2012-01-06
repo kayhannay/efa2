@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 11:42+0100\n"
+"POT-Creation-Date: 2012-01-06 15:53+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,75 +41,71 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: devicemanager.py:93
+#: devicemanager.py:95
+msgid "Restore backup of efaLive from this device"
+msgstr ""
+
+#: devicemanager.py:102
 msgid "Create backup of efaLive on USB device"
 msgstr ""
 
-#: devicemanager.py:240
+#: devicemanager.py:259
 msgid "Device Manager"
 msgstr ""
 
-#: devicemanager.py:251
+#: devicemanager.py:270
 msgid "USB storage devices"
 msgstr ""
 
-#: devicemanager.py:283
+#: devicemanager.py:274
+msgid "no devices found"
+msgstr ""
+
+#: devicemanager.py:310
 msgid "Unmount USB device"
 msgstr ""
 
-#: devicemanager.py:285 devicemanager.py:296
+#: devicemanager.py:311 devicemanager.py:323
 #, python-format
 msgid "Vendor: %s"
 msgstr ""
 
-#: devicemanager.py:286 devicemanager.py:297
+#: devicemanager.py:312 devicemanager.py:324
 #, python-format
 msgid "Model: %s"
 msgstr ""
 
-#: devicemanager.py:287 devicemanager.py:298
+#: devicemanager.py:313 devicemanager.py:325
 #, python-format
 msgid "Device: %s"
 msgstr ""
 
-#: devicemanager.py:288 devicemanager.py:299
+#: devicemanager.py:314 devicemanager.py:326
 #, python-format
 msgid "Size: %s"
 msgstr ""
 
-#: devicemanager.py:289 devicemanager.py:300
+#: devicemanager.py:315 devicemanager.py:327
 #, python-format
 msgid "Filesystem: %s"
 msgstr ""
 
-#: devicemanager.py:290
+#: devicemanager.py:316 devicemanager.py:328
+#, python-format
+msgid "USB-Id: %s"
+msgstr ""
+
+#: devicemanager.py:317
 #, python-format
 msgid "Mouned to: %s"
 msgstr ""
 
-#: devicemanager.py:294
+#: devicemanager.py:322
 msgid "Mount USB device"
 msgstr ""
 
-#: devicemanager.py:336
-#, python-format
-msgid ""
-"Could not mount device:\n"
-"%s"
-msgstr ""
-
-#: devicemanager.py:346
-#, python-format
-msgid ""
-"Could not unmount device:\n"
-"%s"
-msgstr ""
-
-#: devicemanager.py:355
-#, python-format
-msgid ""
-"Could not create backup:\n"
-"%s"
+#: devicemanager.py:392
+msgid "Select backup"
 msgstr ""
 
 #: dialogs.py:31

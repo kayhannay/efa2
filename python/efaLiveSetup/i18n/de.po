@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 11:42+0100\n"
+"POT-Creation-Date: 2012-01-06 15:53+0100\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -42,86 +42,76 @@ msgstr "Ok"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: devicemanager.py:93
-msgid "Create backup of efaLive on USB device"
-msgstr "Sichern von efaLive auf einem USB-Speichermedium"
+#: devicemanager.py:95
+msgid "Restore backup of efaLive from this device"
+msgstr "Wiederherstellen der efaLive Einstellungen von diesem Gerät"
 
-#: devicemanager.py:240
+#: devicemanager.py:102
+msgid "Create backup of efaLive on USB device"
+msgstr "efaLive Datensicherung erstellen"
+
+#: devicemanager.py:259
 msgid "Device Manager"
 msgstr "Speichermedien"
 
-#: devicemanager.py:251
+#: devicemanager.py:270
 msgid "USB storage devices"
 msgstr "USB Speichermedien"
 
-#: devicemanager.py:283
+#: devicemanager.py:274
+msgid "no devices found"
+msgstr "Kein Gerät gefunden"
+
+#: devicemanager.py:310
 msgid "Unmount USB device"
 msgstr "USB Gerät aushängen"
 
-#: devicemanager.py:285 devicemanager.py:296
+#: devicemanager.py:311 devicemanager.py:323
 #, python-format
 msgid "Vendor: %s"
 msgstr "Hersteller: %s"
 
-#: devicemanager.py:286 devicemanager.py:297
+#: devicemanager.py:312 devicemanager.py:324
 #, python-format
 msgid "Model: %s"
 msgstr "Modell: %s"
 
-#: devicemanager.py:287 devicemanager.py:298
+#: devicemanager.py:313 devicemanager.py:325
 #, python-format
 msgid "Device: %s"
 msgstr "Gerät: %s"
 
-#: devicemanager.py:288 devicemanager.py:299
+#: devicemanager.py:314 devicemanager.py:326
 #, python-format
 msgid "Size: %s"
 msgstr "Größe: %s"
 
-#: devicemanager.py:289 devicemanager.py:300
+#: devicemanager.py:315 devicemanager.py:327
 #, python-format
 msgid "Filesystem: %s"
 msgstr "Dateisystem: %s"
 
-#: devicemanager.py:290
+#: devicemanager.py:316 devicemanager.py:328
+#, python-format
+msgid "USB-Id: %s"
+msgstr "USB-Id: %s"
+
+#: devicemanager.py:317
 #, python-format
 msgid "Mouned to: %s"
 msgstr "Einhängepunkt: %s"
 
-#: devicemanager.py:294
+#: devicemanager.py:322
 msgid "Mount USB device"
 msgstr "USB Gerät einhängen"
 
-#: devicemanager.py:336
-#, python-format
-msgid ""
-"Could not mount device:\n"
-"%s"
-msgstr ""
-"Konnte Gerät nicht einhängen:\n"
-"%s"
-
-#: devicemanager.py:346
-#, python-format
-msgid ""
-"Could not unmount device:\n"
-"%s"
-msgstr ""
-"Konnte Gerät nicht aushängen:\n"
-"%s"
-
-#: devicemanager.py:355
-#, python-format
-msgid ""
-"Could not create backup:\n"
-"%s"
-msgstr ""
-"Konnte keine Datensicherung erstellen:\n"
-"%s"
+#: devicemanager.py:392
+msgid "Select backup"
+msgstr "Sicherungsdatei auswählen"
 
 #: dialogs.py:31
 msgid "Details"
-msgstr ""
+msgstr "Details"
 
 #: maingui.py:132
 msgid "efaLive setup"
@@ -263,8 +253,26 @@ msgstr "Bildschirm-Setup"
 msgid "Apply"
 msgstr "Anwenden"
 
-#~ msgid "no devices found"
-#~ msgstr "Kein Gerät gefunden"
+#~ msgid ""
+#~ "Could not mount device:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Konnte Gerät nicht einhängen:\n"
+#~ "%s"
+
+#~ msgid ""
+#~ "Could not unmount device:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Konnte Gerät nicht aushängen:\n"
+#~ "%s"
+
+#~ msgid ""
+#~ "Could not create backup:\n"
+#~ "%s"
+#~ msgstr ""
+#~ "Konnte keine Datensicherung erstellen:\n"
+#~ "%s"
 
 #~ msgid "Backup"
 #~ msgstr "Datensicherung"

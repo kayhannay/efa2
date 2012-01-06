@@ -27,8 +27,10 @@ import os
 import sys
 import subprocess
 import re
+import traceback
 
 from observable import Observable
+import dialogs
 
 import locale
 import gettext
@@ -41,18 +43,18 @@ import logging
 
 def print_device(device):
     print "Device:"
-    #print "\tSubsystem: %s" % device.get_subsystem()
-    #print "\tType: %s" % device.get_devtype()
-    #print "\tName: %s" % device.get_name()
-    #print "\tNumber: %s" % device.get_number()
-    #print "\tSYS-fs path: %s" % device.get_sysfs_path()
-    #print "\tDriver: %s" % device.get_driver()
-    #print "\tAction: %s" % device.get_action()
+    print "\tSubsystem: %s" % device.get_subsystem()
+    print "\tType: %s" % device.get_devtype()
+    print "\tName: %s" % device.get_name()
+    print "\tNumber: %s" % device.get_number()
+    print "\tSYS-fs path: %s" % device.get_sysfs_path()
+    print "\tDriver: %s" % device.get_driver()
+    print "\tAction: %s" % device.get_action()
     print "\tFile: %s" % device.get_device_file()
     #print "\tLinks: %s" % device.get_device_file_symlinks()
     #print "\tProperties: %s" % device.get_property_keys()
     #print "\tSYBSYSTEM: %s" % device.get_property("SUBSYSTEM")
-    #print "\tDEVTYPE: %s" % device.get_property("DEVTYPE")
+    print "\tDEVTYPE: %s" % device.get_property("DEVTYPE")
     print "\tID_VENDOR: %s" % device.get_property("ID_VENDOR")
     print "\tID_MODEL: %s" % device.get_property("ID_MODEL")
     #print "\tID_TYPE: %s" % device.get_property("ID_TYPE")
@@ -87,6 +89,13 @@ class DeviceWidget(gtk.VBox):
         hBox.pack_start(self.label, True, True)
         self.label.show()
 
+        self.restore_button = gtk.Button()
+        restore_icon = gtk.image_new_from_file(get_icon_path("restore.png"))
+        self.restore_button.set_image(restore_icon)
+        self.restore_button.set_tooltip_text(_("Restore backup of efaLive from this device"))
+        hBox.pack_end(self.restore_button, False, False)
+        self.restore_button.show()
+
         self.backup_button = gtk.Button()
         backup_icon = gtk.image_new_from_file(get_icon_path("backup.png"))
         self.backup_button.set_image(backup_icon)
@@ -100,7 +109,7 @@ class DeviceWidget(gtk.VBox):
         
 
 class Device(object):
-    def __init__(self, device_file, vendor=None, model=None, size=0, fs_type=None, label=None, mounted=False):
+    def __init__(self, device_file, vendor=None, model=None, size=0, fs_type=None, label=None, mounted=False, bus_id=None):
         self.device_file = device_file
         self.vendor = vendor
         self.model = model
@@ -108,6 +117,7 @@ class Device(object):
         self.fs_type = fs_type
         self.label = label
         self.mounted = mounted
+        self.bus_id = bus_id
 
 class DeviceManagerModel(object):
     def __init__(self):
@@ -172,10 +182,12 @@ class DeviceManagerModel(object):
             wrapped_device.fs_type = device.get_property("ID_FS_TYPE")
         if device.has_property("ID_FS_LABEL"):
             wrapped_device.label = device.get_property("ID_FS_LABEL")
-        wrapped_device.mounted = self._check_mounted(wrapped_device)
+        if device.has_property("ID_VENDOR_ID") and device.has_property("ID_MODEL_ID"):
+            wrapped_device.bus_id = "%s:%s" % (device.get_property("ID_VENDOR_ID"), device.get_property("ID_MODEL_ID"))
+        wrapped_device.mounted = self.check_mounted(wrapped_device)
         return wrapped_device
 
-    def _check_mounted(self, device):
+    def check_mounted(self, device):
         try:
             mount_output = self._command_output(["mount"])
         except OSError as (errno, strerror):
@@ -200,10 +212,10 @@ class DeviceManagerModel(object):
                 continue
             if (device.get_property("ID_BUS") != "usb"):
                 continue
-            #print_device(device)
             self._handle_device_event(self.client, "add", device)
 
     def _handle_device_event(self, client, action, device):
+        #print_device(device)
         if (device.get_devtype() != "partition"):
             return
         if (device.get_property("ID_BUS") != "usb"):
@@ -218,19 +230,26 @@ class DeviceManagerModel(object):
         else:
             self._logger.warn("Unknown action: %s" % action)
 
+    def get_label(self, device):
+        label_text = "Unknown"
+        if device.label:
+            label_text = device.label
+        elif device.model:
+            label_text = device.model
+        return label_text
+
     def toggle_mount(self, device, mount):
         if mount:
-            label_text = "Unknown"
-            if device.label:
-                label_text = device.label
-            elif device.model:
-                label_text = device.model
+            label_text = self.get_label(device)
             self._command_output(["pmount", device.device_file, label_text])
         else:
             self._command_output(["pumount", device.device_file])
 
-    def create_backup(self, device):
-        self._command_output(["/opt/efalive/bin/autobackup.sh", device.device_file])
+    def create_backup(self, path):
+        self._command_output(["/opt/efalive/bin/run_backup.sh", path])
+
+    def restore_backup(self, file):
+        self._command_output(["/opt/efalive/bin/run_restore.sh", file])
 
 
 class DeviceManagerView(gtk.Window):
@@ -251,12 +270,17 @@ class DeviceManagerView(gtk.Window):
         self.info_label = gtk.Label(_("USB storage devices"))
         self.main_box.add(self.info_label)
         self.info_label.show()
+        
+        self.no_device_label = gtk.Label(_("no devices found"))
+        self.main_box.add(self.no_device_label)
+        self.no_device_label.show()
 
         self._device_entries = {}
 
     def add_device(self, device):
         device_entry = self.create_device_entry(device)
         self.main_box.add(device_entry)
+        self.no_device_label.hide()
         device_entry.show()
         self._device_entries[device.device_file] = device_entry
 
@@ -264,7 +288,8 @@ class DeviceManagerView(gtk.Window):
         device_entry = self._device_entries[device.device_file]
         del self._device_entries[device.device_file]
         device_entry.destroy()
-        #TODO Does not work correctly yet
+        if len(self._device_entries) == 0:
+    		self.no_device_label.show()
         self.queue_resize()
 
     def create_device_entry(self, device):
@@ -273,6 +298,7 @@ class DeviceManagerView(gtk.Window):
 
         device_entry.mount_button.connect("toggled", self._controller.toggle_mount, device_entry)
         device_entry.backup_button.connect("clicked", self._controller.create_backup, device)
+        device_entry.restore_button.connect("clicked", self._controller.restore_backup, device)
         
         return device_entry
 
@@ -280,24 +306,26 @@ class DeviceManagerView(gtk.Window):
         if device_entry.device.mounted:
             unmount_icon = gtk.image_new_from_file(get_icon_path("unmount.png"))
             device_entry.mount_button.set_image(unmount_icon)
+            device_entry.mount_button.set_active(True)
             device_entry.mount_button.set_tooltip_text(_("Unmount USB device"))
-            device_entry.backup_button.set_sensitive(False)
             device_entry.label.set_tooltip_text(_("Vendor: %s") % device_entry.device.vendor + "\n" +
                 _("Model: %s") % device_entry.device.model + "\n" +
                 _("Device: %s") % device_entry.device.device_file + "\n" +
                 _("Size: %s") % device_entry.device.size + "\n" +
                 _("Filesystem: %s") % device_entry.device.fs_type + "\n" +
+                _("USB-Id: %s") % device_entry.device.bus_id + "\n" +
                 _("Mouned to: %s") % "/media/" + device_entry.label.get_text())
         else:
             mount_icon = gtk.image_new_from_file(get_icon_path("mount.png"))
             device_entry.mount_button.set_image(mount_icon)
+            device_entry.mount_button.set_active(False)
             device_entry.mount_button.set_tooltip_text(_("Mount USB device"))
-            device_entry.backup_button.set_sensitive(True)
             device_entry.label.set_tooltip_text(_("Vendor: %s") % device_entry.device.vendor + "\n" +
                 _("Model: %s") % device_entry.device.model + "\n" +
                 _("Device: %s") % device_entry.device.device_file + "\n" +
                 _("Size: %s") % device_entry.device.size + "\n" +
-                _("Filesystem: %s") % device_entry.device.fs_type)
+                _("Filesystem: %s") % device_entry.device.fs_type + "\n" +
+                _("USB-Id: %s") % device_entry.device.bus_id)
 
 
 class DeviceManagerController(object):
@@ -331,30 +359,53 @@ class DeviceManagerController(object):
                 self._model.toggle_mount(device_entry.device, True)
                 device_entry.device.mounted = True
                 self._view.set_device_mounted(device_entry)
-            except OSError as (errno, errstr):
-                self._logger.error("Could not mount device: %s" % errstr)
-                error_dialog = gtk.MessageDialog(self._view, gtk.DIALOG_MODAL, gtk.MESSAGE_ERROR, gtk.BUTTONS_CLOSE, _("Could not mount device:\n%s") % errstr)
-                error_dialog.run()
-                error_dialog.destroy()
+            except OSError as error:
+                message = "Could not mount device: %s" % error
+                dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
         else:
             try:
                 self._model.toggle_mount(device_entry.device, False)
                 device_entry.device.mounted = False
                 self._view.set_device_mounted(device_entry)
-            except OSError as (errno, errstr):
-                self._logger.error("Could not unmount device: %s" % errstr)
-                error_dialog = gtk.MessageDialog(self._view, gtk.DIALOG_MODAL, gtk.MESSAGE_ERROR, gtk.BUTTONS_CLOSE, _("Could not unmount device:\n%s") % errstr)
-                error_dialog.run()
-                error_dialog.destroy()
+            except OSError as error:
+                message = "Could not mount device: %s" % error
+                dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def create_backup(self, widget, device):
         try:
-            self._model.create_backup(device)
-        except OSError as (errno, errstr):
-            self._logger.error("Could not create backup: %s" % errstr)
-            error_dialog = gtk.MessageDialog(self._view, gtk.DIALOG_MODAL, gtk.MESSAGE_ERROR, gtk.BUTTONS_CLOSE, _("Could not create backup:\n%s") % errstr)
-            error_dialog.run()
-            error_dialog.destroy()
+            was_mounted = self._model.check_mounted(device)
+            if not was_mounted:
+                self._model.toggle_mount(device, True)
+            path = os.path.join("/media", self._model.get_label(device))
+            self._model.create_backup(path)
+            if not was_mounted:
+                self._model.toggle_mount(device, False)
+        except OSError as error:
+            message = "Could not create backup: %s" % error
+            dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+
+    def restore_backup(self, widget, device):
+        try:
+            was_mounted = self._model.check_mounted(device)
+            if not was_mounted:
+                self._model.toggle_mount(device, True)
+            file_chooser = gtk.FileChooserDialog(_("Select backup"), 
+                                                 self._view, 
+                                                 gtk.FILE_CHOOSER_ACTION_OPEN, 
+                                                 (gtk.STOCK_CANCEL, gtk.RESPONSE_CANCEL, gtk.STOCK_OPEN, gtk.RESPONSE_OK))
+            path = os.path.join("/media", self._model.get_label(device))
+            file_chooser.set_current_folder(path)
+            result = file_chooser.run()
+            if result == gtk.RESPONSE_OK:
+                filename = file_chooser.get_filename()
+                self._model.restore_backup(filename)
+            if not was_mounted:
+                self._model.toggle_mount(device, False)
+        except OSError as error:
+            message = "Could not restore backup: %s" % error
+            dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+        finally:
+            file_chooser.destroy()
 
     def on_device_add(self, device):
         self._view.add_device(device)
