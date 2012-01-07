@@ -92,14 +92,14 @@ class DeviceWidget(gtk.VBox):
         self.restore_button = gtk.Button()
         restore_icon = gtk.image_new_from_file(get_icon_path("restore.png"))
         self.restore_button.set_image(restore_icon)
-        self.restore_button.set_tooltip_text(_("Restore backup of efaLive from this device"))
+        self.restore_button.set_tooltip_text(_("Restore backup from device"))
         hBox.pack_end(self.restore_button, False, False)
         self.restore_button.show()
 
         self.backup_button = gtk.Button()
         backup_icon = gtk.image_new_from_file(get_icon_path("backup.png"))
         self.backup_button.set_image(backup_icon)
-        self.backup_button.set_tooltip_text(_("Create backup of efaLive on USB device"))
+        self.backup_button.set_tooltip_text(_("Create backup on device"))
         hBox.pack_end(self.backup_button, False, False)
         self.backup_button.show()
 

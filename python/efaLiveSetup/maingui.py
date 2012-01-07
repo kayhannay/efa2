@@ -53,6 +53,8 @@ class SetupModel(object):
         self.efaShutdownAction=Observable()
         self.autoUsbBackup=Observable()
         self.efaBackupPaths=None
+        self.efaLiveBackupPaths="/home/efa/.efalive"
+        self.efaPort=Observable(3834)
 
     def initModel(self):
         self.efaVersion.updateData(1)
@@ -68,10 +70,10 @@ class SetupModel(object):
             os.makedirs(path, 0755)
 
     def parseSettingsFile(self, file):
+        versionStr=None
         for line in file:
             if line.startswith("EFA_VERSION="):
                 versionStr=line[(line.index('=') + 1):]
-                self.setEfaVersion(int(versionStr))
                 self._logger.debug("Parsed version: " + versionStr)
             elif line.startswith("EFA_SHUTDOWN_ACTION="):
                 actionStr=line[(line.index('=') + 1):].rstrip()
@@ -84,21 +86,35 @@ class SetupModel(object):
                 else:
                     self.enableAutoUsbBackup(False)
                 self._logger.debug("Parsed auto USB backup setting: " + enableStr)
+            elif line.startswith("EFA_BACKUP_PATHS="):
+                backupStr=line[(line.index('=') + 1):].rstrip()
+                self.efaBackupPaths = backupStr
+                self._logger.debug("Parsed efa backup paths: " + backupStr)
+            elif line.startswith("EFALIVE_BACKUP_PATHS="):
+                backupStr=line[(line.index('=') + 1):].rstrip()
+                self.efaLiveBackupPaths = backupStr
+                self._logger.debug("Parsed efaLive backup paths: " + backupStr)
+            elif line.startswith("EFA_PORT="):
+                portStr=line[(line.index('=') + 1):].rstrip()
+                self.setEfaPort(int(portStr))
+                self._logger.debug("Parsed efa port: " + portStr)
+        if versionStr != None:
+            self.setEfaVersion(int(versionStr))
 
     def save(self):
-        self._logger.debug("Saving files: %s, %s" % (self._settingsFileName, self._backupFileName))
+        self._logger.debug("Saving file: %s" % (self._settingsFileName))
         try:
             settingsFile=open(self._settingsFileName, "w")
-            settingsFile.write("EFA_VERSION=%d\n" % self.efaVersion._data)
-            settingsFile.write("EFA_SHUTDOWN_ACTION=%s\n" % self.efaShutdownAction._data)
+            settingsFile.write("EFA_VERSION=%d\n" % self.efaVersion.getData())
+            settingsFile.write("EFA_SHUTDOWN_ACTION=%s\n" % self.efaShutdownAction.getData())
             if self.autoUsbBackup._data == True:
                 settingsFile.write("AUTO_USB_BACKUP=\"TRUE\"\n")
             else:
                 settingsFile.write("AUTO_USB_BACKUP=\"FALSE\"\n")
+            settingsFile.write("EFA_BACKUP_PATHS=\"%s\"\n" % self.efaBackupPaths)
+            settingsFile.write("EFALIVE_BACKUP_PATHS=\"%s\"\n" % self.efaLiveBackupPaths)
+            settingsFile.write("EFA_PORT=%d\n" % self.efaPort.getData())
             settingsFile.close()
-            backupFile=open(self._backupFileName, "w")
-            backupFile.write("EFA_BACKUP_PATHS=\"%s\"\n" % self.efaBackupPaths)
-            backupFile.close()
         except IOError, exception:
             self._logger.error("Could not save files: %s" % exception)
             raise Exception("Could not save files")
@@ -123,6 +139,10 @@ class SetupModel(object):
 
     def getConfigPath(self):
         return self._confPath
+
+    def setEfaPort(self, port):
+        self.efaPort.updateData(port)
+        self._logger.debug("efa port: %d" % port)
 
 
 class SetupView(gtk.Window):
@@ -185,6 +205,25 @@ class SetupView(gtk.Window):
         self.versionHBox.pack_start(self.versionCombo, True, True, 2)
         self.versionCombo.show()
 
+        # efa port field
+        self.portVBox=gtk.VBox(False, 5)
+        self.settingsVBox.pack_start(self.portVBox, True, True, 2)
+        self.portVBox.show()
+
+        self.portHBox=gtk.HBox(False, 5)
+        self.portVBox.pack_start(self.portHBox, True, True, 2)
+        self.portHBox.show()
+
+        self.portLabel=gtk.Label(_("efa port"))
+        self.portHBox.pack_start(self.portLabel, False, False, 10)
+        self.portLabel.show()
+
+        port_adjustment = gtk.Adjustment(0, 0, 65565, 1, 1000)
+        self.port_button = gtk.SpinButton(port_adjustment)
+        self.port_button.set_wrap(True)
+        self.portHBox.pack_end(self.port_button, False, False, 2)
+        self.port_button.show()
+
         # shutdown box
         self.shutdownVBox=gtk.VBox(False, 5)
         self.settingsVBox.pack_start(self.shutdownVBox, True, True, 2)
@@ -195,11 +234,11 @@ class SetupView(gtk.Window):
         self.shutdownHBox.show()
 
         self.shutdownLabel=gtk.Label(_("efa shutdown action"))
-        self.shutdownHBox.pack_start(self.shutdownLabel, True, True, 2)
+        self.shutdownHBox.pack_start(self.shutdownLabel, False, False, 10)
         self.shutdownLabel.show()
 
         self.shutdownCombo=gtk.combo_box_new_text()
-        self.shutdownHBox.pack_start(self.shutdownCombo, True, True, 2)
+        self.shutdownHBox.pack_end(self.shutdownCombo, False, False, 2)
         self.shutdownCombo.show()
 
         # automatic usb backup box
@@ -354,15 +393,15 @@ class SetupController(object):
         self._model.efaVersion.registerObserverCb(self.efaVersionChanged)
         self._model.efaShutdownAction.registerObserverCb(self.efaShutdownActionChanged)
         self._model.autoUsbBackup.registerObserverCb(self.autoUsbBackupChanged)
+        self._model.efaPort.registerObserverCb(self.efaPortChanged)
         self._model.initModel()
 
     def efaVersionChanged(self, version):
-        index=0
         if(version==1):
-            index=0
+            self._view.portHBox.set_sensitive(False)
         elif(version==2):
-            index=1
-        self._view.versionCombo.set_active(index)
+            self._view.portHBox.set_sensitive(True)
+        self._view.versionCombo.set_active(version - 1)
 
     def efaShutdownActionChanged(self, action):
         index=0
@@ -376,6 +415,9 @@ class SetupController(object):
 
     def autoUsbBackupChanged(self, enable):
         self._view.autoUsbBackupCbox.set_active(enable)
+
+    def efaPortChanged(self, port):
+        self._view.port_button.set_value(port)
 
     def destroy(self, widget):
         gtk.main_quit()
@@ -477,6 +519,9 @@ class SetupController(object):
 
     def setAutoUsbBackup(self, widget):
         self._model.enableAutoUsbBackup(widget.get_active())
+
+    def setEfaPort(self, widget):
+        self._model.setEfaPort(widget.get_value())
 
     def save(self, widget):
         try:
