@@ -54,11 +54,13 @@ class SetupModel(object):
         self.autoUsbBackup=Observable()
         self.efaBackupPaths=None
         self.efaLiveBackupPaths="/home/efa/.efalive"
-        self.efaPort=Observable(3834)
+        self.efaPort=Observable()
+        self.efaCredentialsFile="~/.efalive/.efacred"
 
     def initModel(self):
         self.efaVersion.updateData(1)
         self.efaShutdownAction.updateData("sudo /sbin/shutdown -h now")
+        self.efaPort.updateData(3834)
         if os.path.isfile(self._settingsFileName):
             self.settingsFile=open(self._settingsFileName, "r")
             self.parseSettingsFile(self.settingsFile)
@@ -88,16 +90,20 @@ class SetupModel(object):
                 self._logger.debug("Parsed auto USB backup setting: " + enableStr)
             elif line.startswith("EFA_BACKUP_PATHS="):
                 backupStr=line[(line.index('=') + 1):].rstrip()
-                self.efaBackupPaths = backupStr
+                self.efaBackupPaths = backupStr.replace("\"", "")
                 self._logger.debug("Parsed efa backup paths: " + backupStr)
             elif line.startswith("EFALIVE_BACKUP_PATHS="):
                 backupStr=line[(line.index('=') + 1):].rstrip()
-                self.efaLiveBackupPaths = backupStr
+                self.efaLiveBackupPaths = backupStr.replace("\"", "")
                 self._logger.debug("Parsed efaLive backup paths: " + backupStr)
             elif line.startswith("EFA_PORT="):
                 portStr=line[(line.index('=') + 1):].rstrip()
                 self.setEfaPort(int(portStr))
                 self._logger.debug("Parsed efa port: " + portStr)
+            elif line.startswith("EFA_CREDENTIALS_FILE="):
+                credStr=line[(line.index('=') + 1):].rstrip()
+                self.efaCredentialsFile = credStr.replace("\"", "")
+                self._logger.debug("Parsed efa credentials file setting: " + credStr)
         if versionStr != None:
             self.setEfaVersion(int(versionStr))
 
@@ -114,6 +120,7 @@ class SetupModel(object):
             settingsFile.write("EFA_BACKUP_PATHS=\"%s\"\n" % self.efaBackupPaths)
             settingsFile.write("EFALIVE_BACKUP_PATHS=\"%s\"\n" % self.efaLiveBackupPaths)
             settingsFile.write("EFA_PORT=%d\n" % self.efaPort.getData())
+            settingsFile.write("EFA_CREDENTIALS_FILE=\"%s\"\n" % self.efaCredentialsFile)
             settingsFile.close()
         except IOError, exception:
             self._logger.error("Could not save files: %s" % exception)
