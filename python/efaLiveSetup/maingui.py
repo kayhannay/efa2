@@ -1,7 +1,7 @@
 '''
 Created on 26.08.2010
 
-Copyright (C) 2010-2011 Kay Hannay
+Copyright (C) 2010-2012 Kay Hannay
 
 This file is part of efaLiveSetup.
 
@@ -30,6 +30,7 @@ from observable import Observable
 from devicemanager import DeviceManagerController as DeviceManager
 from screensetup import ScreenSetupController as ScreenSetup
 from datetime import DateTimeController as DateTime
+from backup import BackupController as Backup
 
 import locale
 import gettext
@@ -44,7 +45,6 @@ import logging
 class SetupModel(object):
     def __init__(self, confPath):
         self._logger = logging.getLogger('efalivesetup.maingui.SetupModel')
-        self._logger.setLevel(logging.DEBUG)
         self._checkPath(confPath)
         self._confPath=confPath
         self._settingsFileName = os.path.join(self._confPath, "settings.conf")
@@ -72,6 +72,7 @@ class SetupModel(object):
             os.makedirs(path, 0755)
 
     def parseSettingsFile(self, file):
+        self._logger.info("Parsing settings file")
         versionStr=None
         for line in file:
             if line.startswith("EFA_VERSION="):
@@ -102,13 +103,13 @@ class SetupModel(object):
                 self._logger.debug("Parsed efa port: " + portStr)
             elif line.startswith("EFA_CREDENTIALS_FILE="):
                 credStr=line[(line.index('=') + 1):].rstrip()
-                self.efaCredentialsFile = credStr.replace("\"", "")
+                self.efaCredentialsFile = credStr
                 self._logger.debug("Parsed efa credentials file setting: " + credStr)
         if versionStr != None:
             self.setEfaVersion(int(versionStr))
 
     def save(self):
-        self._logger.debug("Saving file: %s" % (self._settingsFileName))
+        self._logger.info("Saving settings to file: %s" % (self._settingsFileName))
         try:
             settingsFile=open(self._settingsFileName, "w")
             settingsFile.write("EFA_VERSION=%d\n" % self.efaVersion.getData())
@@ -120,7 +121,7 @@ class SetupModel(object):
             settingsFile.write("EFA_BACKUP_PATHS=\"%s\"\n" % self.efaBackupPaths)
             settingsFile.write("EFALIVE_BACKUP_PATHS=\"%s\"\n" % self.efaLiveBackupPaths)
             settingsFile.write("EFA_PORT=%d\n" % self.efaPort.getData())
-            settingsFile.write("EFA_CREDENTIALS_FILE=\"%s\"\n" % self.efaCredentialsFile)
+            settingsFile.write("EFA_CREDENTIALS_FILE=%s\n" % self.efaCredentialsFile)
             settingsFile.close()
         except IOError, exception:
             self._logger.error("Could not save files: %s" % exception)
@@ -274,7 +275,7 @@ class SetupView(gtk.Window):
         self.toolsSpaceVBox.pack_start(self.toolsSpaceBox, True, True, 5)
         self.toolsSpaceBox.show()
         
-        self.toolsGrid=gtk.Table(3, 3, True)
+        self.toolsGrid=gtk.Table(2, 3, True)
         self.toolsSpaceBox.pack_start(self.toolsGrid, True, True, 5)
         self.toolsGrid.set_row_spacings(2)
         self.toolsGrid.set_col_spacings(2)
@@ -292,24 +293,51 @@ class SetupView(gtk.Window):
         self.toolsGrid.attach(self.deviceButton, 2, 3, 0, 1)
         self.deviceButton.show()
        
+        self.editorButton=gtk.Button(_("Editor"))
+        self.toolsGrid.attach(self.editorButton, 0, 1, 1, 2)
+        self.editorButton.show()
+       
+        self.backupButton=gtk.Button(_("Backup"))
+        self.toolsGrid.attach(self.backupButton, 1, 2, 1, 2)
+        self.backupButton.show()
+       
+        # system box
+        self.systemFrame=gtk.Frame(_("System"))
+        self.mainBox.pack_start(self.systemFrame, True, False, 2)
+        self.systemFrame.show()
+
+        self.systemSpaceVBox=gtk.VBox(False, 10)
+        self.systemFrame.add(self.systemSpaceVBox)
+        self.systemSpaceVBox.show()
+        
+        self.systemSpaceBox=gtk.HBox(False, 10)
+        self.systemSpaceVBox.pack_start(self.systemSpaceBox, True, True, 5)
+        self.systemSpaceBox.show()
+        
+        self.systemGrid=gtk.Table(2, 3, True)
+        self.systemSpaceBox.pack_start(self.systemGrid, True, True, 5)
+        self.systemGrid.set_row_spacings(2)
+        self.systemGrid.set_col_spacings(2)
+        self.systemGrid.show()
+
         self.screenButton=gtk.Button(_("Screen"))
-        self.toolsGrid.attach(self.screenButton, 0, 1, 1, 2)
+        self.systemGrid.attach(self.screenButton, 0, 1, 0, 1)
         self.screenButton.show()
         
         self.networkButton=gtk.Button(_("Network"))
-        self.toolsGrid.attach(self.networkButton, 1, 2, 1, 2)
+        self.systemGrid.attach(self.networkButton, 1, 2, 0, 1)
         self.networkButton.show()
        
         self.keyboardButton=gtk.Button(_("Keyboard"))
-        self.toolsGrid.attach(self.keyboardButton, 2, 3, 1, 2)
+        self.systemGrid.attach(self.keyboardButton, 2, 3, 0, 1)
         self.keyboardButton.show()
        
         self.screensaverButton=gtk.Button(_("Screensaver"))
-        self.toolsGrid.attach(self.screensaverButton, 0, 1, 2, 3)
+        self.systemGrid.attach(self.screensaverButton, 0, 1, 1, 2)
         self.screensaverButton.show()
        
         self.datetimeButton=gtk.Button(_("Date & time"))
-        self.toolsGrid.attach(self.datetimeButton, 1, 2, 2, 3)
+        self.systemGrid.attach(self.datetimeButton, 1, 2, 1, 2)
         self.datetimeButton.show()
        
 
@@ -331,18 +359,6 @@ class SetupView(gtk.Window):
         self.actionsGrid.set_row_spacings(2)
         self.actionsGrid.set_col_spacings(2)
         self.actionsGrid.show()
-
-        
-
-        """
-        self.actionsVBox=gtk.VBox(False, 5)
-        self.actionsSpaceBox.pack_start(self.actionsVBox, False, False, 10)
-        self.actionsVBox.show()
-
-        self.actionsHBox=gtk.HBox(False, 0)
-        self.actionsVBox.pack_start(self.actionsHBox, True, True, 10)
-        self.actionsHBox.show()
-        """
 
         self.shutdownButton=gtk.Button(_("Shutdown PC"))
         self.actionsGrid.attach(self.shutdownButton, 0, 1, 0, 1)
@@ -430,6 +446,7 @@ class SetupController(object):
         gtk.main_quit()
 
     def initEvents(self):
+        self._logger.debug("Initialize events")
         self._view.closeButton.connect("clicked", self.destroy)
         self._view.okButton.connect("clicked", self.save)
         self._view.versionCombo.connect("changed", self.setEfaVersion)
@@ -445,26 +462,31 @@ class SetupController(object):
         self._view.keyboardButton.connect("clicked", self.runKeyboardSetup)
         self._view.screensaverButton.connect("clicked", self.runScreensaverSetup)
         self._view.datetimeButton.connect("clicked", self.runDateTimeSetup)
+        self._view.editorButton.connect("clicked", self.runEditor)
+        self._view.backupButton.connect("clicked", self.runBackup)
 
     def runTerminal(self, widget):
         try:
             subprocess.Popen(['xterm'])
         except OSError as error:
-            message = "Could not open xterm program: %s" % error
+            message = _("Could not open xterm program: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runNetworkSettings(self, widget):
         try:
             subprocess.Popen(['nm-connection-editor'])
         except OSError as error:
-            message = "Could not open nm-connection-editor program: %s" % error
+            message = _("Could not open nm-connection-editor program: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runFileManager(self, widget):
         try:
             subprocess.Popen(['thunar'])
         except OSError as error:
-            message = "Could not open thunar program: %s" % error
+            message = _("Could not open thunar program: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runShutdown(self, widget):
@@ -474,7 +496,8 @@ class SetupController(object):
         try:
             subprocess.Popen(['sudo', '/sbin/shutdown', '-h', 'now'])
         except OSError as error:
-            message = "Could not run /sbin/shutdown program: %s" % error
+            message = _("Could not run /sbin/shutdown program: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runRestart(self, widget):
@@ -484,7 +507,8 @@ class SetupController(object):
         try:
             subprocess.Popen(['sudo', '/sbin/shutdown', '-r', 'now'])
         except OSError as error:
-            message = "Could not run /sbin/shutdown program: %s" % error
+            message = _("Could not run /sbin/shutdown program: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runScreenSetup(self, widget):
@@ -497,18 +521,31 @@ class SetupController(object):
         try:
             subprocess.Popen(['sudo', 'dpkg-reconfigure', '-fgnome', 'keyboard-configuration'])
         except OSError as error:
-            message = "Could not run keyboard setup: %s" % error
+            message = _("Could not run keyboard setup: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runScreensaverSetup(self, widget):
         try:
             subprocess.Popen(['xscreensaver-demo'])
         except OSError as error:
-            message = "Could not open xscreensaver-demo program: %s" % error
+            message = _("Could not open xscreensaver-demo program: %s") % error
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def runDateTimeSetup(self, widget):
         DateTime(None, standalone=False)
+
+    def runEditor(self, widget):
+        try:
+            subprocess.Popen(['gedit'])
+        except OSError as error:
+            message = _("Could not open gedit program: %s") % error
+            self._logger.error(message)
+            dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
+
+    def runBackup(self, widget):
+        Backup(None, standalone=False)
 
     def setEfaVersion(self, widget):
         self._model.setEfaVersion(widget.get_active() + 1)
@@ -538,10 +575,11 @@ class SetupController(object):
             message = _("Could not save files!\n\n") \
                     + _("Please check the path you provided for ") \
                     + _("user rights and existance.")
+            self._logger.error(message)
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
 if __name__ == '__main__':
-    logging.basicConfig(filename='efaLiveSetup.log',level=logging.DEBUG)
+    logging.basicConfig(filename='efaLiveSetup.log',level=logging.INFO)
     controller = SetupController(sys.argv)
     gtk.main();
 

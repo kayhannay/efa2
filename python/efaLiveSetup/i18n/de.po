@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-07 11:41+0100\n"
+"POT-Creation-Date: 2012-01-10 13:43+0100\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -18,222 +18,366 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: datetime.py:128
+#: backup.py:53
+msgid "Backup & Restore"
+msgstr "Datensicherung"
+
+#: backup.py:64 maingui.py:300
+msgid "Backup"
+msgstr "Datensicherung"
+
+#: backup.py:73
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+#: backup.py:86
+msgid "Close"
+msgstr "Schließen"
+
+#: backup.py:114
+msgid "Select directory"
+msgstr "Verzeichnis auswählen"
+
+#: backup.py:125 devicemanager.py:377
+msgid ""
+"Backup failed! Please check that the efalive user is configured correctly in "
+"efa."
+msgstr ""
+"Datensicherung fehlgeschlagen! Bitte die Konfiguration des efalive "
+"Benutzers in efa prüfen."
+
+#: backup.py:130 devicemanager.py:382
+#, python-format
+msgid "Backup to %s failed!"
+msgstr "Datensicherung nach %s fehlgeschlagen!"
+
+#: backup.py:135 devicemanager.py:387
+#, python-format
+msgid "Backup to %s finished."
+msgstr "Datensicherung nach %s erfolgreich."
+
+#: backup.py:148 devicemanager.py:402
+msgid "Select backup"
+msgstr "Sicherungsdatei auswählen"
+
+#: backup.py:159 devicemanager.py:415
+msgid ""
+"Restore failed! Please check that the efalive user is configured correctly "
+"in efa."
+msgstr ""
+"Wiederherstellen fehlgeschlagen! Bitte die Konfiguration des efalive "
+"Benutzers in efa prüfen."
+
+#: backup.py:164 devicemanager.py:420
+#, python-format
+msgid "Restore of backup %s failed!"
+msgstr "Wiederherstellen der Datensicherung %s fehlgeschlagen"
+
+#: backup.py:169 devicemanager.py:425
+#, python-format
+msgid "Restore of backup %s finished."
+msgstr "Wiederherstellen der Datensicherung %s erfolgreich"
+
+#: datetime.py:66
+#, python-format
+msgid "Could not check NTP service status: %s"
+msgstr "Konnte den Status des NTP Service nicht prüfen: %s"
+
+#: datetime.py:100
+#, python-format
+msgid "Could not enable NTP service: %s"
+msgstr "Konnte den NTP service inicht einschalten: %s"
+
+#: datetime.py:109
+#, python-format
+msgid "Could not disable NTP service: %s"
+msgstr "Konnte den NTP Service nicht ausschalten: %s"
+
+#: datetime.py:115
+#, python-format
+msgid "Could not set time: %s"
+msgstr "Fehler beim setzen der Uhrzeit: %s"
+
+#: datetime.py:124
 msgid "Date & Time"
 msgstr "Datum & Zeit"
 
-#: datetime.py:151
+#: datetime.py:147
 msgid "Time (h m s)"
 msgstr "Zeit (h m s)"
 
-#: datetime.py:173
+#: datetime.py:169
 msgid "Network time protocol"
 msgstr "Netzwerk-Zeit-Protokoll"
 
-#: datetime.py:181
+#: datetime.py:177
 msgid "Use network time protocol (NTP)"
 msgstr "Zeit über Internet synchronisieren (NTP)"
 
-#: datetime.py:189 maingui.py:358 screensetup.py:65
+#: datetime.py:185 maingui.py:381 screensetup.py:65
 msgid "Ok"
 msgstr "Ok"
 
-#: datetime.py:194 maingui.py:362 screensetup.py:75
+#: datetime.py:190 maingui.py:385 screensetup.py:75
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: devicemanager.py:95
+#: devicemanager.py:69
 msgid "Restore backup from device"
 msgstr "Wiederherstellen einer Datensicherung von diesem Gerät"
 
-#: devicemanager.py:102
+#: devicemanager.py:76
 msgid "Create backup on device"
 msgstr "Datensicherung auf diesem Gerät erstellen"
 
-#: devicemanager.py:259
+#: devicemanager.py:251
 msgid "Device Manager"
 msgstr "Speichermedien"
 
-#: devicemanager.py:270
+#: devicemanager.py:262
 msgid "USB storage devices"
 msgstr "USB Speichermedien"
 
-#: devicemanager.py:274
+#: devicemanager.py:266
 msgid "no devices found"
 msgstr "Kein Gerät gefunden"
 
-#: devicemanager.py:310
+#: devicemanager.py:302
 msgid "Unmount USB device"
 msgstr "USB Gerät aushängen"
 
-#: devicemanager.py:311 devicemanager.py:323
+#: devicemanager.py:303 devicemanager.py:315
 #, python-format
 msgid "Vendor: %s"
 msgstr "Hersteller: %s"
 
-#: devicemanager.py:312 devicemanager.py:324
+#: devicemanager.py:304 devicemanager.py:316
 #, python-format
 msgid "Model: %s"
 msgstr "Modell: %s"
 
-#: devicemanager.py:313 devicemanager.py:325
+#: devicemanager.py:305 devicemanager.py:317
 #, python-format
 msgid "Device: %s"
 msgstr "Gerät: %s"
 
-#: devicemanager.py:314 devicemanager.py:326
+#: devicemanager.py:306 devicemanager.py:318
 #, python-format
 msgid "Size: %s"
 msgstr "Größe: %s"
 
-#: devicemanager.py:315 devicemanager.py:327
+#: devicemanager.py:307 devicemanager.py:319
 #, python-format
 msgid "Filesystem: %s"
 msgstr "Dateisystem: %s"
 
-#: devicemanager.py:316 devicemanager.py:328
+#: devicemanager.py:308 devicemanager.py:320
 #, python-format
 msgid "USB-Id: %s"
 msgstr "USB-Id: %s"
 
-#: devicemanager.py:317
+#: devicemanager.py:309
 #, python-format
 msgid "Mouned to: %s"
 msgstr "Einhängepunkt: %s"
 
-#: devicemanager.py:322
+#: devicemanager.py:314
 msgid "Mount USB device"
 msgstr "USB Gerät einhängen"
 
-#: devicemanager.py:392
-msgid "Select backup"
-msgstr "Sicherungsdatei auswählen"
+#: devicemanager.py:355
+#, python-format
+msgid "Could not mount device: %s"
+msgstr "Konnte Gerät nicht einhängen: %s"
 
-#: dialogs.py:31
+#: devicemanager.py:364
+#, python-format
+msgid "Could not unmount device: %s"
+
+msgstr "Konnte Gerät nicht aushängen: %s"
+
+#: devicemanager.py:394
+#, python-format
+msgid "Could not create backup: %s"
+msgstr "Konnte keine Datensicherung erstellen: %s"
+
+#: devicemanager.py:432
+#, python-format
+msgid "Could not restore backup: %s"
+msgstr "Konnte keine Datensicherung erstellen: %s"
+
+#: dialogs.py:48
 msgid "Details"
 msgstr "Details"
 
-#: maingui.py:152
+#: dialogs.py:51
+msgid "Output"
+msgstr "Ausgaben"
+
+#: maingui.py:160
 msgid "efaLive setup"
 msgstr "efaLive Setup"
 
-#: maingui.py:163
+#: maingui.py:171
 msgid "efaLive settings"
 msgstr "efaLive Einstellungen"
 
-#: maingui.py:176
+#: maingui.py:184
 msgid "efa version"
 msgstr "efa Version"
 
-#: maingui.py:188
+#: maingui.py:196
 msgid "Here you can choose the efa version that "
 msgstr "Hier kannst Du auswählen, welche Version von efa "
 
-#: maingui.py:189
+#: maingui.py:197
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
 
-#: maingui.py:190
+#: maingui.py:198
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
 
-#: maingui.py:191
+#: maingui.py:199
 msgid "choose efa 1."
 msgstr "eine stabile Version benötigst, wähle efa 1."
 
-#: maingui.py:200
+#: maingui.py:208
 msgid "version"
 msgstr "Version"
 
-#: maingui.py:217
+#: maingui.py:225
 msgid "efa port"
 msgstr "efa Port"
 
-#: maingui.py:236
+#: maingui.py:244
 msgid "efa shutdown action"
 msgstr "Aktion beim Beenden von efa"
 
-#: maingui.py:253
+#: maingui.py:261
 msgid "enable automatic USB backup"
 msgstr "Automatische Datensicherung auf USB einschalten"
 
-#: maingui.py:258
+#: maingui.py:266
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: maingui.py:276
+#: maingui.py:284
 msgid "Terminal"
 msgstr "Kommandozeile"
 
-#: maingui.py:280
+#: maingui.py:288
 msgid "File manager"
 msgstr "Dateimanager"
 
-#: maingui.py:284
+#: maingui.py:292
 msgid "Devices"
 msgstr "Speichermedien"
 
-#: maingui.py:288
+#: maingui.py:296
+msgid "Editor"
+msgstr "Editor"
+
+#: maingui.py:305
+msgid "System"
+msgstr "System"
+
+#: maingui.py:323
 msgid "Screen"
 msgstr "Bildschirm"
 
-#: maingui.py:292
+#: maingui.py:327
 msgid "Network"
 msgstr "Netzwerk"
 
-#: maingui.py:296
+#: maingui.py:331
 msgid "Keyboard"
 msgstr "Tastatur"
 
-#: maingui.py:300
+#: maingui.py:335
 msgid "Screensaver"
 msgstr "Bildschirmschoner"
 
-#: maingui.py:304
+#: maingui.py:339
 msgid "Date & time"
 msgstr "Datum & Zeit"
 
-#: maingui.py:310
+#: maingui.py:345
 msgid "Actions"
 msgstr "Aktionen"
 
-#: maingui.py:340
+#: maingui.py:363
 msgid "Shutdown PC"
 msgstr "PC herunterfahren"
 
-#: maingui.py:344
+#: maingui.py:367
 msgid "Restart PC"
 msgstr "PC neu starten"
 
-#: maingui.py:386
+#: maingui.py:409
 msgid "1 (stable)"
 msgstr "1 (Stabil)"
 
-#: maingui.py:387
+#: maingui.py:410
 msgid "2 (development)"
 msgstr "2 (Entwicklung)"
 
-#: maingui.py:389
+#: maingui.py:412
 msgid "shutdown pc"
 msgstr "PC herunterfahren"
 
-#: maingui.py:390
+#: maingui.py:413
 msgid "restart pc"
 msgstr "PC neu starten"
 
-#: maingui.py:391
+#: maingui.py:414
 msgid "restart efa"
 msgstr "efa neu starten"
 
-#: maingui.py:464
+#: maingui.py:472
+#, python-format
+msgid "Could not open xterm program: %s"
+msgstr "Konnte das Programm xterm nicht starten: %s"
+
+#: maingui.py:480
+#, python-format
+msgid "Could not open nm-connection-editor program: %s"
+msgstr "Konnte das Programm nm-connection-editor nicht starten: %s"
+
+#: maingui.py:488
+#, python-format
+msgid "Could not open thunar program: %s"
+msgstr "Konnte das Programm thunar nicht starten: %s"
+
+#: maingui.py:493
 msgid "Really shut down PC ?"
 msgstr "PC wirklich herunterfahren ?"
 
-#: maingui.py:474
+#: maingui.py:499 maingui.py:510
+#, python-format
+msgid "Could not run /sbin/shutdown program: %s"
+msgstr "Konnte /sbin/shutdown nicht aufrufen: %s"
+
+#: maingui.py:504
 msgid "Really reboot PC ?"
 msgstr "PC wirklich neu starten ?"
 
-#: maingui.py:531
+#: maingui.py:524
+#, python-format
+msgid "Could not run keyboard setup: %s"
+msgstr "Konnte die Tastatureinstellungen nicht laden: %s"
+
+#: maingui.py:532
+#, python-format
+msgid "Could not open xscreensaver-demo program: %s"
+msgstr "Konnte das Programm xscreensaver-demo nicht starten: %s"
+
+#: maingui.py:543
+#, python-format
+msgid "Could not open gedit program: %s"
+msgstr "Konnte das Programm gedit nicht starten: %s"
+
+#: maingui.py:575
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -241,11 +385,11 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:532
+#: maingui.py:576
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:533
+#: maingui.py:577
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 
@@ -256,30 +400,6 @@ msgstr "Bildschirm-Setup"
 #: screensetup.py:70
 msgid "Apply"
 msgstr "Anwenden"
-
-#~ msgid ""
-#~ "Could not mount device:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Konnte Gerät nicht einhängen:\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Could not unmount device:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Konnte Gerät nicht aushängen:\n"
-#~ "%s"
-
-#~ msgid ""
-#~ "Could not create backup:\n"
-#~ "%s"
-#~ msgstr ""
-#~ "Konnte keine Datensicherung erstellen:\n"
-#~ "%s"
-
-#~ msgid "Backup"
-#~ msgstr "Datensicherung"
 
 #~ msgid "Mount"
 #~ msgstr "Einhängen"

@@ -31,6 +31,7 @@ import traceback
 
 from observable import Observable
 import dialogs
+import common
 
 import locale
 import gettext
@@ -40,33 +41,6 @@ DIR=os.path.realpath(LOCALEDIR)
 gettext.install(APP, DIR, unicode=True)
 
 import logging
-
-def print_device(device):
-    print "Device:"
-    print "\tSubsystem: %s" % device.get_subsystem()
-    print "\tType: %s" % device.get_devtype()
-    print "\tName: %s" % device.get_name()
-    print "\tNumber: %s" % device.get_number()
-    print "\tSYS-fs path: %s" % device.get_sysfs_path()
-    print "\tDriver: %s" % device.get_driver()
-    print "\tAction: %s" % device.get_action()
-    print "\tFile: %s" % device.get_device_file()
-    #print "\tLinks: %s" % device.get_device_file_symlinks()
-    #print "\tProperties: %s" % device.get_property_keys()
-    #print "\tSYBSYSTEM: %s" % device.get_property("SUBSYSTEM")
-    print "\tDEVTYPE: %s" % device.get_property("DEVTYPE")
-    print "\tID_VENDOR: %s" % device.get_property("ID_VENDOR")
-    print "\tID_MODEL: %s" % device.get_property("ID_MODEL")
-    #print "\tID_TYPE: %s" % device.get_property("ID_TYPE")
-    print "\tID_BUS: %s" % device.get_property("ID_BUS")
-    print "\tID_FS_LABEL: %s" % device.get_property("ID_FS_LABEL")
-    print "\tID_FS_TYPE: %s" % device.get_property("ID_FS_TYPE")
-    print "\tUDISKS_PARTITION_SIZE: %s" % device.get_property("UDISKS_PARTITION_SIZE")
-
-def get_icon_path(icon_name):
-    path = os.path.dirname(os.path.abspath(__file__))
-    icon_path = os.path.join(path, "icons/%s" % icon_name)
-    return icon_path
 
 class DeviceWidget(gtk.VBox):
     def __init__(self, device, homogeneous=False, spacing=2):
@@ -188,8 +162,9 @@ class DeviceManagerModel(object):
         return wrapped_device
 
     def check_mounted(self, device):
+        self._logger.debug("Check if %s is mounted" % device.device_file)
         try:
-            mount_output = self._command_output(["mount"])
+            mount_output = common.command_output(["mount"])
         except OSError as (errno, strerror):
             self._logger.error("Could not execute mount command to check mount status: %s" % strerror)
             raise
@@ -199,27 +174,18 @@ class DeviceManagerModel(object):
         else:
             return False
 
-    def _command_output(self, args, **kwds):
-        kwds.setdefault("stdout", subprocess.PIPE)
-        kwds.setdefault("stderr", subprocess.STDOUT)
-        process = subprocess.Popen(args, **kwds)
-        output = process.communicate()[0]
-        return output
-
     def search_devices(self):
+        self._logger.info("Search for devices")
         for device in self.client.query_by_subsystem("block"):
-            if (device.get_devtype() != "partition"):
-                continue
-            if (device.get_property("ID_BUS") != "usb"):
-                continue
             self._handle_device_event(self.client, "add", device)
 
     def _handle_device_event(self, client, action, device):
-        #print_device(device)
+        self.debug_device(device)
         if (device.get_devtype() != "partition"):
             return
         if (device.get_property("ID_BUS") != "usb"):
             return
+        self._logger.info("Action %s for device %s" % (action, device.get_device_file()))
         wrapped_device = self._wrap_device(device)
         if action == "add":
             self._notify_add_observers(wrapped_device)
@@ -240,16 +206,42 @@ class DeviceManagerModel(object):
 
     def toggle_mount(self, device, mount):
         if mount:
+            self._logger.info("Mounting device %s to %s" % (device.device_file, label_text))
             label_text = self.get_label(device)
-            self._command_output(["pmount", device.device_file, label_text])
+            common.command_output(["pmount", device.device_file, label_text])
         else:
-            self._command_output(["pumount", device.device_file])
+            self._logger.info("Unmounting device %s" % device.device_file)
+            common.command_output(["pumount", device.device_file])
 
     def create_backup(self, path):
-        self._command_output(["/opt/efalive/bin/run_backup.sh", path])
+        self._logger.info("Create a backup to %s" % path)
+        return common.command_output(["/opt/efalive/bin/run_backup.sh", path])
 
     def restore_backup(self, file):
-        self._command_output(["/opt/efalive/bin/run_restore.sh", file])
+        self._logger.info("Restore backup from %s" % file)
+        return common.command_output(["/opt/efalive/bin/run_restore.sh", file])
+
+    def debug_device(self, device):
+        self._logger.debug("Device:")
+        self._logger.debug("\tSubsystem: %s" % device.get_subsystem())
+        self._logger.debug("\tType: %s" % device.get_devtype())
+        self._logger.debug("\tName: %s" % device.get_name())
+        self._logger.debug("\tNumber: %s" % device.get_number())
+        self._logger.debug("\tSYS-fs path: %s" % device.get_sysfs_path())
+        self._logger.debug("\tDriver: %s" % device.get_driver())
+        self._logger.debug("\tAction: %s" % device.get_action())
+        self._logger.debug("\tFile: %s" % device.get_device_file())
+        #self._logger.debug("\tLinks: %s" % device.get_device_file_symlinks())
+        #self._logger.debug("\tProperties: %s" % device.get_property_keys())
+        #self._logger.debug("\tSYBSYSTEM: %s" % device.get_property("SUBSYSTEM"))
+        self._logger.debug("\tDEVTYPE: %s" % device.get_property("DEVTYPE"))
+        self._logger.debug("\tID_VENDOR: %s" % device.get_property("ID_VENDOR"))
+        self._logger.debug("\tID_MODEL: %s" % device.get_property("ID_MODEL"))
+        #self._logger.debug("\tID_TYPE: %s" % device.get_property("ID_TYPE"))
+        self._logger.debug("\tID_BUS: %s" % device.get_property("ID_BUS"))
+        self._logger.debug("\tID_FS_LABEL: %s" % device.get_property("ID_FS_LABEL"))
+        self._logger.debug("\tID_FS_TYPE: %s" % device.get_property("ID_FS_TYPE"))
+        self._logger.debug("\tUDISKS_PARTITION_SIZE: %s" % device.get_property("UDISKS_PARTITION_SIZE"))
 
 
 class DeviceManagerView(gtk.Window):
@@ -360,7 +352,8 @@ class DeviceManagerController(object):
                 device_entry.device.mounted = True
                 self._view.set_device_mounted(device_entry)
             except OSError as error:
-                message = "Could not mount device: %s" % error
+                message = _("Could not mount device: %s") % error
+                self._logger.error(message)
                 dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
         else:
             try:
@@ -368,7 +361,8 @@ class DeviceManagerController(object):
                 device_entry.device.mounted = False
                 self._view.set_device_mounted(device_entry)
             except OSError as error:
-                message = "Could not mount device: %s" % error
+                message = _("Could not unmount device: %s") % error
+                self._logger.error(message)
                 dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def create_backup(self, widget, device):
@@ -377,11 +371,27 @@ class DeviceManagerController(object):
             if not was_mounted:
                 self._model.toggle_mount(device, True)
             path = os.path.join("/media", self._model.get_label(device))
-            self._model.create_backup(path)
+            (returncode, output) = self._model.create_backup(path)
+            if returncode != 0:
+                if returncode == 1 or returncode == 5:
+                    message = _("Backup failed! Please check that the efalive user is configured correctly in efa.")
+                    self._logger.error(message)
+                    self._logger.debug(output)
+                    dialogs.show_exception_dialog(self._view, message, output)
+                else:
+                    message = _("Backup to %s failed!") % path
+                    self._logger.error(message)
+                    self._logger.debug(output)
+                    dialogs.show_exception_dialog(self._view, message, output)
+            else:
+                message = _("Backup to %s finished.") % path
+                self._logger.info(message)
+                self._logger.debug(output)
+                dialogs.show_output_dialog(self._view, message, output)
             if not was_mounted:
                 self._model.toggle_mount(device, False)
         except OSError as error:
-            message = "Could not create backup: %s" % error
+            message = _("Could not create backup: %s") % error
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
 
     def restore_backup(self, widget, device):
@@ -397,12 +407,29 @@ class DeviceManagerController(object):
             file_chooser.set_current_folder(path)
             result = file_chooser.run()
             if result == gtk.RESPONSE_OK:
+                file_chooser.hide()
                 filename = file_chooser.get_filename()
-                self._model.restore_backup(filename)
+                (returncode, output) = self._model.restore_backup(filename)
+                if returncode != 0:
+                    if returncode == 1 or returncode == 5:
+                        message = _("Restore failed! Please check that the efalive user is configured correctly in efa.")
+                        self._logger.error(message)
+                        self._logger.debug(output)
+                        dialogs.show_exception_dialog(self._view, message, output)
+                    else:
+                        message = _("Restore of backup %s failed!") % filename
+                        self._logger.error(message)
+                        self._logger.debug(output)
+                        dialogs.show_exception_dialog(self._view, message, output)
+                else:
+                    message = _("Restore of backup %s finished.") % filename
+                    self._logger.info(message)
+                    self._logger.debug(output)
+                    dialogs.show_output_dialog(self._view, message, output)
             if not was_mounted:
                 self._model.toggle_mount(device, False)
         except OSError as error:
-            message = "Could not restore backup: %s" % error
+            message = _("Could not restore backup: %s") % error
             dialogs.show_exception_dialog(self._view, message, traceback.format_exc())
         finally:
             file_chooser.destroy()
