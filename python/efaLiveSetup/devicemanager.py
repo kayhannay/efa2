@@ -206,8 +206,8 @@ class DeviceManagerModel(object):
 
     def toggle_mount(self, device, mount):
         if mount:
-            self._logger.info("Mounting device %s to %s" % (device.device_file, label_text))
             label_text = self.get_label(device)
+            self._logger.info("Mounting device %s to %s" % (device.device_file, label_text))
             common.command_output(["pmount", device.device_file, label_text])
         else:
             self._logger.info("Unmounting device %s" % device.device_file)
