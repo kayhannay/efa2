@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-10 13:43+0100\n"
+"POT-Creation-Date: 2012-02-09 14:54+0100\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -18,49 +18,49 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: backup.py:53
+#: backup.py:54
 msgid "Backup & Restore"
 msgstr "Datensicherung"
 
-#: backup.py:64 maingui.py:300
+#: backup.py:65 maingui.py:324
 msgid "Backup"
 msgstr "Datensicherung"
 
-#: backup.py:73
+#: backup.py:74
 msgid "Restore"
 msgstr "Wiederherstellen"
 
-#: backup.py:86
+#: backup.py:87
 msgid "Close"
 msgstr "Schließen"
 
-#: backup.py:114
+#: backup.py:115
 msgid "Select directory"
 msgstr "Verzeichnis auswählen"
 
-#: backup.py:125 devicemanager.py:377
+#: backup.py:126 devicemanager.py:377
 msgid ""
 "Backup failed! Please check that the efalive user is configured correctly in "
 "efa."
 msgstr ""
-"Datensicherung fehlgeschlagen! Bitte die Konfiguration des efalive "
-"Benutzers in efa prüfen."
+"Datensicherung fehlgeschlagen! Bitte die Konfiguration des efalive Benutzers "
+"in efa prüfen."
 
-#: backup.py:130 devicemanager.py:382
+#: backup.py:131 devicemanager.py:382
 #, python-format
 msgid "Backup to %s failed!"
 msgstr "Datensicherung nach %s fehlgeschlagen!"
 
-#: backup.py:135 devicemanager.py:387
+#: backup.py:136 devicemanager.py:387
 #, python-format
 msgid "Backup to %s finished."
 msgstr "Datensicherung nach %s erfolgreich."
 
-#: backup.py:148 devicemanager.py:402
+#: backup.py:149 devicemanager.py:402
 msgid "Select backup"
 msgstr "Sicherungsdatei auswählen"
 
-#: backup.py:159 devicemanager.py:415
+#: backup.py:160 devicemanager.py:415
 msgid ""
 "Restore failed! Please check that the efalive user is configured correctly "
 "in efa."
@@ -68,12 +68,12 @@ msgstr ""
 "Wiederherstellen fehlgeschlagen! Bitte die Konfiguration des efalive "
 "Benutzers in efa prüfen."
 
-#: backup.py:164 devicemanager.py:420
+#: backup.py:165 devicemanager.py:420
 #, python-format
 msgid "Restore of backup %s failed!"
 msgstr "Wiederherstellen der Datensicherung %s fehlgeschlagen"
 
-#: backup.py:169 devicemanager.py:425
+#: backup.py:170 devicemanager.py:425
 #, python-format
 msgid "Restore of backup %s finished."
 msgstr "Wiederherstellen der Datensicherung %s erfolgreich"
@@ -114,11 +114,11 @@ msgstr "Netzwerk-Zeit-Protokoll"
 msgid "Use network time protocol (NTP)"
 msgstr "Zeit über Internet synchronisieren (NTP)"
 
-#: datetime.py:185 maingui.py:381 screensetup.py:65
+#: datetime.py:185 maingui.py:405 screensetup.py:65
 msgid "Ok"
 msgstr "Ok"
 
-#: datetime.py:190 maingui.py:385 screensetup.py:75
+#: datetime.py:190 maingui.py:409 screensetup.py:75
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -193,7 +193,6 @@ msgstr "Konnte Gerät nicht einhängen: %s"
 #: devicemanager.py:364
 #, python-format
 msgid "Could not unmount device: %s"
-
 msgstr "Konnte Gerät nicht aushängen: %s"
 
 #: devicemanager.py:394
@@ -214,170 +213,174 @@ msgstr "Details"
 msgid "Output"
 msgstr "Ausgaben"
 
-#: maingui.py:160
+#: maingui.py:176
 msgid "efaLive setup"
 msgstr "efaLive Setup"
 
-#: maingui.py:171
+#: maingui.py:187
 msgid "efaLive settings"
 msgstr "efaLive Einstellungen"
 
-#: maingui.py:184
+#: maingui.py:200
 msgid "efa version"
 msgstr "efa Version"
 
-#: maingui.py:196
+#: maingui.py:212
 msgid "Here you can choose the efa version that "
 msgstr "Hier kannst Du auswählen, welche Version von efa "
 
-#: maingui.py:197
+#: maingui.py:213
 msgid "you would like to use. Please note that efa 2 is a development "
 msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
 
-#: maingui.py:198
+#: maingui.py:214
 msgid "version, which might me unstable. If you need a stable version, "
 msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
 
-#: maingui.py:199
+#: maingui.py:215
 msgid "choose efa 1."
 msgstr "eine stabile Version benötigst, wähle efa 1."
 
-#: maingui.py:208
+#: maingui.py:224
 msgid "version"
 msgstr "Version"
 
-#: maingui.py:225
-msgid "efa port"
-msgstr "efa Port"
+#: maingui.py:241
+msgid "efa network port"
+msgstr "efa Netzwerk-Port"
 
-#: maingui.py:244
+#: maingui.py:260
 msgid "efa shutdown action"
 msgstr "Aktion beim Beenden von efa"
 
-#: maingui.py:261
+#: maingui.py:277
 msgid "enable automatic USB backup"
 msgstr "Automatische Datensicherung auf USB einschalten"
 
-#: maingui.py:266
+#: maingui.py:285
+msgid "show dialog after automatic backup"
+msgstr "Dialog nach automatischer Datensicherung anzeigen"
+
+#: maingui.py:290
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: maingui.py:284
+#: maingui.py:308
 msgid "Terminal"
 msgstr "Kommandozeile"
 
-#: maingui.py:288
+#: maingui.py:312
 msgid "File manager"
 msgstr "Dateimanager"
 
-#: maingui.py:292
+#: maingui.py:316
 msgid "Devices"
 msgstr "Speichermedien"
 
-#: maingui.py:296
+#: maingui.py:320
 msgid "Editor"
 msgstr "Editor"
 
-#: maingui.py:305
+#: maingui.py:329
 msgid "System"
 msgstr "System"
 
-#: maingui.py:323
+#: maingui.py:347
 msgid "Screen"
 msgstr "Bildschirm"
 
-#: maingui.py:327
+#: maingui.py:351
 msgid "Network"
 msgstr "Netzwerk"
 
-#: maingui.py:331
+#: maingui.py:355
 msgid "Keyboard"
 msgstr "Tastatur"
 
-#: maingui.py:335
+#: maingui.py:359
 msgid "Screensaver"
 msgstr "Bildschirmschoner"
 
-#: maingui.py:339
+#: maingui.py:363
 msgid "Date & time"
 msgstr "Datum & Zeit"
 
-#: maingui.py:345
+#: maingui.py:369
 msgid "Actions"
 msgstr "Aktionen"
 
-#: maingui.py:363
+#: maingui.py:387
 msgid "Shutdown PC"
 msgstr "PC herunterfahren"
 
-#: maingui.py:367
+#: maingui.py:391
 msgid "Restart PC"
 msgstr "PC neu starten"
 
-#: maingui.py:409
+#: maingui.py:433
 msgid "1 (stable)"
 msgstr "1 (Stabil)"
 
-#: maingui.py:410
+#: maingui.py:434
 msgid "2 (development)"
 msgstr "2 (Entwicklung)"
 
-#: maingui.py:412
+#: maingui.py:436
 msgid "shutdown pc"
 msgstr "PC herunterfahren"
 
-#: maingui.py:413
+#: maingui.py:437
 msgid "restart pc"
 msgstr "PC neu starten"
 
-#: maingui.py:414
+#: maingui.py:438
 msgid "restart efa"
 msgstr "efa neu starten"
 
-#: maingui.py:472
+#: maingui.py:504
 #, python-format
 msgid "Could not open xterm program: %s"
 msgstr "Konnte das Programm xterm nicht starten: %s"
 
-#: maingui.py:480
+#: maingui.py:512
 #, python-format
 msgid "Could not open nm-connection-editor program: %s"
 msgstr "Konnte das Programm nm-connection-editor nicht starten: %s"
 
-#: maingui.py:488
+#: maingui.py:520
 #, python-format
 msgid "Could not open thunar program: %s"
 msgstr "Konnte das Programm thunar nicht starten: %s"
 
-#: maingui.py:493
+#: maingui.py:525
 msgid "Really shut down PC ?"
 msgstr "PC wirklich herunterfahren ?"
 
-#: maingui.py:499 maingui.py:510
+#: maingui.py:531 maingui.py:542
 #, python-format
 msgid "Could not run /sbin/shutdown program: %s"
 msgstr "Konnte /sbin/shutdown nicht aufrufen: %s"
 
-#: maingui.py:504
+#: maingui.py:536
 msgid "Really reboot PC ?"
 msgstr "PC wirklich neu starten ?"
 
-#: maingui.py:524
+#: maingui.py:556
 #, python-format
 msgid "Could not run keyboard setup: %s"
 msgstr "Konnte die Tastatureinstellungen nicht laden: %s"
 
-#: maingui.py:532
+#: maingui.py:564
 #, python-format
 msgid "Could not open xscreensaver-demo program: %s"
 msgstr "Konnte das Programm xscreensaver-demo nicht starten: %s"
 
-#: maingui.py:543
+#: maingui.py:575
 #, python-format
 msgid "Could not open gedit program: %s"
 msgstr "Konnte das Programm gedit nicht starten: %s"
 
-#: maingui.py:575
+#: maingui.py:610
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -385,11 +388,11 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:576
+#: maingui.py:611
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:577
+#: maingui.py:612
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 
