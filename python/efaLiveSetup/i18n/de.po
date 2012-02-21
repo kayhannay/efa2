@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-09 14:54+0100\n"
+"POT-Creation-Date: 2012-02-21 09:15+0100\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Backup & Restore"
 msgstr "Datensicherung"
 
-#: backup.py:65 maingui.py:324
+#: backup.py:65 maingui.py:308
 msgid "Backup"
 msgstr "Datensicherung"
 
@@ -114,11 +114,11 @@ msgstr "Netzwerk-Zeit-Protokoll"
 msgid "Use network time protocol (NTP)"
 msgstr "Zeit über Internet synchronisieren (NTP)"
 
-#: datetime.py:185 maingui.py:405 screensetup.py:65
+#: datetime.py:185 maingui.py:389 screensetup.py:65
 msgid "Ok"
 msgstr "Ok"
 
-#: datetime.py:190 maingui.py:409 screensetup.py:75
+#: datetime.py:190 maingui.py:393 screensetup.py:75
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -221,166 +221,146 @@ msgstr "efaLive Setup"
 msgid "efaLive settings"
 msgstr "efaLive Einstellungen"
 
-#: maingui.py:200
-msgid "efa version"
-msgstr "efa Version"
+#: maingui.py:208
+msgid "efa version (2 recommended)"
+msgstr "efa Version (2 empfohlen)"
 
-#: maingui.py:212
-msgid "Here you can choose the efa version that "
-msgstr "Hier kannst Du auswählen, welche Version von efa "
-
-#: maingui.py:213
-msgid "you would like to use. Please note that efa 2 is a development "
-msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
-
-#: maingui.py:214
-msgid "version, which might me unstable. If you need a stable version, "
-msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
-
-#: maingui.py:215
-msgid "choose efa 1."
-msgstr "eine stabile Version benötigst, wähle efa 1."
-
-#: maingui.py:224
-msgid "version"
-msgstr "Version"
-
-#: maingui.py:241
+#: maingui.py:225
 msgid "efa network port"
 msgstr "efa Netzwerk-Port"
 
-#: maingui.py:260
+#: maingui.py:244
 msgid "efa shutdown action"
 msgstr "Aktion beim Beenden von efa"
 
-#: maingui.py:277
+#: maingui.py:261
 msgid "enable automatic USB backup"
 msgstr "Automatische Datensicherung auf USB einschalten"
 
-#: maingui.py:285
+#: maingui.py:269
 msgid "show dialog after automatic backup"
 msgstr "Dialog nach automatischer Datensicherung anzeigen"
 
-#: maingui.py:290
+#: maingui.py:274
 msgid "Tools"
 msgstr "Werkzeuge"
 
-#: maingui.py:308
+#: maingui.py:292
 msgid "Terminal"
 msgstr "Kommandozeile"
 
-#: maingui.py:312
+#: maingui.py:296
 msgid "File manager"
 msgstr "Dateimanager"
 
-#: maingui.py:316
+#: maingui.py:300
 msgid "Devices"
 msgstr "Speichermedien"
 
-#: maingui.py:320
+#: maingui.py:304
 msgid "Editor"
 msgstr "Editor"
 
-#: maingui.py:329
+#: maingui.py:313
 msgid "System"
 msgstr "System"
 
-#: maingui.py:347
+#: maingui.py:331
 msgid "Screen"
 msgstr "Bildschirm"
 
-#: maingui.py:351
+#: maingui.py:335
 msgid "Network"
 msgstr "Netzwerk"
 
-#: maingui.py:355
+#: maingui.py:339
 msgid "Keyboard"
 msgstr "Tastatur"
 
-#: maingui.py:359
+#: maingui.py:343
 msgid "Screensaver"
 msgstr "Bildschirmschoner"
 
-#: maingui.py:363
+#: maingui.py:347
 msgid "Date & time"
 msgstr "Datum & Zeit"
 
-#: maingui.py:369
+#: maingui.py:353
 msgid "Actions"
 msgstr "Aktionen"
 
-#: maingui.py:387
+#: maingui.py:371
 msgid "Shutdown PC"
 msgstr "PC herunterfahren"
 
-#: maingui.py:391
+#: maingui.py:375
 msgid "Restart PC"
 msgstr "PC neu starten"
 
-#: maingui.py:433
-msgid "1 (stable)"
-msgstr "1 (Stabil)"
+#: maingui.py:417
+msgid "1 (old)"
+msgstr "1 (alt)"
 
-#: maingui.py:434
-msgid "2 (development)"
-msgstr "2 (Entwicklung)"
+#: maingui.py:418
+msgid "2 (current)"
+msgstr "2 (aktuell)"
 
-#: maingui.py:436
+#: maingui.py:420
 msgid "shutdown pc"
 msgstr "PC herunterfahren"
 
-#: maingui.py:437
+#: maingui.py:421
 msgid "restart pc"
 msgstr "PC neu starten"
 
-#: maingui.py:438
+#: maingui.py:422
 msgid "restart efa"
 msgstr "efa neu starten"
 
-#: maingui.py:504
+#: maingui.py:488
 #, python-format
 msgid "Could not open xterm program: %s"
 msgstr "Konnte das Programm xterm nicht starten: %s"
 
-#: maingui.py:512
+#: maingui.py:496
 #, python-format
 msgid "Could not open nm-connection-editor program: %s"
 msgstr "Konnte das Programm nm-connection-editor nicht starten: %s"
 
-#: maingui.py:520
+#: maingui.py:504
 #, python-format
 msgid "Could not open thunar program: %s"
 msgstr "Konnte das Programm thunar nicht starten: %s"
 
-#: maingui.py:525
+#: maingui.py:509
 msgid "Really shut down PC ?"
 msgstr "PC wirklich herunterfahren ?"
 
-#: maingui.py:531 maingui.py:542
+#: maingui.py:515 maingui.py:526
 #, python-format
 msgid "Could not run /sbin/shutdown program: %s"
 msgstr "Konnte /sbin/shutdown nicht aufrufen: %s"
 
-#: maingui.py:536
+#: maingui.py:520
 msgid "Really reboot PC ?"
 msgstr "PC wirklich neu starten ?"
 
-#: maingui.py:556
+#: maingui.py:540
 #, python-format
 msgid "Could not run keyboard setup: %s"
 msgstr "Konnte die Tastatureinstellungen nicht laden: %s"
 
-#: maingui.py:564
+#: maingui.py:548
 #, python-format
 msgid "Could not open xscreensaver-demo program: %s"
 msgstr "Konnte das Programm xscreensaver-demo nicht starten: %s"
 
-#: maingui.py:575
+#: maingui.py:559
 #, python-format
 msgid "Could not open gedit program: %s"
 msgstr "Konnte das Programm gedit nicht starten: %s"
 
-#: maingui.py:610
+#: maingui.py:594
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -388,11 +368,11 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:611
+#: maingui.py:595
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:612
+#: maingui.py:596
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 
@@ -403,6 +383,33 @@ msgstr "Bildschirm-Setup"
 #: screensetup.py:70
 msgid "Apply"
 msgstr "Anwenden"
+
+#~ msgid "efa version"
+#~ msgstr "efa Version"
+
+#~ msgid "Choose which version of efa to use (efa 2 recommendet)."
+#~ msgstr "Zu benutzende efa version (efa 2 empfohlen)"
+
+#~ msgid "version"
+#~ msgstr "Version"
+
+#~ msgid "1 (stable)"
+#~ msgstr "1 (Stabil)"
+
+#~ msgid "2 (development)"
+#~ msgstr "2 (Entwicklung)"
+
+#~ msgid "Here you can choose the efa version that "
+#~ msgstr "Hier kannst Du auswählen, welche Version von efa "
+
+#~ msgid "you would like to use. Please note that efa 2 is a development "
+#~ msgstr "Du benutzen willst. Bitte beachte, dass sich efa 2 noch "
+
+#~ msgid "version, which might me unstable. If you need a stable version, "
+#~ msgstr "in der Entwicklung befindet und daher instabil sein kann. Wenn Du "
+
+#~ msgid "choose efa 1."
+#~ msgstr "eine stabile Version benötigst, wähle efa 1."
 
 #~ msgid "Mount"
 #~ msgstr "Einhängen"
