@@ -47,7 +47,7 @@
 
             function positionSubMenu() {
                 //print("In positionSubMenu()");
-                var parentString = "parent active ";
+                var parentString = " active parent";
                 var element = getElementByClass(parentString);
                 if(element != null) {
                     moveSubMenu(element);
