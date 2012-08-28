@@ -1,0 +1,183 @@
+<html>
+<head>
+<title>efa - elektronisches Fahrtenbuch</title>
+</head>
+<body bgcolor="#ffffff">
+<h1 align="center">Erweiterte Ausgabeeinstellungen</h1>
+
+<br>
+<table bgcolor="#0000ff" width="100%">
+<tr><td><font color="#ffffff"><b><i>Beschreibung</i></b></font></td></tr>
+</table>
+
+<p>Um das ohnehin schon recht volle Fenster mit den <a href="StatistikFrame.html">Statistikeinstellungen</a> nicht noch voller zu machen, wurden manche seltener ben?tigten Einstellungen in dieses extra Fenster verlagert. Du ?ffnest es, indem Du im <a href="StatistikFrame.html">Statistik-Fenster</a> auf den Button <i>erweiterte Ausgabe...</i> klickst.</p>
+
+<br clear="all">
+<table bgcolor="#0000ff" width="100%">
+<tr><td><font color="#ffffff"><b><i>Erkl???rung der Buttons und Felder</i></b></font></td></tr>
+</table>
+
+<table width="100%">
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b>OK</b></td></tr></table></td>
+  <td>?bernimmt die Einstellungen und schlie?t das Fenster.</td>
+</tr>
+<tr>
+  <td colspan="2">Die Einstellungen in diesem Fenster sind der ?bersichtlichkeit halber auf drei Registerkarten verteilt. Optionen, die f?r die aktuell gew?hlte <i>Statistikart</i> keine Bedeutung haben, sind grau dargestellt.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#aaffaa"><b>Ausgabevarianten</b></td></tr></table></td>
+  <td width="*" bgcolor="#ddffdd">Ausgabevarianten</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">G?ste &amp; Andere zusammenfassen (am Ende)</font></b></td></tr></table></td>
+  <td>Ist diese Option gew?hlt, so werden G?ste nicht einzeln, sondern unter dem Namen <i>G?ste</i> zusammengefa?t; ebenso werden Personen mit dem Status <i>Andere</i> unter dem Namen <i>andere</i> zusammengefa?t ausgegeben. Die Ausgabe erfolgt am Ende der Kilometerliste.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">G?ste vereinsweise zusammenfassen</font></b></td></tr></table></td>
+  <td>Ist diese Option gew?hlt, so werden G?ste nicht einzeln, sondern unter ihrem Vereinsnamen zusammengefa?t, ausgegeben; Personen mit Status <i>Andere</i> werden zusammengefa?t unter dem Namen <i>andere</i> ausgegeben.<br>Dabei werden die Eintr?ge gem?? der gew?hlten Sortierung in die Kilometerliste eingereiht. Wenn die zusammengefa?ten Eintr?ge am Ende erscheinen sollen, so kann zus?tzlich die Option <i>G?ste &amp; Andere zusammenfassen</i> gew?hlt werden; in diesem Fall werden die Eintr?ge vereinsweise zusammengefa?t am Ende der Kilometerliste ausgegeben.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Teilziele einzeln</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, werden durch <i>+</i> getrennte Teilziele einzeln ausgegeben: Das Ziel <i>Kleine Umfahrt + Pfaueninsel</i>, welches normalerweise auch als solches ausgegeben wird, w?rde dann als <i>Kleine Umfahrt</i> und als <i>Pfaueninsel</i> ausgegeben werden (beide Male mit den vollen Kilometern).</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Entfernungen gruppieren</font></b></td></tr></table></td>
+  <td>Bei der Statistikart <i>Km / Fahrt</i> werden normalerweise die H?ufigkeiten pro exakter Entfernung ausgegeben. Wenn nur ein ?berblick gewonnen werden soll, wie weit wie oft gerudert wird, ist diese Aufsplitterung un?bersichtlich. Ist diese Option gew?hlt, dann werden die Entfernungen in Gruppen von je 5 Km zusammengefa?t.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">immer auch alle Null-Werte ausgeben</font></b></td></tr></table></td>
+  <td>Normalerweise werden immer nur die Ruderer/Boote/Ziele/Monate usw. ausgegeben, f?r die auch tats?chlich eine Fahrt im Auswertungszeitraum gefunden wurde. Andere Mitglieder/Boote/Ziele, die in den jeweiligen Listen stehen, aber nicht im gew?hlten Zeitraum vorkommen, werden ignoriert. Sollen sie trotzdem ausgegeben werden, so kann diese Option gew?hlt werden.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">horizontal immer alle (Wer mit Wem)</font></b></td></tr></table></td>
+  <td>Wenn bei der Statistikart <i>Wer mit Wem</i> die Auswertung auf bestimmte Personen (z.B. nur <i>Junior</i>) eingeschr?nkt wird, dann werden normalerweise auch nur Spalten mit Junioren ausgegeben, auch wenn Junioren auch mit Nicht-Junioren gerudert sind. Wenn f?r alle Personen, mit denen die ausgew?hlten Ruderer gerudert sind, Spalten ausgegeben werden sollen, so mu? diese Option gew?hlt werden.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">in XML-Ausgabe immer alle Felder ausgeben</font></b></td></tr></table></td>
+  <td>Diese Option bewirkt, da? bei der XML-Ausgabe immer alle Felder pro Eintrag ausgegeben werden; diese Option ist ausschlie?lich daf?r gedacht, die von efa berechneten Daten extern (oder mittels Stylesheets) weiterzuverarbeiten.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Mitgliedsnummern anstelle von Namen ausgeben</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, wird anstelle des Namens eines Mitglieds in den Statistiken dessen Mitgliedsnummer ausgegeben (sog. <i>anonymisierte Statistik</i>).</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#aaffaa"><b>Balken</b></td></tr></table></td>
+  <td width="*" bgcolor="#ddffdd">maximale Balkengr??e</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">zu gro?e Balken spalten</font></b></td></tr></table></td>
+  <td>Wenn bei der Ausgabe die geruderten Kilometer o.?. durch einen Balken veranschaulicht werden, so kann es vorkommen, da? einige wenige Balken sehr lang werden, die gro?e Mehrzahl der Balken hingegen sehr kurz (weil es einige wenige mit sehr vielen Kilomtern gibt, w?hrend die gro?e Mehrzahl eher durchschnittlich viele Kilometer hat). In diesem Fall kann efa zu gro?e Balken stauchen (spalten), wenn diese Option aktiviert wird. Lies bitte in diesem Fall auch die nachfolgende Beschreibung zu den Balkengr??en!</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Balkengr??en</font></b></td></tr></table></td>
+  <td>In den Feldern <i>Kilometer</i>, <i>Ruderkilometer</i> usw. k?nnen die maximalen Balkengr??en f?r die einzelnen Werte eingegeben werden. Diese Werte kommen nur zum Tragen, wenn die Option <i>zu gro?e Balken spalten</i> aktiviert ist. efa berechnet in diesem Fall wie gehabt die Balkengr??e f?r 100% (Ruderer mit den meisten Kilometern) anhand der Gr??enangabe im <a href="StatistikFrame.html">Statistik-Fenster</a>. ?bersteigt diese Gr??e f?r einen bestimmten Eintrag die hier angegebene Gr??e, so wird der Balken gestaucht. Wenn also die Balken eine maximale Breite von 200 erreichen sollen und alle Balken f?r Werte, die gr??er als der halbe Maximalwert sind, gestaucht werden sollen, so mu? im <a href="StatistikFrame.html">Statistik-Fenster</a> als Gr??e <i>400</i> angegeben werden (Gr??e f?r 100%) und hier <i>200</i> (maximale Gr??e, auf die gestaucht wird)!</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">zusammengefa?te Werte ohne Balken</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, werden zusammengefa?te Eintr?ge wie <i>G?ste</i> und <i>Andere</i> in der graphischen Ausgabe ohne einen Balken ausgegeben.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#aaffaa"><b>Fahrtenbuch</b></td></tr></table></td>
+  <td width="*" bgcolor="#ddffdd">Einstellungen zur Fahrtenbuch-Ausgabe</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Feld</font></b></td></tr></table></td>
+  <td>legt fest, welche Felder bei der Statistikart <i>Fahrtenbuch</i> ausgegeben werden sollen.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Im Feld Bemerkungen auch den Zielbereich ausgeben</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, werden die erreicheten Zielbereiche (LRV Berlin) im Feld Bemerkungen ausgegeben.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Im Feld Bemerkungen auch die Fahrtart ausgeben</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, wird die Art der Fahrt, sofern es sich nicht um eine <i>normale Fahrt</i> handelt, im Bemerkungsfeld ausgegeben.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#aaffaa"><b>Wettbewerbe</b></td></tr></table></td>
+  <td width="*" bgcolor="#ddffdd">zus?tzliche Wettbewerbe ausgeben</td>
+</tr>
+<tr>
+  <td colspan="2">Seit Version 1.2.0 kann efa auch in normalen Kilometerlisten die Informationen ?ber das Erf?llen der Kilometerwettbewerbe in Kurzform in je einer Spalte ausgeben. Auf diese Weise m?ssen im Verein nicht mehr mehrere einzelne Listen ausgeh?ngt werden, sondern die Informationen finden sich alle auf einer gemeinsamen Liste. Auf dieser Registerkarte kannst Du ausw?hlen, welche Wettbewerbe ausgewertet werden sollen. Zu beachten ist, da? efa nur Fahrtenb?cher ber?cksichtigt, die auch bei der normalen Auswertung ber?cksichtigt werden; insb. wenn der <i>Fahrtenruder-Winterwettbewerb</i> des LRV Berlin ausgewertet werden soll, mu? daher im <a href="StatistikFrame.html">Statistikfenster</a> die Option <i>fahrtenbuch?bergreifend</i> ausgew?hlt werden und ggf. die Berechnung f?r die Kilometerliste auf die Zeit von z.B. <i>1.1.2003</i> bis <i>31.12.2003</i> eingeschr?nkt werden! Die Wettbewerbsdaten werden automatisch f?r den richtigen Zeitraum berechnet, es sei denn, f?r die Auswertung wurde ein Enddatum angegeben, das <i>vor</i> dem Ende des Wettbewerbs liegt.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Wettbewerb</font></b></td></tr></table></td>
+  <td>W?hlt einen Wettbewerb, der in einer zus?tzlichen Spalte ausgegeben werden soll.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Wettbewerbsjahr</font></b></td></tr></table></td>
+  <td>W?hlt aus, f?r welches Wettbewerbsjahr dieser Wettbewerb ausgewertet werden soll.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">auch geforderte Kilometer und Zusatzbedingungen ausgeben</font></b></td></tr></table></td>
+  <td>Normalerweise ist die Ausgabe aus platzgr?nden stark verk?rzt. Insb. wird f?r Teilnehmer, die die Bedingungen noch <i>nicht</i> erf?llt haben, normalerweise nicht ausgegeben, wie viele Kilometer, Wanderfahrt-Km usw. sie erreichen m?ssen. Wenn diese Option gew?hlt ist, werden auch diese Angaben ausgegeben.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">alle Zielfahrten ausgeben (LRV Berlin Sommer)</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, gibt efa f?r Teilnehmer, die den Wettbewerb erf?llen, alle Zielfahrten einer Person aus. Normalerweise werden nur die vier besten Zielfahrten ausgegeben. Hinweis: F?r die elektronische Meldung werden immer alle Zielfahrten (maximal jedoch 50) an den LRV Berlin gemeldet.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#aaffaa"><b>Datei</b></td></tr></table></td>
+  <td width="*" bgcolor="#ddffdd">Ausgabe in Dateien</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">vor ?berschreiben vorhandener Dateien warnen</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist und eine Ausgabedatei erstellt werden soll, die bereits existiert, so warnt efa vor dem ?berschreiben dieser Datei.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">in existierenden HTML-Dateien nur Tabelle ersetzen</font></b></td></tr></table></td>
+  <td>Ist diese Option aktiviert, so ersetzt efa bei der Ausgabe <i>als HTML-Datei</i> in der HTML-Datei (sofern diese bereits existiert) nur die Tabelle mit den ausgewerteten Daten und beh?lt das restliche Dateiger?st der existierenden Datei bei. Dies ist dann n?tzlich, wenn beispielsweise die Ergebnisse auf der Vereinshomepage ver?ffentlicht werden sollen und die Kilometerliste sich ins Layout einf?gen soll (Titel, Links usw.). In diesem Fall sollte zuerst eine Kilometerliste erstellt werden. Anschlie?end wird die erstellte Datei bearbeitet, so da? sie dem Layout f?r die Homepage gen?gt. Hierbei d?rfen die Zeilen <i>&lt;!--EFA-START--&gt;</i> und <i>&lt;!--EFA-ENDE--&gt;</i> nicht entfernt werden! Beim n?chsten Aktualisieren der Kilometerliste ersetzt efa dann nur den Bereich zwischen <i>&lt;!--EFA-START--&gt;</i> und <i>&lt;!--EFA-ENDE--&gt;</i> und beh?lt das restliche Ger?st der Datei bei.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">vor Erstellen der Datei Kommando ausf?hren</font></b></td></tr></table></td>
+  <td>In dieses Feld kann ein Betriebssystemkommando eingetragen werden, welches ausgef?hrt werden soll, bevor efa die Ausgabedatei erstellt. Dies kann z.B. genutzt werden, um unter Linux das Ausgabedevice zu mounten.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">nach Erstellen der Datei Kommando ausf?hren</font></b></td></tr></table></td>
+  <td>In dieses Feld kann ein Betriebssystemkommando eingetragen werden, welches ausgef?hrt werden soll, nachdem efa die Ausgabedatei erstellt. Dies kann z.B. f?r Nachbearbeitungen an der Datei genutzt werden, oder um unter Linux das Ausgabedevice nach dem Mounten wieder zu unmounten.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#aaffaa"><b>Weitere</b></td></tr></table></td>
+  <td width="*" bgcolor="#ddffdd">Weitere Einstellungen</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Bemerkungsfeld enth?lt</font></b></td></tr></table></td>
+  <td>Veranla?t efa dazu, nur Fahrten zu ber?cksichtigen, bei denen im Bemerkungsfeld der hier angegebene Text auftaucht. Auf diese Weise l??t sich die Auswertung auf bestimmte Fahrten einschr?nken. Die in den <a href="EfaConfigFrame.html">efa - Einstellungen</a> konfigurierten Tastenbelegungen k?nnen auch hier zur Eingabe der Schlagworte benutzt werden.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Bemerkungsfeld enth?lt nicht</font></b></td></tr></table></td>
+  <td>Veranla?t efa dazu, nur Fahrten zu ber?cksichtigen, bei denen im Bemerkungsfeld der hier angegebene Text <b>nicht</b> auftaucht. Auf diese Weise lassen sich bestimmte Fahrten von der Auswertung ausnehmen.l??t sich die Auswertung auf bestimmte Fahrten einschr?nken. Die in den <a href="EfaConfigFrame.html">efa - Einstellungen</a> konfigurierten Tastenbelegungen k?nnen auch hier zur Eingabe der Schlagworte benutzt werden.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">nur Fahrten mit Start und Ziel am Bootshaus ('Steg-Km')</font></b></td></tr></table></td>
+  <td>Wenn diese Option gew?hlt ist, ber?cksichtigt efa nur Fahrten, deren Start- und Zielpunkt das eigene Bootshaus ist. In diesem Fall mu? f?r jedes <a href="NeuesZielFrame.html">Ziel</a>, welches ber?cksichtigt werden soll, die Option <i>Start und Ziel ist eigenes Bootshaus</i> gew?hlt sein. Ziele, die nicht in der Zielliste gespeichert sind, werden ignoriert.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td><b>[field}nur Fahrten mit mind. x Kilometern</b></td></tr></table></td>
+  <td>Es werden nur Fahrten ausgewertet, die mindestens x Kilometer lang sind.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td><b>[field}nur Boote f?r Gruppe</b></td></tr></table></td>
+  <td>Es werden nur Fahrten ausgewertet, die mit Booten gemacht wurden, die nur von der angegebenen Gruppe gerudert werden d?rfen.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">nur die folgenden Fahrtenb?cher auswerten</font></b></td></tr></table></td>
+  <td>Wenn in diese Felder Fahrtenbuchdateien eingetragen werden, so wertet efa bei der Statistikerstellung nur die hier eingetragenen Fahrtenb?cher aus. Das aktuell ge?ffnete Fahrtenbuch (falls nicht hier explizit angegeben) wird dann <i>nicht</i> ausgewertet. Die Option <i>fahrtenbuch?bergreifend</i> hat keinerlei Wirkung, falls hier explizit Fahrtenb?cher angegeben werden.</td>
+</tr>
+</table>
+
+<br clear="all"><br>
+<table bgcolor="#0000ff" width="100%">
+<tr><td><font color="#ffffff"><b><i>siehe auch:</i></b></font></td></tr>
+</table>
+<ul>
+  <li><a href="StatistikFrame.html">Statistik-Grundeinstellungen</a></li>
+</ul>
+
+<p><a href="Frames.html">Zur???ck zur ???bersicht der Hilfeseiten</a></p>
+<br clear="all"><hr>
+<small><a href="index.html">efa - elektronisches Fahrtenbuch</a>,
+Copyright &copy; 2001-10 by <a href="http://www.nmichael.de/" target="_new">Nicolas Michael</a>
+&lt;<a href="mailto:software@nmichael.de">software@nmichael.de</a>&gt;</small>
+</body>
+</html>

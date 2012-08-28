@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>efa Tour</title>
+</head>
+<body>
+<table width="100%"><tr><td>[Kap 6 Seite 100/106]</td>
+<td align="right"><a href="k06-101.html">Weiter</a></td></tr></table>
+<h1 align="center">H?here Zuverl?ssigkeit von efa im Bootshaus [1.8.2]</h1>
+<p>Beim Einsatz von efa im Bootshaus ?ber l?ngere Zeitr?ume kam es gelegentlich zu Problemen, etwa da? efa der Speicher
+ausging oder es vereinzelt zu Doppelstarts von efa kam, die zu Inkonsistenzen der Daten oder im schlimmsten Fall gar
+Datenverlusten f?hrten. Dies ist in der aktuellen Version von efa nun grundlegend verbessert.</p>
+<p><b>T?glicher automatischer Neustart von efa:</b> Die Empfehlung, efa regelm??ig neu zu starten, ist nun
+direkt im Programm umgesetzt: Standardm??ig startet sich efa jede Nacht um 4:00 Uhr neu. Durch den Neustart erh?ht sich
+die Zuverl?ssigkeit von efa erheblich, da schleichende Speicherknappheit ?ber Monate hinweg vermieden wird und sich efa
+durch einen Neustart aus m?glichen Fehlersituationen automatisch wieder befreien kann. Die Uhrzeit des Neustarts ist in
+der Konfiguration von efa ?nderbar. Ein Deaktivieren dieser Funktion ist m?glich, jedoch nicht angeraten.</p>
+<p><b>Vorbeugen von Inkonsistenzen und Datenverlusten:</b> Obwohl efa beim Starten pr?ft, ob bereits ein anderes efa
+l?uft und einen Doppelstart verhindert, ist dies dennoch in einigen Vereinen vereinzelt passiert, da? efa mehrfach
+zeitgleich lief. Dies konnte bislang dazu f?hren, da? sich beide efa's gegenseitig die Daten ?berschrieben und es somit
+zu Inkonsistenzen oder Datenverlusten kam. Die neue Version von efa hat ein zus?tzliches Sicherheitsnetz: efa kann jetzt
+feststellen, ob eine Datei seit dem letzten Speichern von einem parallel laufenden efa ver?ndert wurde. Ist dies der Fall,
+so f?hrt efa keine ?nderungen an der Datei durch und beendet sich statt dessen, um eine Inkonsistenz der Daten oder
+Datenverlust zu vermeiden. Ein gegenseitiges ?berschreiben von Daten ist damit nicht mehr m?glich.</p>
+<p><a href="k06-101.html">Weiter</a></p>
+</body>
+</html>

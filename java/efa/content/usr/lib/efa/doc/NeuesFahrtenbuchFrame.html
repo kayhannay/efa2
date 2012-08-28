@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>efa - elektronisches Fahrtenbuch</title>
+</head>
+<body bgcolor="#ffffff">
+<h1 align="center">Neues Fahrtenbuch erstellen / Einstellungen zum Fahrtenbuch</h1>
+
+<br>
+<table bgcolor="#0000ff" width="100%">
+<tr><td><font color="#ffffff"><b><i>Beschreibung</i></b></font></td></tr>
+</table>
+
+<p>Dieses Fenster zeigt die wichtigsten Einstellungen zum Fahrtenbuch und kann beim Erstellen eines neuen Fahrtenbuchs ?ber <i>Datei - Neues Fahrtenbuch erstellen - Neues, unabh?ngiges Fahrtenbuch mit leere Datenlisten</i> bzw. f?r das aktuelle Fahrtenbuch ?ber <i>Administration - Fahrtenbuch - Einstellungen zum Fahrtenbuch</i> aufgerufen werden.</p>
+<p>Hier werden der Dateiname des Fahrtenbuchs, sowie die zu verwendenden Boots-, Mitglieder-, Ziellisten und Statistikeinstellungen festgelegt, sowie die Verkn?pfung mehrerer Fahrtenb?cher.</p>
+<p>Ein Fahrtenbuch sollte immer die Fahrten genau eines Jahres erhalten. F?r ein neues Jahr sollte ?ber die Option <i>Neues Fahrtenbuch als Fortsetzung des aktuellen Fahrtenbuchs</i> unter <i>Datei - Neues Fahrtenbuch erstellen</i> ein neues Fahrenbuch erstellt werden. <b>Diese Eingabemaske sollte nur zum Erstellen des ersten Fahrtenbuchs, sowie zum Ver?ndern der Einstellungen benutzt werden!</b></p>
+<p>efa verwaltet f?r jedes Fahrtenbuch eigene Boots-, Mitglieder-, Ziellisten und Statistikeinstellungen. Auch wenn es theoretisch m?glich w?re, dieselbe Liste in mehreren Fahrtenb?chern zu verwenden, so sollte dies unbedingt vermieden werden, da dann ?nderungen an der Liste im einen Fahrtenbuch auch Auswirkungen auf das andere Fahrtenbuch h?tten!</p>
+
+<br clear="all">
+<table bgcolor="#0000ff" width="100%">
+<tr><td><font color="#ffffff"><b><i>Erkl???rung der Buttons und Felder</i></b></font></td></tr>
+</table>
+
+<table width="100%">
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Dateiname Fahrtenbuch</font></b></td></tr></table></td>
+  <td>Der Name und der Pfad der Fahrtenbuchdatei. ?nderungen an diesem Feld sind nur m?glich, wenn ein neues Fahrtenbuch erstellt wird. Da ein Fahrtenbuch immer f?r die Fahrten genau eines Jahres gedacht ist, ist es sinnvoll, das Jahr als Fahrtenbuchnamen zu verwenden. Die Endung <i>.efb</i> wird von efa automatisch erg?nzt. Das Fahrtenbuch f?r 2002 k?nnte beispielsweise <i>2002.efb</i> hei?en. Wenn nur ein Dateiname eingegeben wird, erg?nzt efa automatisch den Pfad zu dem <i>daten</i>-Verzeichnis von efa. Du kannst aber auch ein anderes Verzeichnis zum Ablegen des Fahrtenbuchs angeben.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Dateiname Bootsliste</font></b></td></tr></table></td>
+  <td>Der Name der Bootsliste, die von diesem Fahrtenbuch verwendet wird. Wenn kein Pfad angegeben ist, befindet sich die Bootsliste im selben Verzeichnis wie das Fahrtenbuch (Normalfall). Beim Anlegen eines neuen Fahrtenbuchs wird dieses Feld automatisch ausgef?llt. Von einem nachtr?glichen Austauschen der Bootsliste rate ich dringend ab!</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Dateiname Mitgliederliste</font></b></td></tr></table></td>
+  <td>Der Name der Mitgliederliste, die von diesem Fahrtenbuch verwendet wird. Wenn kein Pfad angegeben ist, befindet sich die Mitgliederliste im selben Verzeichnis wie das Fahrtenbuch (Normalfall). Beim Anlegen eines neuen Fahrtenbuchs wird dieses Feld automatisch ausgef?llt. Von einem nachtr?glichen Austauschen der Mitgliederliste rate ich dringend ab!</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Dateiname Zielliste</font></b></td></tr></table></td>
+  <td>Der Name der Zielliste, die von diesem Fahrtenbuch verwendet wird. Wenn kein Pfad angegeben ist, befindet sich die Zielliste im selben Verzeichnis wie das Fahrtenbuch (Normalfall). Beim Anlegen eines neuen Fahrtenbuchs wird dieses Feld automatisch ausgef?llt. Von einem nachtr?glichen Austauschen der Zielliste rate ich dringend ab!</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Dateiname Statistikeinstellungen</font></b></td></tr></table></td>
+  <td>Der Name der Datei mit den Statistikeinstellungen, die von diesem Fahrtenbuch verwendet werden. Wenn kein Pfad angegeben ist, befindet sich die Datei im selben Verzeichnis wie das Fahrtenbuch (Normalfall). Beim Anlegen eines neuen Fahrtenbuchs wird dieses Feld automatisch ausgef?llt.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">vorherige Fahrtenbuchdatei</font></b></td></tr></table></td>
+  <td>Dateiname des Fahrtenbuchs, das zeitlich vor dem aktuellen Fahrtenbuch liegt.<br>Wenn bei der <a href="StatistikFrame.html">Statistikerstellung</a> die Fahrten mehrerer aufeinanderfolgender Fahrtenb?cher ausgewertet werden sollen (Option <i>fahrtenbuch?bergreifend</i>), m?ssen die Fahrtenb?cher miteinander verkn?pft werden. Wenn das aktuelle Fahrtenbuch das f?r das Jahr 2002 ist, so ist das vorherige Fahrtenbuch das f?r 2001 und das n?chste das f?r 2003. Damit efa das wei?, m?ssen die Fahrtenbuchdateien von 2001 und 2003 in die Felder <i>vorherige Fahrtenbuchdatei</i> und <i>n?chste Fahrtenbuchdatei</i> eingetragen werden.<br>Wenn Du ?ber die Option <i><a href="FahrtenbuchNeuFortsetzenFrame.html">Neues Fahrtenbuch als Fortsetzung des aktuellen Fahrtenbuchs</a></i> ein neues Fahrtenbuch anlegst, so werden diese Felder automatisch ausgef?llt.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">n?chste Fahrtenbuchdatei</font></b></td></tr></table></td>
+  <td>Dateiname des Fahrtenbuchs, das zeitlich nach dem aktuellen Fahrtenbuch liegt (s.o.).</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Angabe von Mitgliedernamen</font></b></td></tr></table></td>
+  <td>Gibt an, in welcher Form Mitgliedernamen im Fahrtenbuch eingegeben und bei der <a href="StatistikFrame.html">Statistikerstellung</a> ausgegeben werden.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Liste f?r Status</font></b></td></tr></table></td>
+  <td>In dieses Feld m?ssen alle Status eingetragen werden, die ein Mitglied im Verein haben kann, erg?nzt um den Status <i>Gast</i> f?r G?ste. Die hier eingetragenen Werte k?nnen beim <a href="NeuesMitgliedFrame.html">Hinzuf?gen oder Bearbeiten von Mitgliedern</a> als Status ausgew?hlt werden und m?ssen durch Kommata getrennt werden (z.B. <i>Junior,Senior,Gast</i>).<br>Das nachtr?gliche Hinzuf?gen von Status zu dieser Liste ist bedenkenlos m?glich; es sollten jedoch keine Status aus der Liste entfernt werden, die in der Mitgliederliste benutzt werden.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b><font color="#7777dd">Mitgliederzahl am 01.01. des Jahres</font></b></td></tr></table></td>
+  <td>Anzahl der Personen, die am 01.01. des Jahres (f?r dieses Fahrtenbuch) Mitglied im Verein waren. Diese Angabe wird f?r die Auswertung des <i>Blauen Wimpels</i> des LRV Berlin ben?tigt.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b>Fahrtenbuch erstellen</b></td></tr></table></td>
+  <td>Erstellt ein neues Fahrtenbuch und neue (leere) Boots-, Mitglieder-, Ziellisten und Statistikeinstellungen mit den angegebenen Werten. Dieser Button ist nur verf?gbar, wenn ein neues Fahrtenbuch erstellt werden soll.</td>
+</tr>
+<tr>
+  <td valign="top"><table width="100%"><tr><td bgcolor="#dddddd"><b>?nderungen ?bernehemen</b></td></tr></table></td>
+  <td>?bernimmt die ?nderungen f?r das aktuelle Fahrtenbuch. Dieser Button ist nur verf?gbar, wenn die Einstellungen des aktuellen Fahrtenbuchs bearbeitet werden.</td>
+</tr>
+</table>
+
+<br clear="all"><br>
+<table bgcolor="#0000ff" width="100%">
+<tr><td><font color="#ffffff"><b><i>siehe auch:</i></b></font></td></tr>
+</table>
+<ul>
+  <li><a href="FahrtenbuchNeuFortsetzenFrame.html">Neues Fahrtenbuch erstellen oder fortsetzen</a></li>
+</ul>
+
+<p><a href="Frames.html">Zur???ck zur ???bersicht der Hilfeseiten</a></p>
+<br clear="all"><hr>
+<small><a href="index.html">efa - elektronisches Fahrtenbuch</a>,
+Copyright &copy; 2001-10 by <a href="http://www.nmichael.de/" target="_new">Nicolas Michael</a>
+&lt;<a href="mailto:software@nmichael.de">software@nmichael.de</a>&gt;</small>
+</body>
+</html>
