@@ -1,0 +1,15 @@
+Source: efa2
+Section: misc
+Priority: optional
+Maintainer: Kay Hannay <klinux@hannay.de>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.8.4
+Homepage: http://efa.nmichael.de
+#Vcs-Git: git://git.debian.org/collab-maint/efalive.git
+Vcs-Browser: http://kenai.com/projects/efa/sources/efa-src/show
+
+Package: efa2
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre
+Recommends: 
+Description: Electronic logbook for rowing and canoeing clubs.
