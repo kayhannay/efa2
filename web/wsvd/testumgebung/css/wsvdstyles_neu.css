@@ -1,0 +1,70 @@
+/* Body Style */
+
+body.teaser 		{background-color:#003399;}
+
+body.nav 			{background-color:#003399;}
+
+body.content 		{background-color:#cbdaf6;}
+
+body.contenthome 	{background-color:#cbdaf6;background-image:url(../images/bootshaus_hellblau.jpg); background-repeat:no-repeat;}
+
+/* Link Style */
+
+a:link	  		    {text-decoration:underline;color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;}
+
+a:visited       	{text-decoration:underline;color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;}
+
+a:active            {text-decoration:underline;color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;}
+
+a:hover             {text-decoration:underline;color:#FF6368;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;}
+
+
+a.navmain:link	  	{text-decoration:none;color:#ffffff;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+a.navmain:visited   {text-decoration:none;color:#ffffff;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+a.navmain:active    {text-decoration:none;color:#ffffff;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+a.navmain:hover     {text-decoration:none;color:#CBDAF6;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+
+a.navmainactv:link	  	{text-decoration:none;color:#CBDAF6;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+a.navmainactv:visited   {text-decoration:none;color:#CBDAF6;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+a.navmainactv:active    {text-decoration:none;color:#CBDAF6;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+a.navmainactv:hover     {text-decoration:none;color:#CBDAF6;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;font-weight:bold;}
+
+
+/* td Styles */
+
+td.contentblue		{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;text-align:left;line-height:130%}
+
+td.contentbluebold	{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;text-align:left;line-height:130%;font-weight:bold;}
+
+td.contentbluepic	{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;text-align:left;line-height:130%}
+
+td.navmain			{color:#ffffff;font-family:tahoma,verdana,arial,sans-serif;font-size:13px;text-align:left;font-weight:bold;}
+
+td.headerhome		{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:30px;text-align:left;font-weight:bold;}
+
+td.headerblue		{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:26px;text-align:left;font-weight:bold;}
+
+td.headersubblue	{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:20px;text-align:left;font-weight:bold;}
+
+td.contentred		{color:#FF6368;font-family:tahoma,verdana,arial,sans-serif;font-size:15px;text-align:left;font-weight:bold;}
+
+td.contentheaderblue{color:#000033;font-family:tahoma,verdana,arial,sans-serif;font-size:15px;text-align:left;font-weight:bold;;font-weight:bold;}
+
+td.bilderbg 		{background-color:#cbdaf6;}
+
+/* tr Styles */
+
+tr.contentred		{background-color:#ff6368;}
+
+/* table styles */
+
+table.plan			{background-color:#ffffff;}
+
+

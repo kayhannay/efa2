@@ -14,7 +14,23 @@
     <body>
         <div class="page_wrapper">
             <div id="breadcrumb">
-                <div class="mwrapper">You are here: <jdoc:include type="modules" name="breadcrumb" /></div>
+                <div class="mwrapper"><jdoc:include type="modules" name="breadcrumb" /></div>
+            </div>
+            <div class="user_area">
+                <?php
+                    $user =& JFactory::getUser();
+  
+                    if ($user->guest) {
+                        ?>
+                        <a href="index.php?option=com_users&view=login">Login</a>
+                        <?php
+                    } else {
+                        ?>
+                        Hi <?php echo "$user->name" ?> [<a href="index.php?option=com_users&view=profile"><?php echo "$user->username" ?></a>]&nbsp;&nbsp;
+                        <a href="index.php?option=com_users&view=login">Logout</a>
+                        <?php
+                    }
+                ?>
             </div>
             <div class="header"></div>
             <div id="left">
