@@ -3,7 +3,7 @@
 #
 VERSION=1.8.3.19
 
-rm -r efa-$VERSION
+rm -r efa-*
 mkdir efa-$VERSION
 #cp -a content/* efa-$VERSION
 cp -a debian efa-$VERSION
