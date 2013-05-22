@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-21 09:15+0100\n"
+"POT-Creation-Date: 2013-05-09 16:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -109,11 +109,11 @@ msgstr ""
 msgid "Use network time protocol (NTP)"
 msgstr ""
 
-#: datetime.py:185 maingui.py:389 screensetup.py:65
+#: datetime.py:185 maingui.py:393 screensetup.py:65
 msgid "Ok"
 msgstr ""
 
-#: datetime.py:190 maingui.py:393 screensetup.py:75
+#: datetime.py:190 maingui.py:397 screensetup.py:75
 msgid "Cancel"
 msgstr ""
 
@@ -269,7 +269,7 @@ msgid "Network"
 msgstr ""
 
 #: maingui.py:339
-msgid "Keyboard"
+msgid "Hostname"
 msgstr ""
 
 #: maingui.py:343
@@ -280,92 +280,101 @@ msgstr ""
 msgid "Date & time"
 msgstr ""
 
-#: maingui.py:353
+#: maingui.py:351
+msgid "Keyboard"
+msgstr ""
+
+#: maingui.py:357
 msgid "Actions"
 msgstr ""
 
-#: maingui.py:371
+#: maingui.py:375
 msgid "Shutdown PC"
 msgstr ""
 
-#: maingui.py:375
+#: maingui.py:379
 msgid "Restart PC"
 msgstr ""
 
-#: maingui.py:417
+#: maingui.py:421
 msgid "1 (old)"
 msgstr ""
 
-#: maingui.py:418
+#: maingui.py:422
 msgid "2 (current)"
 msgstr ""
 
-#: maingui.py:420
+#: maingui.py:424
 msgid "shutdown pc"
 msgstr ""
 
-#: maingui.py:421
+#: maingui.py:425
 msgid "restart pc"
 msgstr ""
 
-#: maingui.py:422
+#: maingui.py:426
 msgid "restart efa"
 msgstr ""
 
-#: maingui.py:488
+#: maingui.py:493
 #, python-format
 msgid "Could not open xterm program: %s"
 msgstr ""
 
-#: maingui.py:496
+#: maingui.py:501
 #, python-format
 msgid "Could not open nm-connection-editor program: %s"
 msgstr ""
 
-#: maingui.py:504
+#: maingui.py:509
 #, python-format
 msgid "Could not open thunar program: %s"
 msgstr ""
 
-#: maingui.py:509
+#: maingui.py:514
 msgid "Really shut down PC ?"
 msgstr ""
 
-#: maingui.py:515 maingui.py:526
+#: maingui.py:520 maingui.py:531
 #, python-format
 msgid "Could not run /sbin/shutdown program: %s"
 msgstr ""
 
-#: maingui.py:520
+#: maingui.py:525
 msgid "Really reboot PC ?"
 msgstr ""
 
-#: maingui.py:540
+#: maingui.py:545
 #, python-format
 msgid "Could not run keyboard setup: %s"
 msgstr ""
 
-#: maingui.py:548
+#: maingui.py:553
+#, python-format
+msgid "Could not run dynamic hostname setup: %s"
+msgstr ""
+
+#: maingui.py:561
 #, python-format
 msgid "Could not open xscreensaver-demo program: %s"
 msgstr ""
 
-#: maingui.py:559
+#: maingui.py:572
 #, python-format
-msgid "Could not open gedit program: %s"
+msgid "Could not open leafpad program: %s"
 msgstr ""
 
-#: maingui.py:594
+#: maingui.py:607
 msgid ""
 "Could not save files!\n"
 "\n"
 msgstr ""
 
-#: maingui.py:595
+#: maingui.py:608
 msgid "Please check the path you provided for "
 msgstr ""
 
-#: maingui.py:596
+#: maingui.py:609
 msgid "user rights and existance."
 msgstr ""
 

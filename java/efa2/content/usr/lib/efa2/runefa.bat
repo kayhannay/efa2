@@ -43,26 +43,23 @@ SET CP=program/efa.jar;program/efahelp.jar;program
 REM Classpath: Java Help
 SET CP=%CP%;program/plugins/jh.jar
 
-REM Classpath: JAXP-Plugin
-SET CP=%CP%;program/plugins/dom.jar
-SET CP=%CP%;program/plugins/jaxp-api.jar
-SET CP=%CP%;program/plugins/sax.jar
-SET CP=%CP%;program/plugins/xalan.jar
-SET CP=%CP%;program/plugins/xercesImpl.jar
-
-REM Classpath: FOP-Plugin
-SET CP=%CP%;program/plugins/fop.jar
-SET CP=%CP%;program/plugins/batik.jar
-SET CP=%CP%;program/plugins/avalon-framework-cvs-20020315.jar
-
 REM Classpath: FTP-Plugin
-SET CP=%CP%;program/plugins/ftp.jar
+SET CP=%CP%;program/plugins/edtftpj.jar
 
 REM Classpath: MAIL-Plugin
-SET CP=%CP%;program/plugins/mail.jar
+SET CP=%CP%;program/plugins/mailapi.jar
+SET CP=%CP%;program/plugins/smtp.jar
 
 REM Classpath: JSUNTIMES-Plugin
 SET CP=%CP%;program/plugins/jsuntimes.jar
+
+REM Classpath: FOP-Plugin
+SET CP=%CP%;program/plugins/avalon-framework.jar
+SET CP=%CP%;program/plugins/batik-all.jar
+SET CP=%CP%;program/plugins/commons-io.jar
+SET CP=%CP%;program/plugins/commons-logging.jar
+SET CP=%CP%;program/plugins/fop.jar
+SET CP=%CP%;program/plugins/xmlgraphics-commons.jar
 
 
 REM # ##########################################
@@ -88,13 +85,6 @@ SET EFA_JAVA_ARGUMENTS=%JVMOPTIONS% -cp %CP% %1 -javaRestart %3 %4 %5 %6 %7 %8 %
 SET EFA_RUN_CLI=0
 SET EFA_RUN_DEBUG=0
 IF "%2" == "runcli" SET EFA_RUN_CLI=1
-IF "%3" == "-debug" SET EFA_RUN_DEBUG=1
-IF "%4" == "-debug" SET EFA_RUN_DEBUG=1
-IF "%5" == "-debug" SET EFA_RUN_DEBUG=1
-IF "%6" == "-debug" SET EFA_RUN_DEBUG=1
-IF "%7" == "-debug" SET EFA_RUN_DEBUG=1
-IF "%8" == "-debug" SET EFA_RUN_DEBUG=1
-IF "%9" == "-debug" SET EFA_RUN_DEBUG=1
 IF "%EFA_RUN_CLI%" == "1" GOTO STARTCLI
 IF "%EFA_RUN_DEBUG%" == "1" GOTO STARTCLIDBG
 IF "%OS%" == "Windows_NT" GOTO STARTNT

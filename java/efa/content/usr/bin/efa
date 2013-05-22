@@ -1,5 +1,5 @@
 #!/bin/bash
 #
 
-/usr/lib/efa/efa.sh
+/usr/lib/efa/efa.sh "$@"
 

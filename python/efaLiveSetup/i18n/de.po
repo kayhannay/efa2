@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-21 09:15+0100\n"
+"POT-Creation-Date: 2013-05-09 16:03+0200\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -114,11 +114,11 @@ msgstr "Netzwerk-Zeit-Protokoll"
 msgid "Use network time protocol (NTP)"
 msgstr "Zeit über Internet synchronisieren (NTP)"
 
-#: datetime.py:185 maingui.py:389 screensetup.py:65
+#: datetime.py:185 maingui.py:393 screensetup.py:65
 msgid "Ok"
 msgstr "Ok"
 
-#: datetime.py:190 maingui.py:393 screensetup.py:75
+#: datetime.py:190 maingui.py:397 screensetup.py:75
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -274,8 +274,8 @@ msgid "Network"
 msgstr "Netzwerk"
 
 #: maingui.py:339
-msgid "Keyboard"
-msgstr "Tastatur"
+msgid "Hostname"
+msgstr "Hostname"
 
 #: maingui.py:343
 msgid "Screensaver"
@@ -285,82 +285,91 @@ msgstr "Bildschirmschoner"
 msgid "Date & time"
 msgstr "Datum & Zeit"
 
-#: maingui.py:353
+#: maingui.py:351
+msgid "Keyboard"
+msgstr "Tastatur"
+
+#: maingui.py:357
 msgid "Actions"
 msgstr "Aktionen"
 
-#: maingui.py:371
+#: maingui.py:375
 msgid "Shutdown PC"
 msgstr "PC herunterfahren"
 
-#: maingui.py:375
+#: maingui.py:379
 msgid "Restart PC"
 msgstr "PC neu starten"
 
-#: maingui.py:417
+#: maingui.py:421
 msgid "1 (old)"
 msgstr "1 (alt)"
 
-#: maingui.py:418
+#: maingui.py:422
 msgid "2 (current)"
 msgstr "2 (aktuell)"
 
-#: maingui.py:420
+#: maingui.py:424
 msgid "shutdown pc"
 msgstr "PC herunterfahren"
 
-#: maingui.py:421
+#: maingui.py:425
 msgid "restart pc"
 msgstr "PC neu starten"
 
-#: maingui.py:422
+#: maingui.py:426
 msgid "restart efa"
 msgstr "efa neu starten"
 
-#: maingui.py:488
+#: maingui.py:493
 #, python-format
 msgid "Could not open xterm program: %s"
 msgstr "Konnte das Programm xterm nicht starten: %s"
 
-#: maingui.py:496
+#: maingui.py:501
 #, python-format
 msgid "Could not open nm-connection-editor program: %s"
 msgstr "Konnte das Programm nm-connection-editor nicht starten: %s"
 
-#: maingui.py:504
+#: maingui.py:509
 #, python-format
 msgid "Could not open thunar program: %s"
 msgstr "Konnte das Programm thunar nicht starten: %s"
 
-#: maingui.py:509
+#: maingui.py:514
 msgid "Really shut down PC ?"
 msgstr "PC wirklich herunterfahren ?"
 
-#: maingui.py:515 maingui.py:526
+#: maingui.py:520 maingui.py:531
 #, python-format
 msgid "Could not run /sbin/shutdown program: %s"
 msgstr "Konnte /sbin/shutdown nicht aufrufen: %s"
 
-#: maingui.py:520
+#: maingui.py:525
 msgid "Really reboot PC ?"
 msgstr "PC wirklich neu starten ?"
 
-#: maingui.py:540
+#: maingui.py:545
 #, python-format
 msgid "Could not run keyboard setup: %s"
 msgstr "Konnte die Tastatureinstellungen nicht laden: %s"
 
-#: maingui.py:548
+#: maingui.py:553
+#, fuzzy, python-format
+msgid "Could not run dynamic hostname setup: %s"
+msgstr "Konnte das Konfigurationstool für den dynamischen DNS Eintrag nicht laden: %s"
+
+#: maingui.py:561
 #, python-format
 msgid "Could not open xscreensaver-demo program: %s"
 msgstr "Konnte das Programm xscreensaver-demo nicht starten: %s"
 
-#: maingui.py:559
-#, python-format
-msgid "Could not open gedit program: %s"
-msgstr "Konnte das Programm gedit nicht starten: %s"
+#: maingui.py:572
+#, fuzzy, python-format
+msgid "Could not open leafpad program: %s"
+msgstr "Konnte das Programm leafpad nicht starten: %s"
 
-#: maingui.py:594
+#: maingui.py:607
 msgid ""
 "Could not save files!\n"
 "\n"
@@ -368,11 +377,11 @@ msgstr ""
 "Die Einstellungen konnten nicht gespeichert werden!\n"
 "\n"
 
-#: maingui.py:595
+#: maingui.py:608
 msgid "Please check the path you provided for "
 msgstr "Bitte überprüfe den angegebenen Pfad auf "
 
-#: maingui.py:596
+#: maingui.py:609
 msgid "user rights and existance."
 msgstr "Benutzerrechte und ob er existiert."
 

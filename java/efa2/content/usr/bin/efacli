@@ -1,5 +1,5 @@
 #!/bin/bash
 #
 
-/usr/lib/efa2/efaCLI.sh
+/usr/lib/efa2/efaCLI.sh "$@"
 
