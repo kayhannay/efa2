@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: efaLiveSetup 0.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-09 16:03+0200\n"
+"POT-Creation-Date: 2013-09-26 20:53+0200\n"
 "PO-Revision-Date: 2010-09-07 10:18+0200\n"
 "Last-Translator: Kay Hannay <klinux@hannay.de>\n"
 "Language-Team: German\n"
@@ -68,12 +68,21 @@ msgstr ""
 "Wiederherstellen fehlgeschlagen! Bitte die Konfiguration des efalive "
 "Benutzers in efa prüfen."
 
-#: backup.py:165 devicemanager.py:420
+#: backup.py:165
+msgid "Restore of backup finished, but only restored efaLive backup."
+msgstr "Wiederherstellung erfolgreich, es wurde allerdings nur ein efaLive Backup bearbeitet"
+
+#: backup.py:170
+#, fuzzy
+msgid "Restore of backup finished, but only restored efa backup."
+msgstr "Wiederherstellung erfolgreich, es wurde allerdings nur ein efa Backup bearbeitet"
+
+#: backup.py:175 devicemanager.py:420
 #, python-format
 msgid "Restore of backup %s failed!"
 msgstr "Wiederherstellen der Datensicherung %s fehlgeschlagen"
 
-#: backup.py:170 devicemanager.py:425
+#: backup.py:180 devicemanager.py:425
 #, python-format
 msgid "Restore of backup %s finished."
 msgstr "Wiederherstellen der Datensicherung %s erfolgreich"
@@ -205,7 +214,7 @@ msgstr "Konnte keine Datensicherung erstellen: %s"
 msgid "Could not restore backup: %s"
 msgstr "Konnte keine Datensicherung erstellen: %s"
 
-#: dialogs.py:48
+#: dialogs.py:48 dialogs.py:54
 msgid "Details"
 msgstr "Details"
 

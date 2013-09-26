@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-09 16:03+0200\n"
+"POT-Creation-Date: 2013-09-26 20:53+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -63,12 +63,20 @@ msgid ""
 "in efa."
 msgstr ""
 
-#: backup.py:165 devicemanager.py:420
+#: backup.py:165
+msgid "Restore of backup finished, but only restored efaLive backup."
+msgstr ""
+
+#: backup.py:170
+msgid "Restore of backup finished, but only restored efa backup."
+msgstr ""
+
+#: backup.py:175 devicemanager.py:420
 #, python-format
 msgid "Restore of backup %s failed!"
 msgstr ""
 
-#: backup.py:170 devicemanager.py:425
+#: backup.py:180 devicemanager.py:425
 #, python-format
 msgid "Restore of backup %s finished."
 msgstr ""
@@ -200,7 +208,7 @@ msgstr ""
 msgid "Could not restore backup: %s"
 msgstr ""
 
-#: dialogs.py:48
+#: dialogs.py:48 dialogs.py:54
 msgid "Details"
 msgstr ""
 
