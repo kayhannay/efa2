@@ -25,12 +25,12 @@ import os
 import subprocess
 import traceback
 
-import dialogs
-from observable import Observable
-from devicemanager import DeviceManagerController as DeviceManager
-from screensetup import ScreenSetupController as ScreenSetup
-from datetime import DateTimeController as DateTime
-from backup import BackupController as Backup
+import efalivesetup.common.dialogs
+from efalivesetup.common.observable import Observable
+from efalivesetup.devicemanager.devicemanager import DeviceManagerController as DeviceManager
+from efalivesetup.screen.screensetup import ScreenSetupController as ScreenSetup
+from efalivesetup.datetime.datetime import DateTimeController as DateTime
+from efalivesetup.backup.backup import BackupController as Backup
 
 import locale
 import gettext

@@ -29,9 +29,9 @@ import subprocess
 import re
 import traceback
 
-from observable import Observable
-import dialogs
-import common
+from efalivesetup.common.observable import Observable
+import efalivesetup.common.dialogs
+from efalivesetup.common import common
 
 import locale
 import gettext

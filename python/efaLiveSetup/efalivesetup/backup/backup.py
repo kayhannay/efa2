@@ -24,8 +24,8 @@ import sys
 import subprocess
 import traceback
 
-import dialogs
-import common
+import efalivesetup.common.dialogs
+from efalivesetup.common import common
 
 import locale
 import gettext

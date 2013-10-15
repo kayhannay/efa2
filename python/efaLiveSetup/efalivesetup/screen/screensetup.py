@@ -23,7 +23,7 @@ from screenlayout import widget
 import os
 import sys 
 
-import dialogs
+import efalivesetup.common.dialogs
 
 import locale
 import gettext
