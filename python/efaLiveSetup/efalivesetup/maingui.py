@@ -24,6 +24,7 @@ import sys
 import os
 import subprocess
 import traceback
+import logging
 
 import efalivesetup.common.dialogs
 from efalivesetup.common.observable import Observable
@@ -31,16 +32,12 @@ from efalivesetup.devicemanager.devicemanager import DeviceManagerController as 
 from efalivesetup.screen.screensetup import ScreenSetupController as ScreenSetup
 from efalivesetup.datetime.datetime import DateTimeController as DateTime
 from efalivesetup.backup.backup import BackupController as Backup
+from efalivesetup.common import common
 
 import locale
 import gettext
 APP="efaLiveSetup"
-LOCALEDIR=os.path.join(os.path.dirname(sys.argv[0]), "locale")
-DIR=os.path.realpath(LOCALEDIR)
-gettext.install(APP, DIR, unicode=True)
-
-import logging
-
+gettext.install(APP, common.LOCALEDIR, unicode=True)
 
 class SetupModel(object):
     def __init__(self, confPath):

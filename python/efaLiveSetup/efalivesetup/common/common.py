@@ -21,9 +21,12 @@ import os
 import sys 
 import subprocess
 
+LOCALES=os.path.join(os.path.dirname(sys.argv[0]), os.pardir, 'i18n')
+LOCALEDIR=os.path.realpath(LOCALES)
+
 def get_icon_path(icon_name):
-    path = os.path.dirname(os.path.abspath(__file__))
-    icon_path = os.path.join(path, "icons/%s" % icon_name)
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir)
+    icon_path = os.path.join(path, 'icons', icon_name)
     return icon_path
 
 def command_output(args, **kwds):

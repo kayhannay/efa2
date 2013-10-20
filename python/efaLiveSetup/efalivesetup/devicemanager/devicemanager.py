@@ -28,19 +28,16 @@ import sys
 import subprocess
 import re
 import traceback
+import logging
+import locale
+import gettext
 
 from efalivesetup.common.observable import Observable
 import efalivesetup.common.dialogs
 from efalivesetup.common import common
 
-import locale
-import gettext
 APP="deviceManager"
-LOCALEDIR=os.path.join(os.path.dirname(sys.argv[0]), "locale")
-DIR=os.path.realpath(LOCALEDIR)
-gettext.install(APP, DIR, unicode=True)
-
-import logging
+gettext.install(APP, common.LOCALEDIR, unicode=True)
 
 class DeviceWidget(gtk.VBox):
     def __init__(self, device, homogeneous=False, spacing=2):

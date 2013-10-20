@@ -22,17 +22,15 @@ import gtk
 from screenlayout import widget
 import os
 import sys 
-
-import efalivesetup.common.dialogs
-
+import logging
 import locale
 import gettext
-APP="screenSetup"
-LOCALEDIR=os.path.join(os.path.dirname(sys.argv[0]), "locale")
-DIR=os.path.realpath(LOCALEDIR)
-gettext.install(APP, DIR, unicode=True)
 
-import logging
+import efalivesetup.common.dialogs
+from efalivesetup.common import common
+
+APP="screenSetup"
+gettext.install(APP, common.LOCALEDIR, unicode=True)
 
 class ScreenSetupModel(object):
     def __init__(self):

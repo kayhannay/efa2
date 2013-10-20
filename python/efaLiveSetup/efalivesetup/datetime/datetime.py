@@ -24,19 +24,16 @@ import sys
 import subprocess
 import traceback
 import time
+import logging
+import locale
+import gettext
 
 import efalivesetup.common.dialogs
 from efalivesetup.common import common
 from efalivesetup.common.observable import Observable
 
-import locale
-import gettext
 APP="dateTime"
-LOCALEDIR=os.path.join(os.path.dirname(sys.argv[0]), "locale")
-DIR=os.path.realpath(LOCALEDIR)
-gettext.install(APP, DIR, unicode=True)
-
-import logging
+gettext.install(APP, common.LOCALEDIR, unicode=True)
 
 class DateTimeModel(object):
     def __init__(self):

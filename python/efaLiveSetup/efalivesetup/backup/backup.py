@@ -23,18 +23,15 @@ import os
 import sys 
 import subprocess
 import traceback
+import logging
+import locale
+import gettext
 
 import efalivesetup.common.dialogs
 from efalivesetup.common import common
 
-import locale
-import gettext
 APP="backup"
-LOCALEDIR=os.path.join(os.path.dirname(sys.argv[0]), "locale")
-DIR=os.path.realpath(LOCALEDIR)
-gettext.install(APP, DIR, unicode=True)
-
-import logging
+gettext.install(APP, common.LOCALEDIR, unicode=True)
 
 class BackupModel(object):
     def __init__(self):
