@@ -36,19 +36,20 @@ fi
 echo "Replace paths ..."
 
 absprefix=$(get_abs_path ${prefix})
-echo "absprefix $absprefix"
 sedprefix=$(echo ${absprefix} | sed -e 's/[\/&]/\\&/g')
-echo "sedprefix $sedprefix"
 sed -i "s/LOCALES=os.path.join(os.path.dirname(sys.argv\[0\]), os.pardir, 'i18n')/LOCALES=os.path.join('${sedprefix}', 'usr', 'share', 'locale')/" efalivesetup/common/common.py
 sed -i "s/icon_path = os.path.join(path, 'icons', icon_name)/icon_path = os.path.join('${sedprefix}', 'usr', 'share', 'pixmaps', 'efalivesetup', icon_name)/" efalivesetup/common/common.py
+sed -i "s/PYTHONPATH=.:$PYTHONPATH/PYTHONPATH=$sedprefix\/lib\/python2.7\/site-packages\/:$PYTHONPATH/" efalive-setup
 
 echo "Call Python setup with arguments: $args"
 
 python setup.py install $args
 mkdir -p ${prefix}/usr/share/pixmaps/efalivesetup
 cp icons/* ${prefix}/usr/share/pixmaps/efalivesetup/ 
-mkdir -p ${prefix}/usr/share/locale/
+mkdir -p ${prefix}/usr/share/locale
 cp -r i18n/* ${prefix}/usr/share/locale/
+mkdir -p ${prefix}/usr/bin
+cp efalive-setup ${prefix}/usr/bin
 
 
 #cp *.py ../../bash/efalive/content/usr/lib/efalive/lib/efaLiveSetup/ 
