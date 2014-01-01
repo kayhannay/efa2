@@ -1,0 +1,6 @@
+#Redirect temp / http://www1.wsvd.de/
+
+RewriteEngine On
+#RewriteRule newsletter - [L]
+RewriteCond %{REQUEST_URI} !^/newsletter/
+RewriteRule ^.*$ http://www1.wsvd.de/$0 [R=301,L]
