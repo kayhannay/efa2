@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #
-VERSION=2.1.0.00
+VERSION=2.1.1.04
 
 rm -r efa2-*
 mkdir efa2-$VERSION
