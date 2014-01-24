@@ -1,6 +1,6 @@
 efa2 for Debian
 --------------
 
-<possible notes regarding this package - if none, delete this file>
+This is just a simple Debian package for efa 2. It is not compliant with the rules for official Debian packages.
 
  -- Kay Hannay <klinux@hannay.de>  Tue, 28 Aug 2012 12:47:32 +0200
