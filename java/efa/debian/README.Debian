@@ -1,6 +1,6 @@
 efa for Debian
 --------------
 
-<possible notes regarding this package - if none, delete this file>
+Very simple package for efa. It is not compliant with the Debian packaging rules.
 
  -- Kay Hannay <klinux@hannay.de>  Tue, 28 Aug 2012 12:47:32 +0200

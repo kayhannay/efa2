@@ -10,7 +10,7 @@ Vcs-Browser: http://kenai.com/projects/efa/sources/efa-src/show
 
 Package: efa
 Architecture: all
-Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-6-jre
+Depends: ${shlibs:Depends}, ${misc:Depends}, openjdk-7-jre
 Recommends: 
 Description: Electronic logbook for rowing and canoeing clubs.
     This package provides the electronic logbook efa.
