@@ -60,6 +60,9 @@ SET CP=%CP%;program/plugins/commons-logging.jar
 SET CP=%CP%;program/plugins/fop.jar
 SET CP=%CP%;program/plugins/xmlgraphics-commons.jar
 
+REM Classpath: Weather-lugin
+SET CP=%CP%;program/plugins/commons-codec.jar
+SET CP=%CP%;program/plugins/signpost-core.jar
 
 REM # ##########################################
 REM # JVM Settings                             #

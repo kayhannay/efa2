@@ -59,6 +59,10 @@ CP=$CP:program/plugins/commons-logging.jar
 CP=$CP:program/plugins/fop.jar
 CP=$CP:program/plugins/xmlgraphics-commons.jar
 
+# Weather Plugin
+CP=$CP:program/plugins/commons-codec.jar
+CP=$CP:program/plugins/signpost-core.jar
+
 # ##########################################
 # JVM Settings                             #
 # ##########################################
