@@ -1,3 +1,10 @@
+efa2 (2.2.2.19-1) unstable; urgency=low
+
+  * Update to efa 2.2.2_19
+  * Change package dependency from OpenJDK to any Java runtime
+
+ -- Kay Hannay <klinux@hannay.de>  Mon, 17 Nov 2016 13:51:00 +0100
+
 efa2 (2.2.2.14-1) unstable; urgency=low
 
   * Update to efa 2.2.2_14

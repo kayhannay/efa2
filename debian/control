@@ -10,7 +10,7 @@ Vcs-Browser: http://kenai.com/projects/efa/sources/efa-src/show
 
 Package: efa2
 Architecture: all
-Depends: openjdk-7-jre
+Depends: default-jre | java6-runtime
 Recommends: 
 Description: Electronic logbook for rowing and canoeing clubs.
     This package provides the electronic logbook efa. Version 2 of efa
