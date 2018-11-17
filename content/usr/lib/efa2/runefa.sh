@@ -47,6 +47,7 @@ CP=$CP:program/plugins/edtftpj.jar
 
 # Mail Plugin
 CP=$CP:program/plugins/javax.mail.jar
+CP=$CP:program/plugins/activation.jar
 
 # JSUNTIMES Plugin
 CP=$CP:program/plugins/jsuntimes.jar
