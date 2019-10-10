@@ -48,7 +48,6 @@ SET CP=%CP%;program/plugins/edtftpj.jar
 
 REM Classpath: MAIL-Plugin
 SET CP=%CP%;program/plugins/javax.mail.jar
-SET CP=%CP%;program/plugins/activation.jar
 
 REM Classpath: JSUNTIMES-Plugin
 SET CP=%CP%;program/plugins/jsuntimes.jar

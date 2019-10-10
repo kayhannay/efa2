@@ -1,3 +1,9 @@
+efa2 (2.2.2.42-1) unstable; urgency=low
+
+  * Update to efa 2.2.2_42
+
+ -- Kay Hannay <klinux@hannay.de>  Sun, 14 Jul 2019 20:43:00 +0200
+
 efa2 (2.2.2.39-1) unstable; urgency=low
 
   * Update to efa 2.2.2_39
