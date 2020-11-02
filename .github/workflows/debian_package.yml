@@ -1,0 +1,14 @@
+name: Debian package
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: docker.pkg.github.com/${{ github.actor }}/efalive_docker/efalive-development:latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build debian package
+        run: ./build_deb.sh
