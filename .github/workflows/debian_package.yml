@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: docker.pkg.github.com/${{ github.actor }}/efalive_docker/efalive-development:latest
+    runs-on: docker://docker.pkg.github.com/${{ github.actor }}/efalive_docker/efalive-development:latest
 
     steps:
       - uses: actions/checkout@v2
