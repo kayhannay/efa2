@@ -1,11 +1,11 @@
 #!/bin/bash
 #
 #
-VERSION=2.2.2.42
+VERSION=2.2.2.48
 
 rm -r efa2-*
 mkdir efa2-$VERSION
-#cp -a content/* efa-$VERSION
+cp -a content/* efa-$VERSION
 cp -a debian efa2-$VERSION
 cd content
 tar czf ../efa2_$VERSION.orig.tar.gz *
