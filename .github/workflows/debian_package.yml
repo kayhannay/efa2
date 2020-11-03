@@ -6,8 +6,8 @@ on:
 
 jobs:
   build:
-    runs-on: docker://docker.pkg.github.com/${{ github.actor }}/efalive_docker/efalive-development:latest
-
+    runs-on: ubuntu-latest
+    container: docker://docker.pkg.github.com/${{ github.actor }}/efalive_docker/efalive-development:latest
     steps:
       - uses: actions/checkout@v2
       - name: Build debian package
