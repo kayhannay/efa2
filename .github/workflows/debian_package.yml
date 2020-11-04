@@ -17,8 +17,8 @@ jobs:
       - name: Build debian package
         run: |
           ./build_deb.sh
-          echo "${{ secrets.TEST_KEY }}" > testkey.txt
-          cat testkey.txt
+          echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
+          gpg --list-secret-keys --keyid-format LONG
       - uses: actions/upload-artifact@v2
         with:
           name: efa2.deb
