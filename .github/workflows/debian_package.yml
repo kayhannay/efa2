@@ -17,8 +17,7 @@ jobs:
       - name: Build debian package
         run: |
           ./build_deb.sh
-          cat <(echo -e "${{ secrets.GPG_KEY }}") | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
+          echo "secrets.FTP_USER"
       - uses: actions/upload-artifact@v2
         with:
           name: efa2.deb
