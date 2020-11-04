@@ -19,7 +19,7 @@ jobs:
           ./build_deb.sh
           echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
           gpg --list-secret-keys --keyid-format LONG
-          /usr/bin/deploy_registry.sh efa2_2.2.2.48-1_all.deb efa2 buster ${{secret.FTP_USER}} ${{secret.FTP_SECRET}}
+          /usr/bin/deploy_registry.sh efa2_2.2.2.48-1_all.deb efa2 buster '${{ secrets.FTP_USER }}' '${{ secrets.FTP_SECRET }}'
       - uses: actions/upload-artifact@v2
         with:
           name: efa2.deb
