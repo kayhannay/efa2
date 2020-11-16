@@ -14,14 +14,15 @@ jobs:
         password: ${{ secrets.CR_PAT }}
     steps:
       - uses: actions/checkout@v2
+      - name: Create release
+        run: |
+          python3 -m create_release ./
       - name: Build debian package
         run: |
           ./build_deb.sh
+      - name: Deploy package to registry
+        run: |
           echo "${{ secrets.GPG_PUBLIC_KEY }}" | gpg --batch --import
           echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
-          gpg --list-secret-keys --keyid-format LONG
+          #gpg --list-secret-keys --keyid-format LONG
           /usr/bin/deploy_registry.sh efa2_2.2.2.48-1_all.deb efa2 buster '${{ secrets.FTP_USER }}' '${{ secrets.FTP_SECRET }}'
-      - uses: actions/upload-artifact@v2
-        with:
-          name: efa2.deb
-          path: efa2_2.2.2.48-1_all.deb

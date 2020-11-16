@@ -2,6 +2,16 @@
 #
 #
 VERSION=2.2.2.48
+CREATE_RELEASE=true
+
+if [ -f release_info.sh ]; then
+    source release_info.sh
+fi
+
+if [ "${CREATE_RELEASE}" != "true" ]; then
+    echo "Skip build since there is no new release"
+    exit 0
+fi
 
 rm -r efa2-*
 mkdir efa2-$VERSION
