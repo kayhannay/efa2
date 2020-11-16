@@ -16,7 +16,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create release
         run: |
-          python3 -m create_release ./
+          python3 -m create_release.create_release --path ./
       - name: Build debian package
         run: |
           ./build_deb.sh
