@@ -27,4 +27,5 @@ jobs:
           echo "${{ secrets.GPG_PUBLIC_KEY }}" | gpg --batch --import
           echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
           #gpg --list-secret-keys --keyid-format LONG
-          /usr/bin/deploy_registry.sh efa2_2.2.2.48-1_all.deb efa2 buster '${{ secrets.FTP_USER }}' '${{ secrets.FTP_SECRET }}'
+          /usr/bin/deploy_registry.sh '${{ secrets.FTP_USER }}' '${{ secrets.FTP_SECRET }}' buster efa2
+
