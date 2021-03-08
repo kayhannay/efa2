@@ -1,3 +1,9 @@
+efa2 (2.2.2.54-7) unstable; urgency=low
+
+  * fix: change quotes in deploy command
+
+ -- Kay Hannay <klinux@hannay.de>  Mon, 08 Mar 2021 18:49:29 +0000
+
 efa2 (2.2.2.54-6) unstable; urgency=low
 
   * fix: change quotes in deploy command
