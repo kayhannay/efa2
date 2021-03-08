@@ -1,3 +1,9 @@
+efa2 (2.2.2.54-5) unstable; urgency=low
+
+  * fix: debug deployment process
+
+ -- Kay Hannay <klinux@hannay.de>  Mon, 08 Mar 2021 17:14:07 +0000
+
 efa2 (2.2.2.54-4) unstable; urgency=low
 
   * fix: try deployment
