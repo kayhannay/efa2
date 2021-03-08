@@ -1,3 +1,9 @@
+efa2 (2.2.2.54-4) unstable; urgency=low
+
+  * fix: try deployment
+
+ -- Kay Hannay <klinux@hannay.de>  Mon, 08 Mar 2021 17:09:21 +0000
+
 efa2 (2.2.2.54-3) unstable; urgency=low
 
   * feat: update efa to version 2.2.2_54
