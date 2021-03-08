@@ -30,6 +30,7 @@ jobs:
           chmod 700 ~/.ssh
           ssh-keyscan "${{secrets.SSH_HOST}}" >> ~/.ssh/known_hosts
           chmod 644 ~/.ssh/known_hosts
+          cat ~/.ssh/known_hosts
           echo "${{ secrets.GPG_PUBLIC_KEY }}" | gpg --batch --import
           echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
           #gpg --list-secret-keys --keyid-format LONG
