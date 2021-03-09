@@ -18,13 +18,13 @@ ORIG_VERSION=$(echo ${VERSION} | cut -d'-' -f1)
 rm -r efa2-*
 rm -r efa2_*
 mkdir efa2-$ORIG_VERSION
-#cp -a content/* efa2-$ORIG_$VERSION
-cp -a debian efa2-$ORIG_$VERSION
+#cp -a content/* efa2-$ORIG_VERSION
+cp -a debian efa2-$ORIG_VERSION
 cd content
-tar czf ../efa2_$ORIG_$VERSION.orig.tar.gz *
+tar czf ../efa2_$ORIG_VERSION.orig.tar.gz *
 cd ..
 
-cd efa2-$ORIG_$VERSION
+cd efa2-$ORIG_VERSION
 debuild -uc -us
 cd ..
 

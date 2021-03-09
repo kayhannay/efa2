@@ -1,13 +1,3 @@
-efa2 (2.2.2.54-1) unstable; urgency=low
-
-  * fix: change quotes in deploy command
-  * fix: change quotes in deploy command
-  * fix: debug deployment process
-  * fix: try deployment
-  * feat: update efa to version 2.2.2_54
-
- -- Kay Hannay <klinux@hannay.de>  Tue, 09 Mar 2021 13:56:45 +0000
-
 efa2 (2.2.2.48-1) unstable; urgency=low
 
   * Update to efa 2.2.2_48
