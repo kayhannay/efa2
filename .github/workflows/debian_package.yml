@@ -23,16 +23,17 @@ jobs:
         run: |
           ./build_deb.sh
       - name: Deploy package to registry
+        shell: bash
         run: |
           eval $(ssh-agent -s)
           echo "${{secrets.SSH_PRIVATE_KEY}}" | tr -d '\r' | ssh-add -
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          ssh-keyscan -H -t rsa juliet.uberspace.de >> ~/.ssh/known_hosts
+          ssh-keyscan juliet.uberspace.de >> ~/.ssh/known_hosts
           chmod 600 ~/.ssh/known_hosts
           cat ~/.ssh/known_hosts
           echo "Run SSH now ..."
-          ssh -o UserKnownHostsFile=~/.ssh/known_hosts klinux@juliet.uberspace.de ls
+          ssh klinux@juliet.uberspace.de ls
           #echo "${{ secrets.GPG_PUBLIC_KEY }}" | gpg --batch --import
           #echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
           #gpg --list-secret-keys --keyid-format LONG
