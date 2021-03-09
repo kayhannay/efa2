@@ -33,7 +33,7 @@ jobs:
           chmod 600 ~/.ssh/known_hosts
           cat ~/.ssh/known_hosts
           echo "Run SSH now ..."
-          ssh klinux@juliet.uberspace.de ls
+          ssh -o StrictHostKeyChecking=no klinux@juliet.uberspace.de ls
           #echo "${{ secrets.GPG_PUBLIC_KEY }}" | gpg --batch --import
           #echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
           #gpg --list-secret-keys --keyid-format LONG
