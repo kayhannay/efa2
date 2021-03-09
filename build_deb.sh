@@ -14,8 +14,9 @@ if [ "${CREATE_RELEASE}" != "true" ]; then
 fi
 
 rm -r efa2-*
+rm -r efa2_*
 mkdir efa2-$VERSION
-cp -a content/* efa-$VERSION
+#cp -a content/* efa2-$VERSION
 cp -a debian efa2-$VERSION
 cd content
 tar czf ../efa2_$VERSION.orig.tar.gz *
