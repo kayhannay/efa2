@@ -22,6 +22,12 @@ cd content
 tar czf ../efa2_$VERSION.orig.tar.gz *
 cd ..
 cd efa2-$VERSION
+
+echo "### DEBUG ###"
+pwd
+ls -l ../
+echo "### DEBUG ###"
+
 debuild -uc -us
 cd ..
 
