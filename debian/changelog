@@ -1,3 +1,9 @@
+efa2 (2.3.2.00-2) unstable; urgency=low
+
+  * fix: add distribution bullseye
+
+ -- Kay Hannay <klinux@hannay.de>  Sun, 11 Sep 2022 13:56:04 +0000
+
 efa2 (2.3.2.00-1) unstable; urgency=low
 
   * feat: update efa to version 2.3.2_00
