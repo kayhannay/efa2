@@ -7,3 +7,5 @@ wget -q -O program/plugins/javax.mail.jar https://github.com/javaee/javamail/rel
 
 popd
 
+echo "Don't forget to update the VERSION file!"
+
