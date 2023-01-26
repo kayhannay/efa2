@@ -20,7 +20,6 @@ set -e
 
 case "$1" in
     configure)
-        chown -R efa:efa /usr/lib/efa2
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
