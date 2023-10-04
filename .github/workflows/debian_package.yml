@@ -18,6 +18,7 @@ jobs:
           fetch-depth: 0
       - name: Create release
         run: |
+          git config --global --add safe.directory /__w/efa2/efa2
           python3 -m create_release.create_release --path ./ --package efa2
       - name: Build debian package
         run: |
