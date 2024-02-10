@@ -16,7 +16,7 @@ For more information about efaLive, have a look to the efaLive documentation on 
 * [efa](http://efa.nmichael.de/) - the rowing and canoeing log book software
 
 ## Requirements
-To build the Debian package, you need to have [dpkg-dev](http://packages.debian.org/bullseye/dpkg-dev) installed.
+To build the Debian package, you need to have [dpkg-dev](http://packages.debian.org/bookworm/dpkg-dev) installed.
 
 ## How to build
 To build the debian package, there is a script for convenience:
