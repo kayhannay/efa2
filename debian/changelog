@@ -1,3 +1,9 @@
+efa2 (2.4.0.00-1) unstable; urgency=low
+
+  * feat: update efa to version 2.4.0_00
+
+ -- Kay Hannay <klinux@hannay.de>  Fri, 14 Feb 2025 17:12:15 +0000
+
 efa2 (2.3.3.04-2) unstable; urgency=low
 
   * fix: use new distribution name in readme
