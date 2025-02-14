@@ -2,7 +2,7 @@
 
 pushd content/usr/lib/efa2
 
-wget -q -O efa.zip http://efa.nmichael.de/download/efa233.zip && unzip -o efa.zip && rm efa.zip
+wget -q -O efa.zip http://efa.nmichael.de/download/efa240.zip && unzip -o efa.zip && rm efa.zip
 wget -q -O program/plugins/javax.mail.jar https://github.com/javaee/javamail/releases/download/JAVAMAIL-1_6_2/javax.mail.jar
 
 popd
