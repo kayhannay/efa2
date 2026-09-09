@@ -1,0 +1,1053 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><body title="EFA History of Versions">
+<h1><b>EFA History of Versions</b></h1>
+<table border="0">
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.2</b><br><br>26.04.2026</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li></ul>
+<b>New features</b><ul><li> Beta 2.5.1 is hereby released for production (as version 2.5.2).</li></ul>
+<b>Fixes</b><ul><li> Multi-day, regatta and training camp sessions will again be displayed exclusivly in the "unavailable boats" list if the corresponding option is enabled.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#9</b><br><br>19.02.2026</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Based on 2.5.0_01.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> In multisession dialog (starting a session or late entry), an unknown boat no longer blocks the save operation.</li>
+<li> Tab navigation through dialogs with many items (e.g., in configuration or widgets) now always brings the focused element into view. Manual scrolling is no longer required.</li>
+<li> For variable elements (e.g., weather locations, HTML pages, boattypes, crontab entries), new items can now be inserted at a specific position instead of only at the end.</li>
+<li> Widget: Weather-Widget: Enabled by default, but no locations are set up.</li>
+<li> Widget: Weather-Widget: If weather data cannot be loaded, a retry is performed in intervals of several minutes.</li>
+<li> Widget: HTML Widget: Enabled by default, but no HTML pages are set up.</li>
+<li> Widget: HTML Widget:Background did not have the correct color when using Metal or Nimbus look.</li>
+<li> Widget: Newsticker: Disabled by default.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#8</b><br><br>14.02.2026</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Based on 2.5.0_01.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul>
+<li> The status bar below the boot list is no longer displayed by default (configurable)</li>
+<li> The main screen of efaBootshaus has been switched to GridBagLayout. This allows for better positioning of the HTML widgets on the screen.</li>
+<li> New option in efaconfig to define the distance between Buttons and Boat lists. (efaBootshaus-&gt;Appearance)</li>
+<li> Widget: News ticker technically revised. Avoids rendering problems when using certain fonts. Smooth ticker also on RASPI 3b.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> Widget: Weather-Widget: WeatherAPI removed from the list of data sources.</li>
+<li> Widget: Weather-Widget: Better error handling if JSON library is not found.</li>
+<li> Widget: HTML Widget: Correct display when custom colors are not used. HTML content has a transparent background when custom colors are used.</li>
+<li> Plugins: Org.Json library included and old weather plugin removed.</li>
+<li> The "About EFA" dialog now displays and opens current URLs (when in admin mode).</li>
+<li> Info dialog displaying an outdated Java version may open a website.</li>
+<li> When calling an external browser, the browser dialog now also uses the new Desktop.browse() function, if available.</li>
+<li> Performance improvement when filtering in lists and sorting tables.</li>
+<li> Performance improvement when sorting the three main lists in efaBoathouse.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#6</b><br><br>17.01.2026</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Based on Beta 2.5.0#21.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul>
+<li> Widget: Common: Multiple widgets can be positioned at the top/bottom/left/right.</li>
+<li> Widget: HTML-Widget: Each HTML widget can be positioned separately (top/bottom/left/right/multiwidget).</li>
+<li> Widget: Weather-Widget: Each weather widget can be positioned separately (top/bottom/left/right/multiwidget).</li>
+<li> Widget: Weather widget: Each weather widget can be made visible/invisible separately.</li>
+</ul>
+<b>Fixes</b><ul><li> Filename fields don't show an error message if file name starts with HTTP/HTTPs.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#5</b><br><br>15.01.2026</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Early Access for testing efa widget refactoring. Based on Beta 2.5.0#21. Use at own risk.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul>
+<li> GUI optimization - Some checkboxes are indented for better GUI readability.</li>
+<li> Cron jobs: better usage of available screen width.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#4</b><br><br>01.01.2026</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Early Access for testing efa widget refactoring. Based on Beta 2.5.0#21. Use at own risk.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul>
+<li> Widget: HTML-Widget: Clicking in the area of the HTML widget opens a Popup window that closes automatically after 90 seconds.</li>
+<li> Widget: HTML-Widget: Mouse cursor is an hourglass while opening the external browser.</li>
+<li> Widget: HTML-Widget: Optimized order of parameter fields in the GUI.</li>
+<li> Widget: HTML-Widget: Each HTML page can be set to invisible.</li>
+<li> Widget: HTML-Widget: HTML-pages configured in earlier versions of efa won't be shown any more (and must be re-configured manually).</li>
+<li> Widget: Weather-Widget: Optimized order of parameter fields in the GUI.</li>
+<li> Widget: Weather-Widget: Optimized rendering of double values &lt; 1.</li>
+<li> Widget: Weather-Widget: Colors are customizable.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#3</b><br><br>23.11.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Early Access for testing efa widget refactoring. Based on Beta 2.5.0#21. Use at own risk.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul>
+<li> Widget: HTML-Widget: Options for Captions and Caption-Colors.</li>
+<li> Widget: HTML-Widget: Clicking on links in HTML-Widgets opens them in a browser.</li>
+<li> Widget: HTML-Widget: Order of HTML-Widgets can be changed.</li>
+<li> Widget: HTML-Widget: In fresh installations, the HTML widget's position is in the multiwidget.</li>
+<li> Widget: Weather-Widget: Order of HTML-Widgets can be changed.</li>
+<li> Widget: Weather-Widget: In fresh installations, the Weatherwidget's position is in the multiwidget.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#2</b><br><br>16.11.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Early Access for testing efa widget refactoring. Based on Beta 2.5.0#21. Use at own risk.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul><li> Widget: HTML-Widget: Download of the HTML page in the background. HTML caching. Default colors can be defined.</li></ul>
+<b>Fixes</b><ul><li> Widget: Weather-Widget: Widgets revised, translations for DE/EN/FR added.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.1#1</b><br><br>09.11.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul>
+<li>Early Access for testing efa widget refactoring. Based on Beta 2.5.0#21. Use at own risk.</li>
+<li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li>
+</ul>
+<b>New features</b><ul>
+<li> Widget: The widget system has been refactored and extended by new features.</li>
+<li> Widget: Clock widget: Ability to show date. Sunrise/sunset times can be shown beneath the clock.</li>
+<li> Widget: Weather Widget: Initial release with multiple Weather presentations.</li>
+<li> Widget: Weather Widget: efa can show multiple Weather Widgets.</li>
+<li> Widget: HTML Widget: efa can show multiple HTML Widgets.</li>
+<li> Widget: Multi-Widget which is a container for multiple other Widgets. Automatic switch between several Widgets.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0</b><br><br>14.02.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li></ul>
+<b>New features</b><ul>
+<li> efaCloud: Local efaCloud log files can be up to 10 MB in size; during upload sync, only the last 200 KB of the efaCloud log files are uploaded.</li>
+<li> efaCloud: Enhanced logging in efaCloud.log for improved traceability of transferred data.</li>
+</ul>
+<b>Fixes</b><ul><li> efaCloud: Boat status records are now only updated when the trip number in the logbook changes if both entries refer to the same logbook.</li></ul>
+<b>Miscellaneous</b><ul><li>Neu: Publishing efa 2.5.0 based on efa 2.5.0#21</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#21</b><br><br>03.11.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li></ul>
+<b>Fixes</b><ul>
+<li> Sessions from a logbook differing from the currently loaded one cannot be modified.</li>
+<li> Repainting of boat lists improved when boat lists get updated.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#20</b><br><br>25.10.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li></ul>
+<b>Fixes</b><ul><li> Minor Bugfixes</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#19</b><br><br>05.10.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_12 or above.</li></ul>
+<b>New features</b><ul>
+<li> Admin mode/Logbook: When creating a new logbook, the logbook name gets shown on all pages of the 'new logbook' dialog.</li>
+<li> [efaCloud] If an efaCloud synchronisation is currently running in background, the user cannot open the dialogs for choosing projects, logbooks and clubwork. The user is informed with a message.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#18</b><br><br>03.08.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_10 or above.</li></ul>
+<b>New features</b><ul>
+<li> Admin mode/Logbook: When creating a new logbook, the start date of the currently opened logbook is used as the basis, instead of January 1st as before. The end date is calculated automatically. This simplifies the creation of new logbooks with a different start date (e.g., canoeing in Germany).</li>
+<li> Changelog in "About Efa" dialog has been optimized for readability.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#17</b><br><br>08.06.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_10 or above.</li></ul>
+<b>New features</b><ul>
+<li> update runEfa.bat/.sh - 192MB RAM instead of 160MB for efa JavaVM, due to higher demands for efaCloud.</li>
+<li> Boats which are 'on the water' in other logbooks, can be shown as 'not available boats'</li>
+</ul>
+<b>Fixes</b><ul>
+<li> When changing the boat or boatvariant while creating a new session, the autocomplete list for persons get a refresh.</li>
+<li> A restart of efa works better on Windows(r) systems. There are no longer messages like 'efa is already running in background'.</li>
+<li> [efaCloud] Ecrid index handling optimized: no more issues when setting up new efaCloud systems.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#16</b><br><br>21.04.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_10 or above.</li></ul>
+<b>New features</b><ul>
+<li> Dialog for editing BoatStatus in landscape mode; shows a new column for Trip number and Logbook-Date.</li>
+<li> EfaBase/Admin mode: When editing logbook entries, some fields are highlighted with a red warning icon when they are (unexpectedly) empty.</li>
+<li> EfaBase/Admin mode: A Session does not gets set to "closed" by default if a session gets edited in efaBase/Admin mode. This means that the button "Session open - finish now" is visible more often if the session is actually open.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> Boatstatus: If the BoatStatus gets set to a value != OnTheWater, the attributes for TripNo and Logbookname get cleared as well.</li>
+<li> Session start: if a trip is &gt;30km, and only a single trip type is available, no dialog for confirming the trip type is shown.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#15</b><br><br>13.04.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3. It is recommended to upgrade to EfaCloud 2.4.0_10 or above.</li></ul>
+<b>Fixes</b><ul>
+<li>'About efa' dialogue shows the build date.</li>
+<li> Changing the current project: Admin-Dialog shows if there is no currently loaded clubwork book.</li>
+<li> [efaCloud] Dialogs for creating new projects or logbooks show hints for correct usage.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#14</b><br><br>16.03.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3.</li></ul>
+<b>Fixes</b><ul>
+<li> efaBase could not be closed via File-&gt;Quit, some fragments kept running in backround.</li>
+<li> LookAndFeel: if efa is maximized, the window title bar will look the same in all LookAndFeels - with a blue background.</li>
+<li> Avoid big efa.log protocols when errors occurr while sending email notifications.</li>
+<li> Admin-Dialog: Number of unread messages is shown correctly on the button, when project has been closed.</li>
+<li> [efaCloud]: efaCloud log files are again limited to 200kb size max.</li>
+<li> [efaCloud] Deleting efaCloud projects no longer disturbs efaCloud TX-Synchronisation.</li>
+<li> [efaCloud] Bug in efa 2.5.0#12 fixed which avoided migration of local projects to efaCloud.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#12</b><br><br>09.03.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>If you use efaCloud, make sure your server at least supports efaCloud Version 2.3.3.</li></ul>
+<b>New features</b><ul>
+<li> Multiple Boathouses: If you have configured more than one boathouse in the club, the Boat list in admin modes provides an additional colum which shows for which boathouse a boat is shown exclusively.</li>
+<li> Multiple Boathouses: If you have configured more than one boathouse in the club, only the boats that have a trip to the boathouse in the logbook are displayed under 'Boats on the water'. See also documentation: http://efa.nmichael.de/dokuwiki/doku.php?id=config_mehrere_bootshaeuser</li>
+<li> Dialog for choosing Project/Logbook/Clubwork shows info about the currently loaded Project, Logbook, Clubwork.</li>
+<li> Dialog for choosing the Project shows project type (local, efaCloud, efaRemote) and the names of the Boathouses in multi-Boathouse configurations.</li>
+<li> Dialog for choosing the Project/Logbook/Clubwork highlights and autoselects the currently loaded item.</li>
+<li> Efa2's version history is shown in efa 'About' dialog.</li>
+<li> [efaCloud] When using efaCloud, the server MUST HAVE INSTALLED AT LEAST efaCloud 2.3.3 or newer.</li>
+<li> [efaCloud] Creating new Projects: Added hints and an option to avoid creation of Statuses and Waters.</li>
+<li> [efaCloud] Update of Waters after an update: Added hint to inform that waters update should only be done on a single efa client of efaCloud system.</li>
+<li> [efaCloud] Update of Waters (manually): Added hint to inform that waters update should only be done on a single efa client of efaCloud system.</li>
+<li> [efaCloud] When creating new logbooks, a hint is shown stating how the logbooks name should look like.</li>
+<li> [efaCloud] When the current Project uses efaCloud, the Admin list dialog now shows an hint.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> efaBase does not close anymore when hitting ESC key in the main window.</li>
+<li> Admin mode: Edit boats: Tabs 'Boat reservations' and 'Boat damages' grow their size according to the dialog size.</li>
+<li> Admin mode: Project/Logbook/Clubwork/Plugin list: List grow according to the dialog size.</li>
+<li> EfaBackgroundtask no longer runs actions when Admin mode is active. Less problems when creating new projects when a project is currently open.</li>
+<li> [efaCloud] When creating new efaCloud projects in efa, the admin now needs to manually enable the creation of Statuses and Waters.</li>
+<li> [efaCloud] Logrotate works now for efacloud.log und synchErrors.log. Logrotate if filesize &gt; 5 MB.</li>
+<li> [efaCloud] When creating a new efaCloud project, the option to automatically create a waters list has been removed (as it may lead to duplicate waters if the new project is used to add a new efa instance to an existing efaCloud server).</li>
+<li> [efaCloud] For efaCloud, the synchronization of data between the boathouse and the server has been optimized. The use of the server's unique data record key in efa resolves conflicts that arise, for example, in the event of a temporary Internet outage or parallel trip entries in two connected boathouses.</li>
+<li> [efaCloud] Fixed nullpointer exception when efaCloud updated its status the window title.</li>
+<li> [efaCloud]: After startup efa waits 15 seconds instead of 5 before the first attempt to upload data starts.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.5.0#11</b><br><br>27.10.2024</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br>Minimum efaCloud Version: 2.3.3<br></b><b>New features</b><ul>
+<li> efaBths boatlists: Icons for boat groups are rendered aliased.</li>
+<li> Hints in efaconfig now have round borders, fitting to the new efaFlatLaf look.</li>
+<li> New dialog for input of multiple similar sessions (multiple persons go on the same trip with their own boat)</li>
+<li> Popup-Lists: when searching in partial text mode, the preselected entry is now the first of the result set that BEGINS with the search text.</li>
+<li> EfaBths: Boat reservations dialog in landscape mode: Buttons above the table, dialog has a bigger width.</li>
+<li> EfaBths: Clubwork dialog in landscape mode: Buttons above the table, dialog has a bigger width.</li>
+<li> New option in Configuration-&gt;Common-&gt;Input-&gt;Crew: when creating single person sessions, set the person as crew instead of as cox.</li>
+<li> Admin mode/Persons: Persons who are in one or more groups get the respecive group color icon, and the group names are visible in the tooltip.</li>
+<li> Admin mode/Persons (German Kanoers only): Persons who have a Kanu-eFB-ID assigned get the respective EFB icon and the tooltip shows the eFB-ID.</li>
+<li> Admin mode/Boats: Boats which are in one or more groups get the respecive group color icon, and the group names are visible in the tooltip.</li>
+<li> Admin mode/Boats: Tab Boatdamages: When adding new boat damages, a notification will be sent (can be deactivated in Configuration).</li>
+<li> Admin mode/Boats: Tab Boatdamages: When attemting to delete a boat damage, admin gets asks if the damage should not be marked as fixed instead. If so, a notification is sent.</li>
+<li> Admin mode/Boat damages: Layout of the dialog is updated.</li>
+<li> Admin mode/Boat status: shows additional rows for base status, current status and owner</li>
+<li> Admin mode/Boat reservations: Filter text field automatically gets focused.</li>
+<li> Admin mode/Clubwork: Filter text field automatically gets focused.</li>
+<li> Admin mode/Dialogs: Filter text field gets yellow background if focused..</li>
+<li> Admin mode/Groups: Groups show their respective color in the table.</li>
+<li> Admin mode/Statistics: Support for relative file paths when exporting into files.</li>
+<li> CSV export: Created files are more suitable for processing in spreadsheet programs, especially in localized variants.</li>
+<li> CSV export: efaCLI has extended parameters for data export.</li>
+<li> CSV export: efaCLI can export clubwork.</li>
+<li> CSV export: efaCLI Export allows specification of relative paths for exports and imports ./ = Efa data directory,  ~/ = home directory of current user.</li>
+<li> CSV import: UTF-8 CSV files with BOM (created by spreadsheets programs) can be used for import.</li>
+<li> Better sorting of items in the tables for editing boat reservations, persons, boats... when sorting by another column.</li>
+<li> Backup: efa.log file can be added to the items which are included in the backup.</li>
+<li> Maximum font size for tables is 24pix.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> in efaBths the loogbook dialog supports the F3 key again.</li>
+<li> Outdated boatreservations of "hidden" boats are deleted.</li>
+<li> In beta versions there are no more questions for updateing the waters list in admin mode.</li>
+<li> Hidden option for "efa always on top" gets shown again.</li>
+<li> If efa configuration data gets restored from a backup, the user is informed to restart efa. By this accidental changes by audit task are avoided (which may take place as the audit task may not find restored config data before efa gets restarted.)</li>
+<li> Fixed nullpointer in audit task when deleting reservations for invisible boats.</li>
+<li> If a restore of a backup restores config items, the project will NOT be reloaded, but the user gets a request to restart efa. This ensures that config data is loaded before the audit task starts up and performs unwanted changes.</li>
+<li> Admin Dialog: Better layout for showing upcoming automatic logbook or clubwork switch.</li>
+<li> EFA#102: EFA2.5.0#8 Beta: efaCLI Export: current standards for CSV delimiter and CSV quote shall remain for backwards compatibility</li>
+<li> EFA#106: EFA2.5.0#8 Beta: efaCLI Export: Topic of mails contain unneccesary timezone descriptions</li>
+<li> EFA#107: EFA2.5.0#8 Beta: efaCLI Export: CSV export without absolute paths create files in efa main directory</li>
+<li> EFA#103: EFA2.5.0#8 Beta: efaCLI Statistics: Statistics could not be created any more.</li>
+<li> EFA#104: EFA2.5.0#8 Beta: typo in DE, efaConfig: Boathouse-&gt; Notifications</li>
+<li> [efaCloud] No more nullpointer exception when entering admin mode and no open project.</li>
+<li> [efaCloud] No more exceptions logged in debug mode. https://github.com/nicmichael/efa/issues/138 </li>
+</ul>
+<b>Miscellaneous</b><ul>
+<li>Neu: Admin mode/Boats: Boat edit dialog: Tabs for Boat reservations and Boat damages provide more space for the table data.</li>
+<li>Neu: CSV export: efaCLI former standards for CSV column delimiter (|) and CSV-quote(") stay unchanged due to backwards compatiblity for existing export batches.</li>
+<li>Code: Refactoring: Removed unused import statemens.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.4.0_01</b><br><br>10.10.2025</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Minor Bugfixes</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.4.0_00</b><br><br>05.04.2024</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br></b><br><b><i><font color="#EE0000">Important notice</font></i></b><ul><li>After updating to 2.4.0, you must restart your computer. Restarting efa itself is not sufficient.</li></ul>
+<b>New features</b><ul>
+<li> EfaFlatLight LookAndFeel provides a clear, modern look of efa. Customizable in wide ranges.</li>
+<li> EfaFlatLight is the standard LookAndFeel after update or new install. After an update, a reboot of the machine is neccessary to activate flatlaf.</li>
+<li> Fallback: If flatlaf library cannot be found, METAL is used as standard LookAndFeel.</li>
+<li> Blue window title bar of efaBths shows efaCloud-status as icons instead of text.</li>
+<li> Show Logbook dialog in efaBths makes use of alternating row colors.</li>
+<li> EfaConfig: Font is customizable for all LookAndFeel in efaBase and efaBths. Better standard font for all LookAndFeel.</li>
+<li> EfaConfig: Tooltip colores customizable.</li>
+<li> EfaConfig: Restructuring of the configuration with headings and notes on individual configuration elements.</li>
+<li> EfaConfig: Heading colors can be used for highlighting tab headers (Metal and WindowsClassic LookAndFeel).</li>
+<li> EfaConfig: Club logo can have a bigger size of 320x200 pixels.</li>
+<li> EfaConfig: When maximizing windows, efa can respect taskbar size and location</li>
+<li> EfaConfig: efa-Boat House&amp;Input: New option to simplify input of multiple similar sessions (expert mode).</li>
+<li> efaBths: Clock widget and buttons use bold font, even if not setup in efaConfig.</li>
+<li> Labels for input fields are right-aligned for better usability.</li>
+<li> Clubwork list dialog: applied custom column widths so that the data is easier to read.</li>
+<li> Headers for lists get highlighted (e.g. in persons editor when assigning groups).</li>
+<li> Hidden elements for boats and persons show an icon and a tooltip indicating their status.</li>
+<li> About dialog: list of used libraries and their licensing. In debug mode, system Infos show LAF and CSS settings.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> WindowsLookAndFeel: Is more usable for efa. As in all other LookAndFeels, the buttons get displayed filled with color, instead of just having a colored border.</li>
+<li> Tables with alternating row colors use the lookandfeel specific colors instead of plain white background color.</li>
+<li> Removed unneccesary borders in efaBths and all dialogs.</li>
+<li> Icons for adding new items use a darker green and are better recognizable.</li>
+<li> Autocomplete fields did not show their popup window on Windows machines, when user changed to another program and returned to efa. Also, STRG+F now opens the popup window.</li>
+<li> Autocomplete fields: if user leaves a popup selection with tab, the selected entry is used for the field.</li>
+<li> Autocomplete fields: if set to partial text mode, the color of the button was orange instead of red if the item was not valid.</li>
+<li> Start session dialog: Hitting ESC while an autocomplete window is open, only the autocomplete window is closed instead of the start session dialog.</li>
+<li> EfaConfig: Scrollable in the config window is INSIDE the tabs - making it easier to scroll</li>
+<li> EfaConfig: Key assignment for comment field - text field for values set to enabled.</li>
+<li> EfaConfig: MeteoAstro plugin indicates in efaconfig that weather can no longer be displayed.</li>
+<li> EfaConfig: More config items indicate that they need a restart of efa.</li>
+<li> EfaConfig: Cron job tab is refactored.</li>
+<li> Startup: fixed startup problems of efaBths on slower machines (Raspberry PI). When opening projects, Audit task no longer runs in background. This can increase startup time for efaBths by a few seconds.</li>
+<li> When reading messages to admin, the text of the message can be selected and copied to clipboard via CTRL+C.</li>
+<li> Boathouse lists with two columns: calculate widths for second columns optimized, performance optimization when a boat name has an icon prefix.</li>
+<li> Boathouse lists with two columns: show the comment of the boat if the boat has been manually set to 'not available'</li>
+<li> Boathouse lists filter: did not find any boats when filter string contained only one of the special characters: ß, æ or œ.</li>
+<li> Boat reservation: When selecting the boat, the selection list button is displayed.</li>
+<li> Displaying messages for admin: User can now select text in textarea and copy it to clipboard (CTRL+C).</li>
+<li> HTML Widgets use Dialog font as default, in 14 pix size in all LookAndFeels.</li>
+<li> NewsTicker Widget without problems with unusual font sizes.</li>
+<li> MeteoAstro plugin in efaBths main screen shows a hand as a mouse cursor if an HTML popup has been configured.</li>
+<li> MeteoAstro plugin default value for 'download weather' is false for new installation. Avoids unneccessary exceptions in log after installation.</li>
+<li> No (hidden) exception in debug mode in HTMLWidget updating process</li>
+<li> No (hidden) exception during initialisation of efaBths if the special button is displayed. Special button now has the according icon.</li>
+<li> No more duplicates in the spellchecking dialogue (which comes up when a item with a lookup list has not fully been set by the user).</li>
+<li> Key F3 in start session dialog does no longer invoke searching in logbook dialog.</li>
+<li> READY will only be written in efa.log after the GUI initialization of efaBths and efaBase, and no longer after showing of BaseFrame.</li>
+<li> Fixed swing multithreading problem when performing automatic logbook change, exiting efa due to periodic or planned restart, and updating efaCloud status in the title bar.</li>
+<li> Fixed swing multithreading problem when running parametized statistics with interactive specification of persons, boats, groups.</li>
+<li> Dialog for automatic shutdown/restart of efa now shows the reason.</li>
+<li> Removed resource leak: ZIP file created during a backup gets closed afterwards.</li>
+<li> Widgets for clock and news stop running in background if invisible.</li>
+<li> no exception in admintask for carryover calculation when changing project to a project where no clubwork has been defined in efabase.</li>
+<li> When tooltips are active for tables, tooltips are shown for table column headers.</li>
+<li> Show Logbook dialog: shows date and time colums with a larger width.</li>
+<li> Show Logbook dialog: Fixed a rendering error when the crew of the logbook entry is empty.</li>
+<li> Admin mode: Dialogs for selecting Projects, Logbooks, Clubwork, Plugins are better readable in any LookAndFeels.</li>
+<li> efaBths: Blue title bar does not change it's size when efaFlatLaf is active and config items get saved in admin mode.</li>
+<li> Tables: when alternating row colors are deactivated, flatlaf shows horizontal lines for better readability in tables.</li>
+<li> [efaCloud] Sync improvements: when resyncing 'recently' changed/created records only records of the last 5 days are considered, instead of the last 30 days.</li>
+<li> [efaCloud] Sync improvements: better handling when names of boats and other items get replaced by uuids (by cleaning actions at the end of the year).</li>
+<li> [efaCloud] Cannot convert an existing project to efaCloud then efaCloud credential fields are empty</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.3_02</b><br><br>26.11.2023</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br></b><b>Fixes</b><ul><li> Unwanted Dialog window shown during cron job executions</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.3_03</b><br><br>01.01.2024</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br></b><b>Fixes</b><ul><li> Data import of logbook items did not work due to ArrayIndexOutOfBounds exception</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.3_02</b><br><br>26.11.2023</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br></b><b>Fixes</b><ul><li> Unwanted Dialog window shown during cron job executions</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.3_01</b><br><br>05.11.2023</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br></b><b>New features</b><ul>
+<li> Reorganisation of efaBoathouse configuration items (common, appearance) so the items can be found more easily</li>
+<li> Automatic clearing of boathouse filter fields: configurable interval</li>
+<li> Automatic clearing of boathouse filter fields: after most actions in efaBths (configurable)</li>
+<li> Items with umlauts/special characters are easier to find when searching in tables, boat lists and autocomplete lists (configurable)</li>
+<li> Boat reservations: Boat can be changed after saving, and also copies of boat reservations can be created.</li>
+</ul>
+<b>Fixes</b><ul>
+<li> Widgets are safe for multithreading: Less exceptions for rendering in efa.log</li>
+<li> Autocomplete lists: Filter by partial contents now consideres complete list</li>
+<li> Sorting of boat lists, person lists, autocomplete-lists works better with european special characters like umlauts</li>
+<li> Some more configuration elements requiring a restart of efaBths to activate produce a corresponding message when saving configuration changes.</li>
+<li> No more duplicates in the spellchecking dialogue (which comes up when a item with a lookup list has not fully been set by the user).</li>
+<li> [efaCloud] Synchronisation in efaBase allows download of records with many changes.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.3_00</b><br><br>29.09.2023</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.8<br></b><b>New features</b><ul>
+<li> efa 2.3.3. requires at least Java Vesion 8</li>
+<li> Boat reservations (both one-time and weekly reservations) can now be filtered by date</li>
+<li> Boathouse shows two-column lists (can be disabled)</li>
+<li> Boathouse shows today's reservations for available boats(can be disabled)</li>
+<li> Boathouse shows tooltips for items (can be disabled)</li>
+<li> Boathouse can filter for tooltip contents</li>
+<li> Boathouse with more prominent headers (configureable)</li>
+<li> Boathouse: Yellow background for active/non-empty filter fields in boat lists. Filter fields get cleared in fixed intervals.</li>
+<li> Boat reservations can be filtered for today's reservations only (new checkbox)</li>
+<li> Boat reservations allow weekly reservations within a limited period</li>
+<li> Overlapping boat reservations of diffrent types: behaviour of efa can be set</li>
+<li> Autocomplete fields (e.g. boat name) filter by partial word</li>
+<li> efaCloud logging of synchronization errors</li>
+</ul>
+<b>Fixes</b><ul>
+<li> Logrotate efa.log avoids missing log entries when running efaCLI(https://github.com/nicmichael/efa/issues/22) </li>
+<li> [efaCloud] overwriting of sessions when switching logbook</li>
+<li> [efaCloud] too little tolerance for data synchronization</li>
+<li> plugin.xml now correctly reports current version 1.6.2 of JavaMail</li>
+<li> Fixed errors in french locale concerning apostrophes.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.2_03</b><br><br>21.01.2023</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul><li> Increased default lock timeout to 30 sec</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.2_02</b><br><br>21.01.2023</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul><li> Additional lock timeout diagnostics</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.2_01</b><br><br>28.10.2022</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul><li> JavaMail Update to Version 1.6.2</li></ul>
+<b>Fixes</b><ul>
+<li> Invalid persons in person selection list (https://github.com/nicmichael/efa/issues/62)</li>
+<li> Person selection list loses entries in efaBase (https://github.com/nicmichael/efa/issues/67)</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.2_00</b><br><br>04.06.2022</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul>
+<li> Filter for lists with available boats and boats on the water</li>
+<li> Improved display of tables</li>
+<li> Improved handling of club work in efaCloud</li>
+</ul>
+<b>Fixes</b><ul>
+<li> efaCloud bugfixes on Windows</li>
+<li> Improved efaCloud synchronization</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.1_04</b><br><br>22.03.2022</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul><li> Fix for missing decimal point in display of distances and other decimal values</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.1_03</b><br><br>06.03.2022</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul><li> Improved transation to French</li></ul>
+<b>Fixes</b><ul>
+<li> [efaCloud] synchronization problem under Windows fixed</li>
+<li> Bug for import of decimal numbers fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.1_02</b><br><br>08.02.2022</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul>
+<li> [efaCloud] Bugfix for logbook change</li>
+<li> Bug for import of decimal numbers fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.1_01</b><br><br>24.01.2022</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul><li> Improved Auto-Complete lists only suggest persons which haven't yet been selected for this boat</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.1_00</b><br><br>22.12.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Miscellaneous</b><ul><li>[efaCloud] optimizations with centralized admin management</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_14</b><br><br>19.11.2021</font></td></tr></table></td>
+<td valign="top"><b><br><br>Minimum Java Version: 1.6<br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_12</b><br><br>26.09.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul>
+<li> [efaCloud]: Authorization retry if internet connection interrupted during program start</li>
+<li> fixed reference count in logfile check for Raspberry</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_11</b><br><br>19.06.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Miscellaneous</b><ul><li>Change: Update only for German rowing functions.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_10</b><br><br>10.06.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul>
+<li> [efaCloud] Groups with more than 27 members allowed.</li>
+<li> [efaCloud] efaCloud und efaCLI are compatible. No efaCloud commands via efaCli.</li>
+<li> [efaCloud] efaRemote + efaCloud is tested.</li>
+<li> [efaCloud] Optimized error tolerance.</li>
+<li> [efaCloud] Shows an error dialog if authentification at efaCloud server fails</li>
+<li> [efaCloud] Corrected config menu "Data"</li>
+<li> [efaCloud] If a data inconsistency is detected, the error message contains the non-uploaded record</li>
+<li> [efaCloud] efa2fahrtenabzeichen will be uploaded with up to 4 differences</li>
+<li> [efaCloud] shows a server_welcome_message in the efaCloud configuration dialog (needs Server version 2.3.0_12)</li>
+<li> [efaCloud] Server =&gt; client configuration information is transferred with every synchronisation, instead of doing so only after a restart of efa. Fixed an error with resume after pausing sync</li>
+<li> [efaCloud] Optimized error message during initial connection to efaCloud.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_09</b><br><br>11.04.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Miscellaneous</b><ul><li>Change: Update only for German rowing functions.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_07</b><br><br>30.03.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul><li> efaCloud Fast-Sync every 30 seconds (latency reduction for changes of multiple clients becoming visible to others)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_06</b><br><br>23.03.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul><li> NullPointerException fixed when finishing a session of an unknown or double-booked boat in efaCloud</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_05</b><br><br>22.03.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>Fixes</b><ul>
+<li> efaCloud Upload error (manual upload) fixed</li>
+<li> NullPointerException in efaCloud configuration fixed when no project is opened</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_04</b><br><br>20.03.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul><li> Enhanced Statistics during remote Online Update</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_02</b><br><br>20.03.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul><li> User Statistics during remote Online Update</li></ul>
+<b>Fixes</b><ul><li> NullPointerException fixed when finishing a session</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_01</b><br><br>18.03.2021</font></td></tr></table></td>
+<td valign="top"><b><br><br>Minimum Java Version: 1.6<br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.3.0_00</b><br><br>16.03.2021</font></td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimum Java Version: 1.6<br></b><b>New features</b><ul><li> efaCloud - efa in the Cloud (experimental)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_54</b><br><br>15.12.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_52</b><br><br>18.11.2020</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Removed unnecessary .java files from efa.jar</li></ul>
+<b>Miscellaneous</b><ul><li>Neu: efa checks periodically if Java version 8 or newer is being used and warns if not</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_51</b><br><br>16.11.2020</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Exception when creating new persons as an ordinary user in boathouse mode fixed</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_50</b><br><br>16.11.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_49</b><br><br>14.11.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_48</b><br><br>23.07.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_47</b><br><br>19.07.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_46</b><br><br>19.07.2020</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Fixed import of data records with set InvalidFrom field if the time of invalidity lies before the validity time of the import</li>
+<li> Unallowed editing of persons, boats and destinations by admins without corresponding permissions fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_45</b><br><br>22.06.2020</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Correct placement of dialogs in environments with multiple monitors</li>
+<li> Session cancel dialog can now be cancled with ESC</li>
+<li> Broken switching between person and boat selection lists fixed</li>
+</ul>
+<b>Miscellaneous</b><ul><li>Neu: reservation details of overlapping reservations are now shown</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_44</b><br><br>19.04.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_43</b><br><br>22.02.2020</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_42</b><br><br>16.06.2019</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Weather data now displays correctly again (Yahoo Weather API updated)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_40</b><br><br>28.01.2019</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_39</b><br><br>28.10.2018</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Separators in boat lists now show names of self-defined boat types</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_37</b><br><br>19.06.2018</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Layout problems of Project/Logbook Open dialog fixed</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_36</b><br><br>06.05.2018</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul><li> Weather widget now supports inclusion of arbitrary HTML text or pages</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_35</b><br><br>19.02.2018</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_34</b><br><br>01.02.2018</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_33</b><br><br>10.11.2017</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Yahoo! Wetter API updated - Weather information now shown properly</li>
+<li> PDF statistics are now uploaded properly by FTP without file corruption</li>
+<li> Statistic settings with a logbook set as filter criteria can now be properly edited</li>
+<li> Overlapping boat reservations are now properly detected and prevented</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_32</b><br><br>05.11.2017</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Added support for Java 9</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_31</b><br><br>03.05.2017</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_30</b><br><br>27.04.2017</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul><li> Lock Timeout for data manipulation now configurable</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_29</b><br><br>13.04.2017</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_28</b><br><br>12.04.2017</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul><li> Support of PASV mode for FTP Upload</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_26</b><br><br>14.03.2017</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_24</b><br><br>12.02.2017</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_23</b><br><br>07.02.2017</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_22</b><br><br>12.12.2016</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_21</b><br><br>05.12.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Fix for sending email from efaCLI</li>
+<li> Proper error message instead of NullPointerException, if no email server has been configured when sending an email</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_19</b><br><br>23.10.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Exception during Online-Update and emails sending fixed</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_18</b><br><br>22.10.2016</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_17</b><br><br>17.09.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul><li> Special Button now support changing the project, logbook, or boathouse</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_16</b><br><br>09.09.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Sorting of boats in boat lists exclusively by boat name now possible again</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_15</b><br><br>28.08.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul><li> Sorting of boats in boat lists now optinally possible by boat type</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_14</b><br><br>25.07.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Improved robustness for file reading (length checks of field values and truncating of values above 1 MB in size).</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_13</b><br><br>23.07.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> NullPointerException in Boot Status Audit fixed (if correcting session status).</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_12</b><br><br>16.07.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Update conflict in efaRemote for repeated change of the same logbook record fixed.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_09</b><br><br>01.05.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Error (NoClassDefFoundError) when loading whether data after online update fixed.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_08</b><br><br>22.04.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Weather information now shown again (API for querying of weather data changed)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_05</b><br><br>27.02.2016</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_04</b><br><br>26.02.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Repeated prompting for calculation of clubwork carry-over fixed</li>
+<li> Unclickable dialog prompting for calculation of clubwork carry-over in efaBase fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_03</b><br><br>13.01.2016</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Erroneous statistics calculation for days of week and months fixed</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_02</b><br><br>22.12.2015</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_01</b><br><br>21.12.2015</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.2_00</b><br><br>16.12.2015</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul>
+<li> Status of persons can now automatically be updated by efa based on year of birth</li>
+<li> Configurable preset value for comments field</li>
+<li> Scaling of HTML Widget can now be freely configured</li>
+<li> Statistics evaluations of clubwork can now suppress members that have not yet fulfilled their clubwork hours</li>
+<li> Strict checks of unknown person names in logbook entries can now be enforced when sessions are entered</li>
+<li> efa now validates email addresses in project settings</li>
+</ul>
+<b>Fixes</b><ul>
+<li> efaCLI now run on Linux/Unix also in environments without display (headless)</li>
+<li> Error messagesn during creation of a new logbook through efaRemote fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_15</b><br><br>06.12.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Club names are now distinguished from name add-ons through squared brackets during input if the option "Show club names in person list" has been activated</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_14</b><br><br>30.11.2014</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_13</b><br><br>12.11.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> NullPointerException during statistics calculation of clubwork fixed if no clubwork hours were found during selected period</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_12</b><br><br>22.10.2014</font></td></tr></table></td>
+<td valign="top"><b><br><br></b></td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_11</b><br><br>18.10.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> efa now onlz attempts to send email if an email server has been configured</li>
+<li> wrong count for number of exported records fixed</li>
+<li> efa now prompts user to confirm when attempting to reserve a boat that is currently "not available"</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_10</b><br><br>06.08.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Missing notes when reporting an uncleaned boat added</li>
+<li> Already entered distance is not lost any more when a destination is edited in admin mode</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_09</b><br><br>24.07.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Sending of emails without STARTTLS when using port 25</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_08</b><br><br>12.07.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Improved support for sending email with STARTTLS or SSL</li>
+<li> Missing club name for cox fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_07</b><br><br>18.06.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Data import with efaCLI now 100x faster</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_06</b><br><br>17.06.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Position in statistics output now not incremented for identical values</li>
+<li> NullPointerExceptions during data import in efaCLI fixed</li>
+</ul>
+<b>Miscellaneous</b><ul><li>Neu: Debug-Logging in efaCLI</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_05</b><br><br>07.06.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Statistics evaluation of unknown persons now possible again</li>
+<li> Sorting of logbook entries by date in statistics evaluation now also considers time</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_04</b><br><br>03.06.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul><li> Problems/freeze of efa after start fixed</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_03</b><br><br>01.06.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Clubwork can now also be administred in efa-Base</li>
+<li> Error message during efa start fixed, if clubwork book had been deleted</li>
+<li> Reminder to close the boat house if all boats are back now appears also, if some boats are at races or multi-day tours (not available)</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_02</b><br><br>29.05.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> Clubwork button sometimes not shown after efa start - fixed</li>
+<li> Entering and evaluation of clubwork hours for guests possible</li>
+<li> Time range for clubwork calculation of target hours fixed</li>
+<li> Error message when entering unknown namen for clubwork hours fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_01</b><br><br>28.05.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Fixes</b><ul>
+<li> NullPointerException when opening project edit dialog fixed</li>
+<li> Clubwork button sometimes not shown after efa start - fixed</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132"><font color="yellow"><b>2.2.0_00</b><br><br>26.05.2014</font></td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>New features</b><ul>
+<li> Support for accounting of club work hours</li>
+<li> Key field for data import is now configurable</li>
+<li> emails sent from efa will now use the recipient's email address as reply-to address (if recipient has an email address configured in the persons list)</li>
+<li> Statistics evaluation now allows to restrict evaluation to a specific logbook</li>
+<li> Logbook statistics evaluation can now optionally also consider open sessions (instead of only finished sessions)</li>
+<li> Messages can now be edited when forwarded by the admin</li>
+<li> Open sessions can now be finished also in efa-Base (and Admin Mode). The boat status will be updated accordingly.</li>
+<li> efa can now optionally display club names behind each person's name in drop-down lists.</li>
+<li> Optionally, efa now allows to enter sessions without distance.</li>
+<li> efa system infos now also show current IP address</li>
+<li> JavaMail-Plugin updated (Version 1.5.1) and now supports sending of encrypted emails better</li>
+</ul>
+<b>Fixes</b><ul>
+<li> Error messages when creating logbook fixed</li>
+<li> Repeated logbook switch after manual switch fixed</li>
+<li> Error when creating PDF and XML output of unsupported statistics fixed</li>
+<li> efa restart on Windows didn't work, when installation directory contained spaces</li>
+<li> Display problems in efa configuration (too many fields) fixed</li>
+</ul>
+<b>Miscellaneous</b><ul>
+<li>Change: Statistic windows in Admin Mode now not closed after 5 minutes any more</li>
+<li>Language: Language support for Danish updated</li>
+</ul>
+</td>
+</tr>
+</table>
+</body></html>

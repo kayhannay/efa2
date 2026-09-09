@@ -65,7 +65,10 @@ SET CP=%CP%;program/plugins/fop.jar
 SET CP=%CP%;program/plugins/xmlgraphics-commons.jar
 
 REM Classpath: EFA Flat Laf
-SET CP=%CP%;program/plugins/flatlaf-3.2.5.jar
+SET CP=%CP%;program/plugins/flatlaf-3.6.jar
+
+REM Classpath: JSON
+SET CP=%CP%;program/plugins/json-20250517.jar
 
 REM Classpath: Weather-Plugin
 SET CP=%CP%;program/plugins/commons-codec.jar
@@ -79,7 +82,7 @@ REM # ##########################################
 REM Java Heap
 REM A higher Java Heaps helps to speed up efa on slower computers
 REM As garbage collection needs to run at lower frequencies
-SET EFA_JAVA_HEAP=160m
+SET EFA_JAVA_HEAP=192m
 SET EFA_NEW_SIZE=32m
 IF EXIST javaheap.bat CALL javaheap.bat
 

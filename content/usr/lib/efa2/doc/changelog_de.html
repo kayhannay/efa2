@@ -1,0 +1,1366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><body title="EFA Versionshistorie">
+<h1><b>EFA Versionshistorie</b></h1>
+<table border="0">
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.2</b><br><br></font><font color="yellow">26.04.2026</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul><li> Beta 2.5.1 wird hiermit für die Produktion freigegeben (als Version 2.5.2).</li></ul>
+<b>Korrekturen</b><ul><li> Mehrtagesfahrten, Regatta- und Trainingscamp-Fahrten werden wieder ausschließlich unter "nicht verfügbare Boote" angezeigt, wenn die entsprechende Option aktiviert ist.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#9</b><br><br></font><font color="yellow">19.02.2026</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Basiert auf 2.5.0_01.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Bei Multisession-Dialogen (Fahrtstart oder Nachtrag) verhindert ein unbekanntes Boot nicht mehr das Speichern.</li>
+<li> Durchtabben durch Dialoge mit vielen Elementen (z.B. in der Konfiguration oder bei Widgets) holt immer das fokussierte Element in den Sichtbereich. Es entfällt das manuelle Scrollen.</li>
+<li> Bei variablen Elementen (z.B. Wetter-Orten, HTML-Seiten, Bootstypen, Crontab-Elementen) können neue Elemente an eine bestimmte Stelle eingefügt werden, statt bisher nur am Ende.</li>
+<li> Widget: Wetter-Widget: Ist standardmäßig aktiviert, aber ohne voreingestellte Wetter-Orte.</li>
+<li> Widget: Wetter-Widget: Wenn Wetterdaten z.B. direkt beim Start nicht geladen werden, findet in kürzeren Zeitintervallen eine Aktualisierung statt.</li>
+<li> Widget: HTML Widget: Ist standardmäßig aktiviert, aber ohne voreingestellte HTML-Seiten.</li>
+<li> Widget: HTML Widget: Hintergrund war in Metal- und Nimbus-Look nicht mit der richtigen Farbe gefüllt.</li>
+<li> Widget: Newsticker: Ist standardmäßig deaktiviert.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#8</b><br><br></font><font color="yellow">14.02.2026</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Basiert auf 2.5.0_01.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul>
+<li> Statusleiste unter der Bootsliste wird standardmäßig nicht mehr angezeigt (konfigurierbar)</li>
+<li> Hauptbildschirm von efaBootshaus auf GridBagLayout umgestellt. Hierdurch lassen sich die HTML-Widgets besser an die auf dem Bildschirm positionieren.</li>
+<li> Neue Option um den Abstand der Schaltflächen zu den Bootslisten zu definieren (efaBootshaus-&gt;Erscheinungsbild)</li>
+<li> Widget: Newsticker technisch überarbeitet. Keine Darstellungsprobleme mehr bei Verwendung einiger Schriftarten. Auch auf RASPI3b mit gleichmäßiger Tickerrate.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Widget: Wetter-Widget: WeatherAPI aus der Liste der Datenquellen entfernt.</li>
+<li> Widget: Wetter-Widget: Besseres Fehlerhandling, wenn JSON-Bibliothek nicht gefunden wird.</li>
+<li> Widget: HTML Widget: Korrekte Darstellung, wenn auf eigene Farben verzichtet wird. HTML-Inhalt hat transparenten Hintergrund, wenn eigene Farben verwendet werden.</li>
+<li> Plugins: Org.Json Bibliothek aufgenommen und altes Wetter-Plugin entfernt.</li>
+<li> "Über EFA" Dialog zeigt aktuelle URLs an und öffnet sie (wenn im Admin-Modus).</li>
+<li> Info-Dialog zur Anzeige einer veralteten Java-Version kann Webseite öffnen.</li>
+<li> Browserdialog nutzt beim Aufruf eines Externen Browsers auch die neue Desktop.browse() Funktion, wenn verfügbar.</li>
+<li> Performanceverbesserung beim Filtern in Listen und beim Sortieren von Tabellen.</li>
+<li> Performanceverbesserung bei der Sortierung der Bootsliste/Personenliste in efaBootshaus.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#6</b><br><br></font><font color="yellow">17.01.2026</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Basiert auf Beta 2.5.0#21.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul>
+<li> Widget: Allgemein: Es können mehrere Widgets oben/unten/links/rechts positioniert werden.</li>
+<li> Widget: HTML-Widget: Jedes HTML-Widget kann separat positioniert werden (oben/unten/links/rechts/multiwidget).</li>
+<li> Widget: Wetter-Widget: Jedes Wetter-Widget kann separat positioniert werden (oben/unten/links/rechts/multiwidget).</li>
+<li> Widget: Wetter-Widget: Jedes Wetter-Widget kann separat sichtbar/unsichtbar gemacht werden.</li>
+</ul>
+<b>Korrekturen</b><ul><li> Datei-Eingabefelder zeigen keinen Fehler mehr an, wenn eine HTTP/HTTPs Seite gewählt ist.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#5</b><br><br></font><font color="yellow">15.01.2026</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Early Access für Test der Widget-Überarbeitung. Basiert auf Beta 2.5.0#21. Einsatz auf eigene Gefahr.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul>
+<li> GUI Optimierung: Einige Checkboxen sind nun eingerückt, was die GUI besser verständlich macht.</li>
+<li> Cron Jobs: mehr Platz auf kleinen Bildschirmen</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#4</b><br><br></font><font color="yellow">01.01.2026</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Early Access für Test der Widget-Überarbeitung. Basiert auf Beta 2.5.0#21. Einsatz auf eigene Gefahr.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul>
+<li> Widget: HTML-Widget: Klick auf die Fläche des Widgets öffnet die Inhalte in einem Popup-Fenster. Dieses schließt sich automatisch nach 90 Sekunden. </li>
+<li> Widget: HTML-Widget: Anzeige einer Sanduhr als Mauszeiger, wenn der Browser nach Klick auf einem Link geöffnet wird.</li>
+<li> Widget: HTML-Widget: Reihenfolge der Felder in der Oberfläche verbessert. </li>
+<li> Widget: HTML-Widget: Einzelne HTML-Seiten können ausgeblendet werden.</li>
+<li> Widget: HTML-Widget: HTML-Seite aus früheren efa-Versionen wird nicht mehr angezeigt (und muss manuell eingerichtet werden)</li>
+<li> Widget: Wetter-Widget: Reihenfolge der Felder in der Oberfläche verbessert.</li>
+<li> Widget: Wetter-Widget: Bessere Formatierung von Fließkommazahlen kleiner 1.</li>
+<li> Widget: Wetter-Widget: Benutzerefinierte Farben für Wetterwidget.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#3</b><br><br></font><font color="yellow">23.11.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Early Access für Test der Widget-Überarbeitung. Basiert auf Beta 2.5.0#21. Einsatz auf eigene Gefahr.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul>
+<li> Widget: HTML-Widget: Überschriften und Überschriftenfarbe definierbar.</li>
+<li> Widget: HTML-Widget: Klick auf Links in den HTML-Widgets öffnet den Link im Webbrowser.</li>
+<li> Widget: HTML-Widget: Reihenfolge der HTML-Widgets änderbar.</li>
+<li> Widget: HTML-Widget: Bei Neuinstallationen ist die Standardposition im Multi-Widget.</li>
+<li> Widget: Wetter-Widget: Reihenfolge der Wetter-Widgets änderbar.</li>
+<li> Widget: Wetter-Widget: Bei Neuinstallationen ist die Standardposition im Multi-Widget.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#2</b><br><br></font><font color="yellow">16.11.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Early Access für Test der Widget-Überarbeitung. Basiert auf Beta 2.5.0#21. Einsatz auf eigene Gefahr.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul><li> Widget: HTML-Widget: Download der HTML-Seite im Hintergrund. HTML-Caching. Standardfarben definierbar. </li></ul>
+<b>Korrekturen</b><ul><li> Widget: Wetter-Widget: Widgets überarbeitet, Übersetzungen für DE/EN/FR hinzugefügt.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.1#1</b><br><br></font><font color="yellow">09.11.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul>
+<li>Early Access für Test der Widget-Überarbeitung. Basiert auf Beta 2.5.0#21. Einsatz auf eigene Gefahr.</li>
+<li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li>
+</ul>
+<b>Neuerungen</b><ul>
+<li> Widget: Das Widget-System wesentlich überarbeitet und ergänzt.</li>
+<li> Widget: Uhrzeit Widget: Datumsanzeige. Sonnenauf/Untergang kann bei der Uhr angezeigt werden.</li>
+<li> Widget: Wetter Widget: Initiale Version der Wetteranzeige mit mehren Darstellungsmöglichkeiten.</li>
+<li> Widget: Wetter Widget: Möglichkeit, mehrere Wetter-Widgets anzuzeigen.</li>
+<li> Widget: HTML Widget: Möglichkeit, mehrere HTML-Widgets anzuzeigen.</li>
+<li> Widget: Multi Widget zur Anzeige mehrerer Widgets, die automatisch durchlaufen.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0</b><br><br></font><font color="yellow">14.02.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul>
+<li> Veröffentlichung efa 2.5.0 auf Basis von efa 2.5.0#21</li>
+<li> efaCloud: Lokale efaCloud-Log-Dateien werden bis zu 10 MByte groß; bei Upload-Sync werden nur die letzten 200kb der efaCloud-Log-Dateien hochgeladen.</li>
+<li> efaCloud: Erweitertes Logging in efaCloud.log zur besseren Nachvollziehbarkeit in Bezug auf die transferierten Daten.</li>
+</ul>
+<b>Korrekturen</b><ul><li> efaCloud: Aktualisierung von Boatstatusrecord bei Veränderung der Fahrtnummer im Fahrtenbuch erfolgt nur noch, wenn sich beide auf das gleiche Fahrtenbuch beziehen.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#21</b><br><br></font><font color="yellow">03.11.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li></ul>
+<b>Korrekturen</b><ul>
+<li> Fahrten aus einem anderen Fahrtenbuch als dem aktuell geladenen können nicht verändert werden.</li>
+<li> Neuzeichnen der Bootsliste nach Veränderung Listeninhalte verbessert.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#20</b><br><br></font><font color="yellow">25.10.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul><li> Aktualisierte Wettbewerbsbedingungen fuer LRV Brandenburg</li></ul>
+<b>Korrekturen</b><ul><li> Kleine Fehlerkorrekturen</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#19</b><br><br></font><font color="yellow">05.10.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul>
+<li> Adminmodus/Fahrtenbuch: Bei Anlage eines neuen Fahrtenbuchs wird der Fahrtenbuchname auf allen Folgeseiten des Dialogs wiederholt.</li>
+<li> [efaCloud] Wenn eine efaCloud-Synchronisation im Hintergrund läuft, wird das benutzerseitige Wechseln von Projekten, Fahrtenbüchern und Vereinsarbeit unterbunden, und der Anwender mit einer Meldung informiert.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#18</b><br><br></font><font color="yellow">03.08.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_12 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul>
+<li> Adminmodus/Fahrtenbuch: Bei Anlage eines neuen Fahrtenbuchs wird der Startzeitraum des aktuell geöffneten Fahrtenbuchs als Grundlage genommen - statt wie bisher der 01.01. Der Endezeitpunkt der Periode wird automatisch berechnet. Dies vereinfacht die Anlage neuer Fahrtenbücher bei abweichender Startperiode (z.B. Kanufahren in Deutschland).</li>
+<li> Changelog im "Über Efa" Dialog ist besser strukturiert.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#17</b><br><br></font><font color="yellow">08.06.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_10 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul>
+<li> update runEfa.bat/.sh - 192MB RAM statt 160MB für efa JavaVM, wegen Speicher-Mehrbedarf für efaCloud.</li>
+<li> Boote, die in anderen Logbüchern 'auf Fahrt' sind, können als 'nicht verfügbare Boote' angezeigt werden.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Auswahlliste für Personen wird aktualisiert, wenn bei Neuanlage einer Fahrt das Boot oder die Bootsvariante geändert wird.</li>
+<li> Efa-Neustart unter Windows funktioniert zuverlässiger, es gibt keine Meldungen mehr 'efa läuft bereits im Hintergrund'.</li>
+<li> [efaCloud] Ecrid Index Handling verbessert: keine Probleme mehr nach dem Aufsetzen neuer efaCloud Systeme</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#16</b><br><br></font><font color="yellow">21.04.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_10 und höher werden empfohlen.</li></ul>
+<b>Neuerungen</b><ul>
+<li> Bootsstatus-Dialog im Querformat und zeigt die zugeordnete Fahrt-Nr und Fahrtenbuchname zum Bootsstatus.</li>
+<li> EfaBase/Admin-Modus: Bei der Bearbeitung von Fahrtenbucheinträgen werden bestimmte leere Felder mit einem roten Warnicon hervorgehoben.</li>
+<li> EfaBase/Admin-Modus: Eine Fahrt wird nicht mehr _grundsätzlich_ bei der Bearbeitung in efaBase/Adminmodus auf "geschlossen" gesetzt. D.h. die "Fahrt offen - jetzt beenden" bleibt häufiger sichtbar, wenn die Fahrt tatsächlich noch offen ist.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Bootstatus: Wird der Bootstatus auf einen Wert != Unterwegs gesetzt, werden im Bootsstatus die Angaben von Fahrtnummer und Fahrtenbuchnamen geleert.</li>
+<li> Fahrt anlegen/Nacherfassen: Ist eine Fahrt&gt;30km, und ist nur eine Fahrtart zur Auswahl möglich, unterbleibt die Abfrage der Fahrtart.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#15</b><br><br></font><font color="yellow">13.04.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen. EfaCloud 2.4.0_10 und höher werden empfohlen.</li></ul>
+<b>Korrekturen</b><ul>
+<li>'Über efa' Dialog zeigt das Build-Datum an</li>
+<li> Wechsel zwischen den Projekten: Admin-Dialog zeigt zuverlässig an, wenn kein Vereinsarbeitsbuch geöffnet ist.</li>
+<li> [efaCloud] Anlage neuer Projekte und Fahrtenbücher mit mehr Hinweisen zur korrekten Konfiguration.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#14</b><br><br></font><font color="yellow">16.03.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen.</li></ul>
+<b>Korrekturen</b><ul>
+<li> efaBase ließ sich nicht vollständig über Datei-&gt;Beenden schließen.</li>
+<li> LookAndFeel: im maximierten Modus von efa wird die Titelzeile in allen Looks gleich angezeigt - mit einem blauen Hintergrund.</li>
+<li> Beim Email-Versand auftretende Fehler verursachen keine vollaufenden efa.log Dateien mehr.</li>
+<li> Admin-Dialog: Anzahl der Nachrichten wird bei geschlossenen Projekten auf der Schaltfläche korrekt dargestellt.</li>
+<li> [efaCloud] efaCloud Logdateien sind wieder auf max. 200kb Größe limitiert.</li>
+<li> [efaCloud] Löschen von efaCloud Projekten verwirrt nicht mehr die efaCloud TX-Synchronisation.</li>
+<li> [efaCloud] Bug in efa 2.5.0#12 bei Migration von Projekten nach efaCloud behoben.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#12</b><br><br></font><font color="yellow">09.03.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Wenn efaCloud eingesetzt wird, muss der Server mindestens Version 2.3.3 unterstützen.</li></ul>
+<b>Neuerungen</b><ul>
+<li> Mehrere Bootshäuser: Wenn man im Verein mehr als ein Bootshaus konfiguriert hat, werden bei 'Boote auf Fahrt' nur noch die Boote angezeigt, die eine Fahrt im Fahrtenbuch zum Bootshaus haben. Siehe auch Dokumentation: http://efa.nmichael.de/dokuwiki/doku.php?id=config_mehrere_bootshaeuser</li>
+<li> Mehrere Bootshäuser: Werden in einem Projekt mehrere Bootshäuser verwaltet, zeigt die Bootsliste in einer zusätzlichen Spalte an, welches Boot exklusiv in welchem Bootshaus angezeigt werden soll.</li>
+<li> Konfiguration von Bootstypen: Wenn 'Kanufahren in Deutschland' aktiviert ist, wird ein Hinweis mit Verweis auf die Kanu-EFB-Synchronisation mit den dort konfigurierten Bootstypen angezeigt.</li>
+<li> Dialog für Auswahl von Projekt/Fahrtenbuch/Vereinsarbeit zeigt Informationen zum aktuell geladenen Projekt etc. an.</li>
+<li> Dialog für Auswahl von Projekt zeigt Projekttyp (Lokal, efaCloud, efaRemote) und die Namen der Bootshäuser an.</li>
+<li> Dialog für Auswahl von Projekt zeigt das aktuell geöffnete Projekt/Fahrtenbuch/Vereinsarbeit mit grüner Hinterlegung, und es ist beim Öffnen des Dialogs standardmäßig ausgewählt.</li>
+<li> Im 'Über efa2' Dialog wird die Versionshistorie angezeigt.</li>
+<li> [efaCloud] Bei Einsatz von efaCloud: Auf dem Server muss MINDESTENS VERSION 2.3.3 oder höher installiert sein.</li>
+<li> [efaCloud] Erstellung von Projekten: Ergänzende Hinweise; Option zum Verhindern der Anlage von Status und Gewässern.</li>
+<li> [efaCloud] Bei Aktualisierung von Gewässern nach Update: Hinweis darauf, dass das Gewässerupdate nur bei einer Instanz im efaCloud-System erfolgen sollte.</li>
+<li> [efaCloud] Bei Aktualisierung von Gewässern (manueller Aufruf): Hinweis darauf, dass das Gewässerupdate nur bei einer Instanz im efaCloud-System erfolgen sollte.</li>
+<li> [efaCloud] Bei Anlage neuer Fahrtenbücher werden Hinweise zur Benennung der Fahrtenbücher gegeben.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> efaBase schließt sich nicht mehr bei Betätigung von ESC im Hauptfenster.</li>
+<li> Admin Modus: Boote bearbeiten: Register 'Bootsreservierungen' und 'Bootsschäden' wachsen mit der Größe des Dialogs.</li>
+<li> Admin Modus: Projekt/Fahrtenbuch/Vereinsarbeit/Plugin Liste: Listen wachsen mit der Dialoggröße.</li>
+<li> EfaBackgroundtask führt keine Aktionen mehr durch, wenn Admin-Modus aktiv ist. Dadurch weniger Probleme bei Neuanlage von Projekten, wenn bereits ein Projekt offen ist.</li>
+<li> [efaCloud] Bei Anlage neuer efaCloud-Projekte muss der Admin explizit angeben, dass neue Status + Gewässer angelegt werden sollen.</li>
+<li> [efaCloud] Logrotate für efacloud.log und synchErrors.log korrigiert. Logrotate bei einer Dateigröße von 5 MB.</li>
+<li> [efaCloud] Bei der Projekt-Neuanlage werden nicht mehr automatisch Gewässer angelegt (da dies bei Integration in eine bestehende efaCloud-Instanz zu Problemen führen kann).</li>
+<li> [efaCloud] Für efaCloud wurde die Synchronisation der Daten zwischen Bootshaus und Server optimiert. Die Verwendung des eindeutigen Datensatzschlüssels des Servers in efa löst Konflikte, die etwa bei temporärem Internetausfall oder Parallelität von Fahrteinträgen in zwei angebundenen Bootshäusern auftreten.</li>
+<li> [efaCloud] Nullpointer-Fehlermeldung behoben, wenn efaCloud den Status im Fenstertitel aktualisiert.</li>
+<li> [efaCloud] Direkt nach dem Start wartet EFA 15 Sekunden statt 5 Sekunden, bis der erste Upload in efaCloud gestartet wird.</li>
+</ul>
+<b>Sonstige Änderungen</b><ul><li>New: [efaCloud] Wenn das aktuelle Projekt ein efaCloud Projekt ist, wird ein Hinweis angezeigt.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.5.0#11</b><br><br></font><font color="yellow">27.10.2024</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br>Minimale efaCloud Version: 2.3.3<br></b><b>Neuerungen</b><ul>
+<li> efaBths Listen: Farbicons für Bootslisten werden geglättet dargestellt.</li>
+<li> Hinweise in EfaConfig usw. werden passend zum efaFlatlaf mit abgerundeten Ecken dargestellt.</li>
+<li> Neuer Dialog für Erfassung von Wanderfahrten (Multisession), wenn mehrere Leute im eigenen Boot zu einer gemeinsamen Fahrt aufbrechen. Konfigurierbar in efaConfig.</li>
+<li> Autovervollständigungs-Listen: bei der Suche nach Teilbegriff wird immer der Eintrag vorselektiert, der mit dem Suchbegriff beginnt.</li>
+<li> Dialog für Bootsreservierungen in efaBths ist breiter und hat die Schaltflächen über der Tabelle (Aktualisierte Version).</li>
+<li> Dialog für Vereinsarbeit in efaBths ist breiter und hat die Schaltflächen über der Tabelle (Aktualisierte Version).</li>
+<li> Neue Option in Konfiguration-&gt;Allgemein-&gt;Eingabe-&gt;Besatzung: bei Einsitzer-Fahrten die Person als Crew statt als Steuermann eintragen.</li>
+<li> Adminmodus/Personen: Personen, die in einer oder mehreren Gruppen sind, haben das zugehörige Icon, und der Tooltip stellt die Gruppen dar.</li>
+<li> Adminmodus/Personen: Personen, die eine Kanu-eFB-ID haben, erhalten ein passendes Icon, und der Tooltip beinhaltet die eFB-ID.</li>
+<li> Adminmodus/Boote: Boote, die in einer oder mehreren Gruppen sind, haben das zugehörige Icon, und der Tooltip stellt die Gruppen dar.</li>
+<li> Adminmodus/Boote: Registerkarte Bootsschäden: Bei Eintragung neuer Bootsschäden wird eine Benachrichtigung erstellt (Deaktivierbar in Konfiguration).</li>
+<li> Adminmodus/Boote: Registerkarte Bootsschäden: Bei Löschung von Bootsschäden wird gefragt, ob diese nicht besser als behoben markiert werden sollen. Dann wird ggfs. auch eine Benachrichtigung erstellt.</li>
+<li> Adminmodus/Boote: Boot Bearbeiten-Dialog: breitere Darstellung für Bootsreservierungen und Bootsschäden.</li>
+<li> Adminmodus/Bootsschäden: Layout des Dialogs zur Erfassung von Bootsschäden wurde überarbeitet.</li>
+<li> Adminmodus/Bootsstatus: Zum Boot werden Basis-Status, aktueller Status und Eigentümer angezeigt.</li>
+<li> Adminmodus/Bootsreservierungen: Filterfeld erhält automatisch den Fokus.</li>
+<li> Adminmodus/Vereinsarbeit: Filterfeld erhält automatisch den Fokus.</li>
+<li> Adminmodus/Gruppen: In der Tabelle dargestellte Gruppen zeigen ihre Farbe an.</li>
+<li> Adminmodus/Dialoge: Das Filter-Textfeld erhält einen gelben Hintergrund, wenn es den Fokus erhält.</li>
+<li> Adminmodus/Statistiken: Statistiken mit Dateiexport können relative Pfadnamen verwenden.</li>
+<li> CSV DatenExport: Erzeugte CSV-Dateien lassen sich besser mit aktuellen Tabellenkalkulationen verarbeiten, wenn Format 'CSV (mit BOM)' gewählt wird.</li>
+<li> CSV DatenExport: efaCLI Standards für Spaltentrennzeichen (|) und Text-Trennzeichen (") bleiben unverändert für Abwärtskompatibilität</li>
+<li> CSV DatenExport: efaCLI mit erweiterten Parametern für Datenexport.</li>
+<li> CSV DatenExport: efaCLI mit Export für Vereinsarbeit.</li>
+<li> CSV Datenexport: efaCLI Export mit relativen Dateinamen für ./ = Efa Datenverzeichnis und ~/ = Home-Verzeichnis des aktuellen Benutzers.</li>
+<li> CSV DatenImport: CSV-Dateien in UTF-8 mit BOM (aus Tabellenkalkulationen) lassen sich importieren.</li>
+<li> Bessere Sortierung in den Tabellen für die Bearbeitung von Bootsreservierungen, Personen, Booten... etc. wenn nach einer anderen Spalte sortiert wird.</li>
+<li> Backup: efa.log Datei kann mit gesichert werden (wird aber nicht wiederhergestellt)</li>
+<li> EFB-Sync: Fahrtart kann dem EFB-Kommentartext vorangestellt werden.</li>
+<li> EFB-Sync: Schlägt das DB-Update einer Fahrt fehl, werden trotzdem alle weiteren Fahrten synchronisiert.</li>
+<li> EFB-Sync: Option in EfaConfig-&gt;Sync um die KanuEFB-ID Felder für Personen, Boote, Gewässer immer anzeigen zu lassen.</li>
+<li> Maximale Schriftgröße für Tabellen auf 24pix erhöht.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> In efaBootshaus funktioniert im Admin-Bereich: Fahrtenbuch wieder die Suche mit F3.</li>
+<li> Abgelaufene Bootsreservierungen von "versteckten" Booten werden gelöscht.</li>
+<li> In Beta-Versionen wird im Admin-Modus nicht mehr beständig die Aktualisierung der Gewässerliste angeboten.</li>
+<li> Versteckte Option für "efa immer im Vordergrund" wird wieder angezeigt.</li>
+<li> Wenn ein Backup efa-Konfigurationsdaten wiederherstellt, dann wird zum Neustart von EFA aufgefordert. Hierdurch wird verhindert, dass der Audit Task beim Öffnen des Projekts Daten korrigiert, weil er ggfs. nicht geladene TYPEN oder andere Konfigurationsdaten (noch) nicht findet.</li>
+<li> Nullpointer im Audit Task behoben, wenn Reservierungen zu nicht sichtbaren Booten gelöscht werden sollen.</li>
+<li> Wenn ein Restore auch Konfigurationsdaten wiederherstellt, wird das Projekt nicht neu geladen und der Anwender zum Neustart von efa aufgefordert. Dies sorgt dafür, dass die wiederhergestellten Konfigurationsdaten, Bootstypen etc. direkt zum Einsatz kommen.</li>
+<li> Admin Dialog: Besseres Layout, wenn ein anstehender Fahrtenbuch- oder Vereinsarbeitswechsel dargestellt wird.</li>
+<li> EFA#102: EFA2.5.0#8 Beta: efaCLI Export: bisherige Standards für Feld- und Text-Trennzeichen sollen bestehen bleiben (für Abwärtskompatiblität)</li>
+<li> EFA#106: EFA2.5.0#8 Beta: efaCLI Export: Betreff der versandten Mail beinhaltet unnötige Zeitzonen-Angabe</li>
+<li> EFA#107: EFA2.5.0#8 Beta: efaCLI Export: CSV-Exporte ohne absolute Pfadangabe landen im Efa-Hauptverzeichnis</li>
+<li> EFA#103: EFA2.5.0#8 Beta: efaCLI Statistiken: lassen sich über efaCLI nicht mehr erstellen.</li>
+<li> EFA#104: EFA2.5.0#8 Beta: Rechtschreibfehler in DE, efaConfig: Bootshaus -&gt; Benachrichtigungen</li>
+<li> [efaCloud] Kein Nullpointer-Fehler mehr beim Betreten des Admin-Modus, wenn kein Projekt geöffnet ist.</li>
+<li> [efaCloud] Im Debug Modus werden keine unnötigen Nullpointer-Exceptions mehr ins Log geschrieben. https://github.com/nicmichael/efa/issues/138</li>
+</ul>
+<b>Sonstige Änderungen</b><ul><li>Code: Refactoring: Unnötige Imports entfernt.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.4.0_01</b><br><br></font><font color="yellow">10.10.2025</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Aktualisierte Wettbewerbsbedingungen fuer LRV Brandenburg</li></ul>
+<b>Korrekturen</b><ul><li> Kleine Fehlerkorrekturen</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.4.0_00</b><br><br></font><font color="yellow">05.04.2024</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br></b><br><b><i><font color="#EE0000">Wichtige Hinweise:</font></i></b><ul><li>Nach dem Update auf 2.4.0 ist ein Neustart des Rechners erforderlich. Ein Neustart von efa selbst reicht nicht aus.</li></ul>
+<b>Neuerungen</b><ul>
+<li> EfaFlatLight LookAndFeel bietet eine klare, modernere Darstellung. In weiten Bereichen konfigurierbar.</li>
+<li> EfaFlatLight Standard-Look nach Update oder Installation. Bei Update ist ein Neustart des Rechners erforderlich, damit efaFlatLight aktiv wird.</li>
+<li> Fallback: Wenn flatLaf-Bibliothek nicht gefunden wird, wird METAL als Standard-Look verwendet.</li>
+<li> EfaCloud-Status-Icons in blauer efaBths-Titelleiste sind besser dargestellt.</li>
+<li> Fahrtenbuch-Anzeige in efaBths nutzt alternierende Zeilenfarben für mehr Übersicht.</li>
+<li> EfaConfig: Schriftart für efaBths und efaBase einstellbar. Bessere Standardschrift für alle LookAndFeel.</li>
+<li> EfaConfig: Tooltip-Farben sind konfigurierbar.</li>
+<li> EfaConfig: Neustrukturierung der Konfiguration mit Überschriften und Hinweisen zu einzelnen Konfigurationselementen.</li>
+<li> EfaConfig: Überschriftenfarbe kann auch für Registerkarten genutzt werden (Metal and WindowsClassic LookAndFeel).</li>
+<li> EfaConfig: Vereins-Logo kann bis 320x200 Pixel gross werden.</li>
+<li> EfaConfig: Beim Maximieren von Fenstern kann efa den Platzberdarf der Taskbars berücksichtigen</li>
+<li> EfaConfig: EfaBootshaus-&gt;Eingabe: Option zur vereinfachten Anlage mehrerer ähnlicher Fahrten hintereinander (Expertenmodus)</li>
+<li> Versteckte Elemente im Boots- und PersonenDialog zeigen ein Icon und einen Tooltip zu ihrem Status.</li>
+<li> efaBths: Uhrzeit-Widget und Buttons immer mit fetter Schrift auch wenn keine fette Schrift vorgesehen ist.</li>
+<li> Vereinsarbeit-Dialog hat angepasste Tabellen-Spaltenbreiten, damit die Daten einfacher zu lesen sind.</li>
+<li> Beschriftungen zu Eingabefeldern werden rechtsbündig angezeigt (besserere Usability).</li>
+<li> Überschriften von Listen (Gruppen, Typen) werden hervorgehoben.</li>
+<li> About-Dialog: Anzeige der genutzten Bibliotheken und ihrer Lizenz. Im Debug-Modus werden Infos zum LAF und CSS angezeigt.</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> WindowsLookAndFeel: Ist besser nutzbar geworden. Wie bei den anderen LookAndFeels werden Buttons mit Farbe gefüllt angezeigt, anstatt nur einen farbigen Rahmen zu haben.</li>
+<li> Icons zum Hinzufügen von Elementen sind dunkler und besser wahrnehmbar.</li>
+<li> Tabellen mit alternierenden Zeilen nutzen die LookAndFeel-Farben als Standardfarbe anstatt fest weisse Hintergrundfarbe zu nutzen.</li>
+<li> Überflüssige grafische Rahmen entfernt in efaBths und allen Dialogen.</li>
+<li> Autovervollständigen-Felder zeigten sich unter Windows nicht mehr an, wenn man zwischenzeitlich in einem anderen Programm war. Zusätzlich: STRG+F öffnet das Autovervollständigen-Feld.</li>
+<li> Autovervollständigen-Felder: Zeigten sich unter Linux/Unbuntu mit "efa immer im Vordergrund" nicht an (versteckten sich hinter dem Hauptfenster)</li>
+<li> Autovervollständigen-Felder: Zeigen sich nun auch an, wenn mit der Eingabe im Textfeld kein Treffer gefunden wird.</li>
+<li> Autovervollständigen-Felder: werden diese mit TAB verlassen, wird der gewählte Eintrag übernommen.</li>
+<li> Fahrt Beginnen Dialog: Taste ESC in Autovervollständigen-Feldern schließt nur die Auswahlbox, nicht den gesamten Dialog.</li>
+<li> Lesen von Nachrichten: im Textfeld kann nun Text mit der Maus markiert und mit STRG+C in die Zwischenablage übernommen werden.</li>
+<li> EfaConfig: Scrollbar im Config-Fenster ist INNERHALB der Registerkarten - somit besser scrollbar</li>
+<li> EfaConfig: Tastenbelegung für Bemerkungsfeld - Textfeld zur Eingabe freigeschaltet.</li>
+<li> EfaConfig: MeteoAstro-Plugin weist in Konfiguration auf nicht mehr funktionierende Wetterabfrage hin.</li>
+<li> EfaConfig: mehr Elemente weisen darauf hin, dass sie einen Neustart von efa benötigen.</li>
+<li> EfaConfig: Automatische Vorgänge werden besser dargestellt.</li>
+<li> EfaConfig: KanuEFBSync Registerkarte wird besser dargestellt.</li>
+<li> Startup: Start-Probleme von efaBths auf langsameren Maschinen behoben (Raspberry PI). Audit Task läuft beim Öffnen von Projekten nicht mehr im Hintergrund, was den Start von efaBths um eine paar Sekunden verlängern kann.</li>
+<li> Boothaus-Listen mit zwei Spalten berechnen Breite für zweites Element besser. Performanceoptimierung für Darstellung der bunten Icons vor den Bootsnamen.</li>
+<li> Boothaus-Listen mit Filtern: Es wurden keine Einträge gefunden, wenn die Eingabe ein Sonderzeichen ß, æ oder œ beinhaltete.</li>
+<li> Boothaus-Listen mit zwei Spalten zeigen bei einfach 'nicht verfügbaren' Booten den Kommentar des Bootsstatus an.</li>
+<li> Bootsreservierung: Bei Auswahl des Bootes wird der Knopf für die Auswahlliste angezeigt.</li>
+<li> HTML Widgets zeigen ihren Inhalt in serifenloser Schrift mit 14 Pixel höhe an - wie unter Metal.</li>
+<li> NewsTicker Widget hat kein Problem mehr mit unüblichen Schriften.</li>
+<li> MetoAstro-Plugin in Hauptbildschirm von efaBths zeigt eine Hand als Mauscursor an, wenn ein HTML-Popup konfiguriert wurde.</li>
+<li> Keine (versteckte) Exception mehr bei der Aktualisierung der Inhalte des HTML-Widgets.</li>
+<li> Keine (versteckte) Exception mehr bei Initialisierung von efaBths wenn der Spezialbutton angezeigt wird. Spezialbutton zeigt nun das zugehörige Icon.</li>
+<li> Key F3 im 'Fahrt beginnen' Dialog öffnet nicht mehr den Suchdialog für das Fahrtenbuch.</li>
+<li> BEREIT wird nur noch nach der GUI-Initialisierung von efaBths und efaBase in das Log geschrieben, statt beim Anzeigen von BaseFrame.</li>
+<li> Swing Multithreading Problem gelöst bei automatischem Fahrtenbuchwechsel, periorischem oder geplanten efaBths Neustart und Aktualisierung des efaCloud status im Fenstertitel.</li>
+<li> Swing Multithreading Problem gelöst bei Aufruf von Statistiken mit interaktiver Abfrage von Namen, Booten, Gruppen.</li>
+<li> Dialog für automatisches Beenden/Neustarten von efa zeigt den Grund korrekt an.</li>
+<li> Resource Leak behoben: Die während eines Backups erstellte ZIP-Datei wird nach Abschluss geschlossen.</li>
+<li> News- und Uhr Widgets laufen im Hintergrund nicht weiter, wenn sie nicht sichtbar sind.</li>
+<li> emil: Einheitliche Höhe für Textfelder. Textfelder können nicht mehr zu klein sein in bestimmten LookAndFeels. Schnellere Scrollgeschwindigkeit in der Teilnehmerliste.</li>
+<li> Keine Exception im Admintask zur Berechnung des Vereinsarbeit-Übertrags mehr, wenn zu einem Projekt ohne Vereinsarbeit gewechselt wird.</li>
+<li> Bei aktivem Tooltip-Support zeigen Tabellen auch Tooltips für Spaltenüberschriften.</li>
+<li> Fahrtenbuch anzeigen: zeigt breitere Spalten für Datum- und Zeitfelder an (gut bei Verwendung größerer Schriftarten)</li>
+<li> Fahrtenbuch anzeigen: Darstellungsfehler behoben, wenn die Crew eines Fahrtenbucheintrags leer war.</li>
+<li> Admin Modus: Dialoge zur Auswahl von Projekten, Fahrtenbüchern, Vereinsarbeit, Plugins werden besser dargestellt in allen LookAndFeels.</li>
+<li> efaBths: Blaue Titelleiste verändert ihre Größe nicht mehr, wenn efaFlatLaf aktiv ist, und die efa-Konfiguration geändert wurde.</li>
+<li> Tabellen: Wenn alternierende Zeilen aktiv sind, zeigt das efaFlatLaf zumindest horizontale Linien in den Tabellen an.</li>
+<li> [efaCloud] Verbesserungen der Synchronisation: bei Re-Synchronisation 'kürzlich' geänderter/neuer Datensätze berücksichtigt nur noch Datensätze der letzten 5 Tage statt 30 Tage.</li>
+<li> [efaCloud] Verbesserungen der Synchronisation: Besserer Umgang mit der Situation, wenn die Klartext-Namen durch UUIDs ersetzt werden (durch Aufräumarbeiten am Jahresende).</li>
+<li> [efaCloud] Projekt kann nicht mehr mit leeren Feldern zu efaCloud-Credentials in ein efaCloud-Projekt umgestellt werden.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.3_02</b><br><br></font><font color="yellow">26.11.2023</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br></b><b>Korrekturen</b><ul><li> Unerwuenschtes Dialogfenster bei Automatischen Ablauefen angezeigt</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.3_03</b><br><br></font><font color="yellow">01.01.2024</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br></b><b>Korrekturen</b><ul><li> Datenimport von Fahrtenbucheinträgen funktioniert nicht, wegen ArrayIndexOutOfBounds Exception</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.3_02</b><br><br></font><font color="yellow">26.11.2023</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br></b><b>Korrekturen</b><ul><li> Unerwuenschtes Dialogfenster bei Automatischen Ablauefen angezeigt</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.3_01</b><br><br></font><font color="yellow">05.11.2023</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br></b><b>Neuerungen</b><ul>
+<li> Konfigurationsseiten für efaBootshaus (Allgemein, Erscheinungsbild) reorganisiert für bessere Auffindbarkeit von Eigenschaften</li>
+<li> Konfigurierbares Zeitintervall für automatisches Leeren von Filterfeldern in Bootshaus</li>
+<li> Konfigurierbares automatisches Leeren von Filterfeldern nach den meisten Bootshaus-Aktionen</li>
+<li> Einfacheres Finden von Einträgen mit Umlauten/Sonderzeichen in Tabellen, Bootslisten, und Eingabefeldern mit Vervollständigung (konfigurierbar)</li>
+<li> Bootsreservierungen: Ändern von Bootsnamen und Erstellen von Reservierungs-Kopien</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Widgets multithreading-sicher: weniger Rendering-Exceptions im efa.log</li>
+<li> Teilbegriffsuche für Eingabefelder mit Vervollständigung suchen nun auf kompletter Liste</li>
+<li> Sortierung für Bootsliste, Personenliste, Vervollständigungs-Listen gehen besser mit europäischen Sonderzeichen um</li>
+<li> Mehr Konfigurationselemente, die einen Neustart von EFA benötigen, melden dieses beim Speichern der Konfigurationsdaten.</li>
+<li> Der Dialog für die Auswahl unklar eingegebener Werte zeigt keine doppelten Einträge mehr an.</li>
+<li> [efaCloud] Synchronisation in efaBase erlaubt Übernahme von Datensätzen mit vielen Änderungen.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.3_00</b><br><br></font><font color="yellow">29.09.2023</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.8<br></b><b>Neuerungen</b><ul>
+<li> efa 2.3.3 erfordert mindestens Java Version 8</li>
+<li> Bootsreservierungen (sowohl einmalige als auch wöchentliche) lassen sich jetzt nach Datum filtern</li>
+<li> Kanu-EFB Synchronisation überarbeitet mit mehr Konfigurationsparametern</li>
+<li> Bootshaus mit zweispaltiger Listendarstellung (deaktivierbar)</li>
+<li> Bootshaus zeigt heutige Bootsreservierungen an (deaktivierbar)</li>
+<li> Bootshaus mit Tooltipps für Einträge (deaktivierbar)</li>
+<li> Bootshaus kann nach Inhalten der Tooltips filtern</li>
+<li> Bootshaus mit besser sichtbaren Überschriften (konfigurierbar)</li>
+<li> Bootshaus: Gelber Hintergrund für aktive/gefüllte Filter-Felder in Bootslisten, regelmäßiges Zurücksetzen der Filter</li>
+<li> Eingabefelder mit Vervollständigung (z.B. Bootsname) suchen nach nach Teilbegriff</li>
+<li> Bootsreservierungen lassen sich per Checkbox auf den heutigen Tag filtern</li>
+<li> Bootsreservierungen mit zeitlich beschränkten wöchentlichen Reservierungen</li>
+<li> Verhalten von efa bei Überschneidungen von Reservierungen unterschiedlichen Typs kann eingestellt werden</li>
+<li> efaCloud Eigenes Logging für Synchronisationsfehler</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Logrotate efa.log verursacht mit efaCLI keine fehlenden Logeinträge mehr (https://github.com/nicmichael/efa/issues/22) </li>
+<li> [efaCloud] Überschreiben von Fahrten in efaCloud bei Fahrtenbuchwechsel</li>
+<li> [efaCloud] Synchronisationsabweichungstoleranz zu eng</li>
+<li> plugin.xml verweist auf korrekte JavaMail-Version 1.6.2</li>
+<li> Französische Übersetzung hat keine Fehler mehr bei Texten mit Apostrophen</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.2_03</b><br><br></font><font color="yellow">21.01.2023</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> Standard Lock Timeout auf 30 Sekunden erhoeht</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.2_02</b><br><br></font><font color="yellow">21.01.2023</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> Erweiterte Lock Timeout Diagnostics</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.2_01</b><br><br></font><font color="yellow">28.10.2022</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul><li> JavaMail Update auf Version 1.6.2</li></ul>
+<b>Korrekturen</b><ul>
+<li> Ungueltige Personen in Personen-Auswahlliste (https://github.com/nicmichael/efa/issues/62)</li>
+<li> Personen-Auswwahlliste schrumpft in efaBasis (https://github.com/nicmichael/efa/issues/67)</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.2_00</b><br><br></font><font color="yellow">04.06.2022</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul>
+<li> Filter fuer Liste der verfuegbaren Boote und Boote auf Fahrt</li>
+<li> Verbesserte Darstellung von Tabellen</li>
+<li> Anpassung der Logik zur Änderung des Vereinsarbeitsbuches an die Logik zur Veränderung des Fahrtenbuches bei der Verwendung in efaCloud</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Fehlerkorrektur für efaCloud auf Windows Systemen</li>
+<li> Verbesserung der Synchronisierung mit efaCloud</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.1_04</b><br><br></font><font color="yellow">22.03.2022</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> Korrektur fuer fehlendes Dezimalkomma in Darstellung von Entfernungen und anderen Dezimalwerten</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.1_03</b><br><br></font><font color="yellow">06.03.2022</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul><li> Verbesserte Uebersetzung nach Franzoesisch</li></ul>
+<b>Korrekturen</b><ul>
+<li> [efaCloud] Synchronisationsfehler unter Windows behoben</li>
+<li> Fehler bei Handhabung von Dezimalzahlen im Import behoben</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.1_02</b><br><br></font><font color="yellow">08.02.2022</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul><li> Wettbewerbsbedingungen fuer Fahrtenabzeichen 2022 angepasst</li></ul>
+<b>Korrekturen</b><ul>
+<li> [efaCloud] Bugfix bei Fahrtenbuchwechsel</li>
+<li> Fehler bei Handhabung von Dezimalzahlen im Import behoben</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.1_01</b><br><br></font><font color="yellow">24.01.2022</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul><li> Verbesserte Auto-Complete Listen schlagen nur Personen vor, die noch nicht fuer das Boot ausgewaehlt sind</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.1_00</b><br><br></font><font color="yellow">22.12.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Sonstige Änderungen</b><ul><li>[efaCloud] Optimierungen mit zentraler Admin-Verwaltung</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_14</b><br><br></font><font color="yellow">19.11.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> Fehlende Berechnung der Zielbereiche bei Wettbebwerbsauswertung fuer LRV Sommer-Wettbewerb 2021 behoben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_12</b><br><br></font><font color="yellow">26.09.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul>
+<li> [efaCloud] Wenn die Internetverbindung beim Start des Programms noch nicht steht, wird der Retry der Autorisierung nun korrekt angestoßen.</li>
+<li> Behebung des Referenzfehlers in der Logdatei-Prüfung beim Raspberry Systemzeitfehler-Effekt.</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_11</b><br><br></font><font color="yellow">19.06.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul><li> Wettbewerbsbedingungen fuer LRV-Sommer-Wettbewerb 2021 aktualisiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_10</b><br><br></font><font color="yellow">10.06.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul>
+<li> [efaCloud] Gruppen mit mehr als 27 Mitgliedern nun möglich</li>
+<li> [efaCloud] efaCloud und efaCLI nun kompatibel. Allerdings keine efaCloud Kommandos über efaCLI</li>
+<li> [efaCloud] efaRemote + efaCloud getestet</li>
+<li> [efaCloud] Toleranz der Fehlerprüfung optimiert</li>
+<li> [efaCloud] Hinweisdialog bei fehlschlagen der Authentifizierung am Server</li>
+<li> [efaCloud] verwaiste Konfigurationsreste in Konfigurationsmenü "Daten" durch Hinweis uf den richtigen Ort ersetzt.</li>
+<li> [efaCloud] Bei Datensatzinkonsistenz enthält die Fehlermeldung nun den nicht aktualisierten Datensatz</li>
+<li> [efaCloud] efa2fahrtenabzeichen wird mit bis zu 4 Abweichungen noch aktualisiert</li>
+<li> [efaCloud] Eine Info über den Stand des Servers (server_welcome_message) wird nun im efaCloud Konfigurationsdialog mit angezeigt (braucht Serverversion 2.3.0_12)</li>
+<li> [efaCloud] Server =&gt; client Konfigurationsinformation wird nun mit jeder Synchronisation neu übertragen, nicht nur bei Neustart. Resume nach Pausieren Fehler behoben.</li>
+<li> [efaCloud] Verbesserte Dartsellung des Fehlers bei der initialen Verbindung zur Vereinfachung der Fehlerbehebung bei der ersten efaCloud Konfiguration</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_09</b><br><br></font><font color="yellow">11.04.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Sonstige Änderungen</b><ul><li>Change: Bedingungen fuer DRV-Fahrtenabzeichen 2021 angepasst</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_07</b><br><br></font><font color="yellow">30.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> efaCloud Fast-Sync alle 30 Sekunden (Verringerung der Latenz der Sichtbarkeit von Aenderungen verschiedener Clients)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_06</b><br><br></font><font color="yellow">23.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> NullPointerException in efaCloud beim Beenden einer Fahrt mit unbekanntem Boot oder Doppeleintrag korrigiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_05</b><br><br></font><font color="yellow">22.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul>
+<li> efaCloud Upload-Fehler (manueller Upload) korrigiert</li>
+<li> NullPointerException in efaCloud-Konfiguration korrigiert, wenn kein Projekt geoeffnet ist</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_04</b><br><br></font><font color="yellow">20.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Sonstige Änderungen</b><ul><li>New: Erweiterte User Statistics bei remote Online-Update</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_02</b><br><br></font><font color="yellow">20.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> NullPointerException beim Beenden einer Fahrt korrigiert</li></ul>
+<b>Sonstige Änderungen</b><ul><li>New: User Statistics bei remote Online-Update</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_01</b><br><br></font><font color="yellow">18.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Korrekturen</b><ul><li> Lizenztext aktualisiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.3.0_00</b><br><br></font><font color="yellow">16.03.2021</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br>Minimale Java Version: 1.6<br></b><b>Neuerungen</b><ul><li> efaCloud - efa in der Cloud (experimentell)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_54</b><br><br></font><font color="yellow">15.12.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Meldegend fuer DRV-Fahrtenabzeichen aktualisiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_52</b><br><br></font><font color="yellow">18.11.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> efa ueberprueft regelmaessig, ob Java Version 8 oder neuer verwendet wird und warnt ggf.</li></ul>
+<b>Korrekturen</b><ul><li> Ueberfluessige .java Dateien aus efa.jar entfernt</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_51</b><br><br></font><font color="yellow">16.11.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Fehler beim Anlegen einer Person als normaler Nutzer im Bootshaus-Modus behoben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_50</b><br><br></font><font color="yellow">16.11.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Fehlerhafte Uebermittlung von Zielfahrten fuer LRV-Sommer-Wettbebwerb 2020 (Covid) bei Meldung korrigiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_49</b><br><br></font><font color="yellow">14.11.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Ermittlung der Zielfahrten fuer geaenderte Bestimmungen (Covid) korrigiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_48</b><br><br></font><font color="yellow">23.07.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Sonstige Änderungen</b><ul><li>Change: Aktualisierte Wettbewerbsbedingungen fuer DRV Jugend-Fahrtenabzeichen 2020</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_47</b><br><br></font><font color="yellow">19.07.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Sonstige Änderungen</b><ul><li>Change: Aktualisierte Wettbewerbsbedingungen fuer LRV Berlin Sommer-Fahrten-Wettbewerb 2020</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_46</b><br><br></font><font color="yellow">19.07.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Deadlock nach Aktualisierung des Gewaesserkatalogs aufgrund fehlerhafter Projekt-Konfiguration behoben</li>
+<li> Import von Datensaetzen mit InvalidFrom-Feld korrigiert, wenn der Zeitpunkt des InvalidFrom vor dem Import-Gueltigkeitszeitpunkg liegt</li>
+<li> Unerlaubtes Bearbeiten von Personen, Booten und Zielen durch Admins ohne entsprechende Berechtigung korrigiert</li>
+</ul>
+<b>Sonstige Änderungen</b><ul><li>Change: Aktualisierte Wettbewerbsbedingungen fuer DRV-Fahrtenabzeichen 2020</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_45</b><br><br></font><font color="yellow">22.06.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Details einer Ueberlappenden Reservierung werden jetzt angezeigt</li></ul>
+<b>Korrekturen</b><ul>
+<li> Korrekte Platzierung von Dialogen in Umgebungen mit mehreren Bildschirmen</li>
+<li> Fahrtabbruch-Dialog kann jetzt mit ESC abgebrochen werden</li>
+<li> Fehlerhaftes Verhalten beim Wechseln zwischen Boots und Personen-Liste behoben</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_44</b><br><br></font><font color="yellow">19.04.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Sonstige Änderungen</b><ul><li>Change: Geänderte Wettbewerbsbedingungen für LRV Winter-Wettbewerb 2019/2020</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_43</b><br><br></font><font color="yellow">22.02.2020</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Neues Feld 'Adresszusatz' fuer DRV/LRV-Wettbewerbsmeldungen</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_42</b><br><br></font><font color="yellow">16.06.2019</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> elektronische Wettbewerbsmeldungen jetzt nur noch nach Online-Update bzw. Check der neuesten Version moeglich</li></ul>
+<b>Korrekturen</b><ul><li> Wetterdaten werden wieder korrekt angezeigt (Yahoo Weather API updated)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_40</b><br><br></font><font color="yellow">28.01.2019</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Bedingungen für DRV-Wanderruderwettbewerb 2019 aktualisiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_39</b><br><br></font><font color="yellow">28.10.2018</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Trenner in Bootslisten zeigen jetzt selbstdefinierte Bootstypen an</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_37</b><br><br></font><font color="yellow">19.06.2018</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Darstellungsprobleme im Projekt/Fahrtenbuch Öffnen Dialog behoben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_36</b><br><br></font><font color="yellow">06.05.2018</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Einbinden beliebigen HTML-Texts oder HTML-Seiten in Wetter-Widget</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_35</b><br><br></font><font color="yellow">19.02.2018</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul>
+<li> Auswertung von Jugendlichen mit Behinderung für DRV-Fahrtenabezeichen jetzt möglich</li>
+<li> DRV-Gewässerkatalog aktualisiert</li>
+</ul>
+<b>Korrekturen</b><ul><li> DRV-Wanderruderstatistik Auswertung von Fahrten jetzt möglich, auch wenn mehrere Fahrten derselben Personen zum selben Ziel am selben Tag stattgefunden haben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_34</b><br><br></font><font color="yellow">01.02.2018</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> DRV-Wettbewerbsauswertung hat manchmal nicht genügend Fahrten ausgegeben (jetzt bis zu 10)</li>
+<li> Standard-Wettbewerbsjahr im Statistikdialog ist jetzt zu Beginn des Jahres das Vorjahr (statt aktuelles Jahr)</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_33</b><br><br></font><font color="yellow">10.11.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Yahoo! Wetter API aktualisiert - Wetterdaten werden jetzt wieder korrekt angezeigt</li>
+<li> PDF-Statistiken werden jetzt vom FTP-Upload korrekt (unverstümmelt) hochgeladen</li>
+<li> Statistik mit Filtereinstellung eines einzelnen Fahrtenbuchs kann jetzt korrekt bearbeitet werden</li>
+<li> Überschneidende Bootsreservierungen werden jetzt korrekt erkannt und unterbunden</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_32</b><br><br></font><font color="yellow">05.11.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Unterstützung für Java 9 hinzugefügt</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_31</b><br><br></font><font color="yellow">03.05.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Warnungen über fehlendes Geschlecht beim Auswerten der DRV-Wanderruderstatistik korrigiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_30</b><br><br></font><font color="yellow">27.04.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul>
+<li> Datenexport sämtlicher (auch derzeit ungültiger und gelöschter) Datensätze möglich, wenn kein Gültigkeitszeitpunkt angegeben wird</li>
+<li> Warnungen bei Wettbewerbsauswertung, wenn Teilnehmer ohne Jahrgang oder Geschlecht in Personenliste erfaßt sind</li>
+<li> Lock Timeout für Datenmanipulation jetzt konfigurierbar</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_29</b><br><br></font><font color="yellow">13.04.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> verbesserte Fehlerausschriften falls DRV-Signatur nicht dekodiert werden kann</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_28</b><br><br></font><font color="yellow">12.04.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Unterstützung von PASV Modus für FTP-Upload</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_26</b><br><br></font><font color="yellow">14.03.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul>
+<li> Datumsformat jetzt konfigurierbar (TT.MM.JJJJ oder MM/DD/YYYY)</li>
+<li> Sortierung von Bootslisten nach Riggerung (und Anzahl von Bootsplätzen) jetzt möglich</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_24</b><br><br></font><font color="yellow">12.02.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> HeadlessException beim Datenimport über efaCLI behoben</li>
+<li> Hinweis auf Überweisung des DRV-Meldegeldes geändert (wird erst nach Bearbeitung überwiesen)</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_23</b><br><br></font><font color="yellow">07.02.2017</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> NullPointerException beim Auswerten von DRV-Fahrtenabzeichen behoben, wenn für einen Teilnehmer kein Geschlecht erfaßt ist</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_22</b><br><br></font><font color="yellow">12.12.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Sonstige Änderungen</b><ul><li>Change: Nachfrage beim Erfassen von Fahrten mit mehr als 30 Km: Auswahlmöglichkeit "Kilometernachtrag" wird nicht mehr angeboten, um Mißverständnisse und irrtümliche Kennezeichnung von Fahrten als zusammengefaßte Kilometernachträge zu vermeiden</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_21</b><br><br></font><font color="yellow">05.12.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Korrektur für email-Versand aus efaCLI</li>
+<li> Vernünftige Fehlermeldung statt NullPointerException beim email-Versand, wenn kein email-Server konfiguriert ist</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_19</b><br><br></font><font color="yellow">23.10.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Exception beim Online-Update und Versenden von emails behoben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_18</b><br><br></font><font color="yellow">22.10.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Sonstige Änderungen</b><ul><li>DRV: Meldegeld für DRV-Wettbewerbe 2016 aktualisiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_17</b><br><br></font><font color="yellow">17.09.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Spezial-Button erlaubt jetzt das Wechseln des Projekts, Fahrtenbuchs, oder Bootshauses</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_16</b><br><br></font><font color="yellow">09.09.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Sortierung der Boote in Bootslisten ausschließlich nach Bootsnamen jetzt wieder möglich</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_15</b><br><br></font><font color="yellow">28.08.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Sortierung der Boote in Bootslisten jetzt auch optional nach Bootstyp möglich</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_14</b><br><br></font><font color="yellow">25.07.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Bessere Robustheit beim Lesen von fehlerhaften Daten (Längenprüfung von Feldinhalten und ggf. Abschneiden von Werten über 1 MB Länge).</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_13</b><br><br></font><font color="yellow">23.07.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> NullPointerException im Bootsstatus-Audit behoben (wenn Fahrtstatus eines Boots korrigiert wurde).</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_12</b><br><br></font><font color="yellow">16.07.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Update-Konflikt bei wiederholtem Ändern desselben Fahrtenbucheintrags über efaRemote behoben.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_09</b><br><br></font><font color="yellow">01.05.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Fehler (NoClassDefFoundError) beim Laden der Wetterdaten nach Online-Update behoben.</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_08</b><br><br></font><font color="yellow">22.04.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Wetterdaten werden jetzt wieder angezeigt (API zur Abfrage der Wetterdaten aktualisiert)</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_05</b><br><br></font><font color="yellow">27.02.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Fehler beim Korrigieren von unbekannten Namen beim Download von DRV-Fahrtenheften behoben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_04</b><br><br></font><font color="yellow">26.02.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Wettbewerbsbestimmungen für LRV-Winter-Wettbewerb 2015/2016 angepaßt</li></ul>
+<b>Korrekturen</b><ul>
+<li> Wiederholte Aufforderung zum Berechnen des Vereinsarbeits-Übertrags korrigiert</li>
+<li> Nicht klickbare Aufforderung zum Berechnen des Vereinsarbeits-Übertrags in efaBasis korrigiert</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_03</b><br><br></font><font color="yellow">13.01.2016</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Fehlerhafte Statistikberechnung für Wochentage und Monate korrigiert</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_02</b><br><br></font><font color="yellow">22.12.2015</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Tagesfahrten werden bei Auswertungen zum Fahrtenabzeichen für Jahre vor 2015 nicht mehr berücksichtigt</li>
+<li> efa fragt nun nicht mehr bei der Eingabe, ob eine als JuM-Regatta gekennzeichnete Fahrt eine Regatta ist</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_01</b><br><br></font><font color="yellow">21.12.2015</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Regatten wurden fälschlicherweise bei Erwachsenen für das DRV-Fahrtenabzeichen als Wanderruderkilometer gewertet</li>
+<li> NullPointerException nach Update behoben</li>
+<li> Warnungen zu nicht berücksichtigte Fahrten werden jetzt auch bei Statistik-Ausgabe für efaWett angezeigt</li>
+<li> Strenge Prüfung von Namensformat erlaubt jetzt auch Namenszusätze (runge Klammern) sowie Vereinsnamen (eckige Klammern), jedoch nicht "Gast"</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.2_00</b><br><br></font><font color="yellow">16.12.2015</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul>
+<li> Auswertung der DRV-Wettbewerbe an neue Bestimmungen für 2015 angepaßt</li>
+<li> Fahrtarten "Training", "Wanderfahrt", "Ausbildung", "JuM-Regatta" abgeschafft</li>
+<li> efa überprüft jetzt bei der Eingabe, ob eine Fahrt aufgrund ihrer Fahrtart als Wanderfahrt gewertet werden kann oder nicht</li>
+<li> Status von Personen kann jetzt von efa altersabhängig automatisch gesetzt werden</li>
+<li> Konfigurierbare Vorbelegung für Text im Bemerkungs-Feld</li>
+<li> Darstellungsgröße im HTML-Widget kann beliebig skaliert werden</li>
+<li> In Auswertungen der Vereinsarbeit können Mitglieder, die die Sollstunden noch nicht erfüllt haben, nun unterdrückt werden</li>
+<li> Unbekannte Personennamen können bei Eingabe von Fahrten im Bootshaus jetzt nach strengen Regeln auf gültiges Namensformat hin geprüft werden</li>
+<li> efa überprüft jetzt die email-Adressen in den Projekt-Einstellungen sowie beim Melden von Wettbewerben auf syntaktische Korrektheit</li>
+<li> Bei der Auswertung der DRV-Wanderruderstatistik werden nun für jeden Eintrag die LfdNr aller berücksichtigten Fahrten ausgegeben</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> efaCLI kann jetzt unter Linux/Unix auch ohne graphische Umgebung (headless) gestartet werden</li>
+<li> Fehlermeldungen beim Anlegen eines neuen Fahrtenbuchs über efaRemote behoben</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_15</b><br><br></font><font color="yellow">06.12.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Vereinsnamen werden jetzt von Namenszusätzen durch eckige Klammern in der Eingabe unterscheiden, wenn die Option "Vereinsnamen in Personenliste anzeigen" aktiviert ist</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_14</b><br><br></font><font color="yellow">30.11.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> efa erlaubt jetzt die Eingabe des korrekten Personennamens wenn eine Person beim Einspielen von signierten Fahrtenheften (DRV-Fahrtenabzeichen) nicht gefunden werden konnte</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_13</b><br><br></font><font color="yellow">12.11.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> NullPointerException bei Statistikberechnung der Vereinsarbeitsstunden behoben, wenn keine Arbeitsstunden im angegebenen Zeitraum gefunden wurden</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_12</b><br><br></font><font color="yellow">22.10.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Fehlerhafte Berechnung von JuM-Regatten für DRV-Fahrtenabzeichen behoben, wenn Teilnehmer *nicht* der Gruppe 3 a/b angehört</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_11</b><br><br></font><font color="yellow">18.10.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> efa versucht email-Versand jetzt nur, wenn auch ein email-Server konfiguriert ist</li>
+<li> Fehlerhafte Angabe zur Anzahl der exportierten Datensätze bei Datenexport korrigiert</li>
+<li> efa fragt jetzt vor der Reservierung von "nicht verfügbaren" Booten nach, ob diese wirklich reserviert werden sollen</li>
+<li> Für Wettbewerbsauswertungen aktiviert efa jetzt nur alle vordefinierten Fahrtarten und Bootstypen, die für Ruderfahrten in Frage kommen, und erlaubt es weiterhin, selbst definierte Fahrtarten oder Bootstypen von der Wettbewerbsauswertung auszunehmen</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_10</b><br><br></font><font color="yellow">06.08.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Fehlende Beschreibung in Benachrichtigung bei Meldung eines ungeputzten Bootes ergänzt</li>
+<li> Unerlaubte Filtereinstellungen bei Wettbewerbsmeldungen werden jetzt bei Auswertung ignoriert</li>
+<li> Im Admin-Modus werden im Fahrtenbucheintrag bereits erfaßte Kilometereingaben bei Bearbeitung des Ziels nicht mehr gelöscht</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_09</b><br><br></font><font color="yellow">24.07.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> email-Versand ohne STARTTLS bei Verwendung von Port 25</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_08</b><br><br></font><font color="yellow">12.07.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Verbesserte Unterstützung für email-Versand mittels STARTTLS oder SSL</li>
+<li> Fehlende Anzeige von Vereinsnamen bei Steuerleuten korrigiert</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_07</b><br><br></font><font color="yellow">18.06.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Datenimport mittels efaCLI jetzt 100x schneller</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_06</b><br><br></font><font color="yellow">17.06.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul><li> Debug-Logging in efaCLI</li></ul>
+<b>Korrekturen</b><ul>
+<li> Position in Statistikausgabe wird jetzt bei gleicher Leistung gleichgestzt</li>
+<li> NullPointerExceptions beim Import von Daten in efaCLI behoben</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_05</b><br><br></font><font color="yellow">07.06.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Statistikauswertung von unbekannten Personen jetzt wieder möglich</li>
+<li> Zeitliche Sortierung von Fahrtenbucheinträgen in Statistikausgabe berücksichtigt jetzt neben Datum auch die Uhrzeit</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_04</b><br><br></font><font color="yellow">03.06.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul><li> Probleme/Einfrieren von efa beim Starten behoben</li></ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_03</b><br><br></font><font color="yellow">01.06.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Vereinsarbeit kann jetzt auch in efa-Basis administriert werden</li>
+<li> Fehlermeldung beim Start von efa, wenn Vereinsarbeitsbuch gelöscht wurde, behoben</li>
+<li> Aufforderung zum Schließen der Hallentore erscheint jetzt auch, wenn alle Boote zurück sind, aber einige Boote noch auf Regatta oder Wanderfahrt (nicht verfügbar) sind</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_02</b><br><br></font><font color="yellow">29.05.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> Vereinsarbeits-Button wird manchmal beim Start von efa nicht angezigt - behoben</li>
+<li> Erfassung uns Auswertung von Vereinsarbeitsstunden für Gäste möglich</li>
+<li> Berücksichtige Auswertungs- und Vereinsarbeits-Zeitraum korrekt bei Berechnung der Sollstunden</li>
+<li> Fehlermeldung bei Eingabe von unbekannten Namen für Vereinsarbeit korrigiert</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_01</b><br><br></font><font color="yellow">28.05.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Korrekturen</b><ul>
+<li> NullPointerException beim Aufrufen des Projekt-Dialogs behoben</li>
+<li> Vereinsarbeits-Button wird manchmal beim Start von efa nicht angezigt - behoben</li>
+</ul>
+</td>
+</tr>
+<tr height="134">
+<td valign="top" align="center" width="128" background="line.png"><table width="132" height="130" border="0"><tr height="128"><td background="circle.png" valign="middle" align="center" height="128" width="132">
+<font color="yellow"><b>2.2.0_00</b><br><br></font><font color="yellow">26.05.2014</font>
+</td></tr></table></td>
+<td valign="top">
+<b><br><br></b><b>Neuerungen</b><ul>
+<li> Erfassung und Auswertung von Vereinsarbeitsstunden</li>
+<li> Schlüsselfeld für Datenimport nach efa ist jetzt konfigurierbar</li>
+<li> Beim Versenden von Nachrichten wird die email-Adresse der Person, die die Nachricht erstellt hat, als reply-to Adresse gespeichert (sofern für die Person eine email-Adresse in der Personenliste hinterlegt ist)</li>
+<li> Statistikauswertung erlaubt jetzt gezielte Auswertung eines einzelnen Fahrtenbuchs</li>
+<li> Optional können bei der Statistikauswertung jetzt auch offene Fahrten berücksichtigt werden (bspw. um diese in der Fahrtenbuchausgabe mit auszugeben)</li>
+<li> Bei Synchronisation mit Kanu-eFB werden nur Fahrten synchronisiert, die mit Kanu-Bootstypen durchgeführt wurden (Konfiguration der Kanu-Bootstypen unter "efa-Konfiguration - Synchronisation - Kanu-eFB")</li>
+<li> Nachrichten können beim Weiterleiten durch Administrator editiert werden</li>
+<li> Offene Fahrten können jetzt auch in efa-Basis (bzw. im Admin-Modus) manuell beendet werden. Der Bootsstatus wird hierbei korrekt aktualisiert.</li>
+<li> Anzeige von Vereinsnamen optional hinter dem Personennamen in Auswahllisten möglich (kann aktiviert werden unter "efa-Konfiguration - Allgemein - Eingabe")</li>
+<li> Optional erlaubt efa jetzt auch das Erfassen von Fahrten ohne Entfernungsangabe (kann aktiviert werden unter "efa-Konfiguration - Allgemein - Eingabe" im Expertenmodus)</li>
+<li> Angabe von Kilometern und Fahrtart aus Fahrtgruppen entfernt</li>
+<li> efa-Systeminfos zeigen jetzt auch aktuelle IP-Adresse an</li>
+<li> SEPA-Kontoinformationen für DRV und LRV Berlin</li>
+<li> JavaMail-Plugin aktualisiert (Version 1.5.1) und unterstützt jetzt den Versand von verschlüsselten emails besser</li>
+</ul>
+<b>Korrekturen</b><ul>
+<li> Fehlermeldungen beim Erstellen eines neues Fahrtenbuchs behoben</li>
+<li> Fälschlicher wiederholter automatischer Fahrtenbuchwechsel nach manuellem Öffnen eines anderen Fahrtenbuchs behoben</li>
+<li> Fehler bei PDF-Generierung von nicht unterstützten Statistiken behoben</li>
+<li> Fehlermeldungen beim Öffnen von XML-Dateien, die nicht mehr unterstützte Felder enthalten, jetzt unterdrückt</li>
+<li> Melden von Änderungswünschen für Fahrtenbucheinträge war nicht möglich, wenn weniger als konfigurierte Fahrten angezeigt wurden oder die Tabelle umsortiert wurde</li>
+<li> efa-Neustart unter Windows funktionierte nicht, wenn Java-Installationsverzeichnis Leerzeichen im Namen enthielt</li>
+<li> Darstellungsprobleme im Konfigurationsdialog bei zu vielen Einträge in "Automatische Abläufe" korrigiert</li>
+<li> Schreibfehler in Gewässerliste korrigiert</li>
+</ul>
+<b>Sonstige Änderungen</b><ul>
+<li>Change: Statistikfenster werden jetzt im Admin-Modus nicht mehr nach fünf Minuten automatisch geschlossen</li>
+<li>Sprache: Sprachunterstützung für Dänisch aktualisiert</li>
+</ul>
+</td>
+</tr>
+</table>
+</body></html>

@@ -64,7 +64,10 @@ CP=$CP:program/plugins/fop.jar
 CP=$CP:program/plugins/xmlgraphics-commons.jar
 
 # EFA Flat Laf
-CP=$CP:program/plugins/flatlaf-3.2.5.jar
+CP=$CP:program/plugins/flatlaf-3.6.jar
+
+# JSON
+CP=$CP:program/plugins/json-20250517.jar
 
 # Weather Plugin
 CP=$CP:program/plugins/commons-codec.jar
@@ -82,7 +85,7 @@ fi
 if [ "$EFA_JAVA_HEAP" = "" ] ; then
 # A higher Java Heaps helps to speed up efa on slower computers
 # As garbage collection needs to run at lower frequencies
-  EFA_JAVA_HEAP=160m
+  EFA_JAVA_HEAP=192m
 fi
 if [ "$EFA_NEW_SIZE" = "" ] ; then
   EFA_NEW_SIZE=32m
