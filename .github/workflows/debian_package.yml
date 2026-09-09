@@ -35,5 +35,5 @@ jobs:
           echo "${{ secrets.GPG_KEY }}" | gpg --batch --import
           gpg --list-secret-keys --keyid-format LONG
           export GPG_TTY=$(tty)
-          /usr/bin/deploy_registry.sh "${{ secrets.SSH_USER }}" "${{ secrets.SSH_HOST }}" bookworm efa2
+          /usr/bin/deploy_registry.sh "${{ secrets.SSH_USER }}" "${{ secrets.SSH_HOST }}" trixie efa2
 
