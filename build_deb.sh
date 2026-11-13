@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 #
-VERSION="2.5.2.00-1"
+VERSION="2.5.3.17-1"
 CREATE_RELEASE=true
 
 if [ -f release_info.sh ]; then
